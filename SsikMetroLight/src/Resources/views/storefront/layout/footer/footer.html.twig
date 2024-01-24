@@ -1,0 +1,35 @@
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
+
+{% set isShowNewsletterBlock = config('SsikMetroLight.config.isShowNewsletterBlock') %}
+{% set isShowFooterContact = config('SsikMetroLight.config.isShowFooterContact') %}
+
+{% block layout_footer_navigation_columns %}
+    {{parent()}}
+    {% if isShowNewsletterBlock == 1 %}
+        <div class="col-md-4 footer-column">
+            {% sw_include '@Storefront/storefront/ssik/newsletter-form.html.twig' %}  
+        </div>
+    {% endif %}    
+{% endblock %}
+
+{% block layout_footer_navigation_hotline_content %}
+    {% if isShowFooterContact == 1 %}
+        {% sw_include '@Storefront/storefront/ssik/footer-logo.html.twig' %}  
+        {% sw_include '@Storefront/storefront/ssik/footer-contact.html.twig' %}  
+    {% else %}   
+        {{parent()}}
+    {% endif %}   
+{% endblock %}
+
+{% block layout_footer_payment_shipping_logos %}
+    <div class="footer-pre-bottom">
+        {% sw_include '@Storefront/storefront/ssik/social-icons.html.twig' %}  
+        {{parent()}}
+    </div>
+{% endblock %}
+
+{% block layout_footer_bottom %}
+    <div class="footer-bottom-wrapper">
+        {{parent()}}
+    </div>
+{% endblock %}

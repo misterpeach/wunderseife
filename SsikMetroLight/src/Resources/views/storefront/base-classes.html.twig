@@ -1,0 +1,71 @@
+{% block ssik_body_classes %}
+{% apply spaceless %}
+    {% set classes = [] %}
+
+    {% if ssik.config.headerStyle is not empty %}
+        {% set classes = classes|merge(['is-ssik-header-' ~ ssik.config.headerStyle])  %}
+    {% else %}
+        {% set classes = classes|merge(['is-ssik-header-shopware']) %}
+    {% endif %}
+    
+    {% if ssik.config.productCard is not empty %}
+        {% set classes = classes|merge(['ssik-product-card-' ~ ssik.config.productCard])  %}
+    {% else %}
+        {% set classes = classes|merge(['ssik-product-card-shopware']) %}
+    {% endif %}
+
+    {% if theme_config('ssik-footer-logo') %}
+        {% set classes = classes|merge(['is-footer-logo']) %}
+    {% endif %}
+
+    {# {% if ssik.config.isQuantityPlusMinus == 1 %}
+        {% set classes = classes|merge(['is-ssik-counter']) %}
+    {% endif %} #}
+
+    {% if ssik.config.ssikAccountWidget == 1 %}
+        {% set classes = classes|merge(['is-ssik-account']) %}
+    {% endif %}
+
+    {% if context.customer %} 
+        {% set classes = classes|merge(['is-ssik-logged']) %}
+    {% endif %}
+
+    {% if ssik.config.isShowNewsletterBlock == 1 %} 
+        {% set classes = classes|merge(['is-newsletter-show']) %}
+    {% endif %}
+
+    {% if ssik.config.isBrandShow == 1 %}
+        {% set classes = classes|merge(['is-brand']) %}
+    {% endif %}
+
+    {% if ssik.config.isDescriptionShow == 1 %}
+        {% set classes = classes|merge(['is-description']) %}
+    {% endif %}
+
+    {% if ssik.config.isCharacteristicsShow == 1 %}
+        {% set classes = classes|merge(['is-characteristics']) %}
+    {% endif %}
+
+    {% if ssik.config.isPriceUnitShow == 1 %}
+        {% set classes = classes|merge(['is-price-unit']) %}
+    {% endif %}
+
+    {% if ssik.config.isPriceCheapestShow == 1 %}
+        {% set classes = classes|merge(['is-price-cheapest']) %}
+    {% endif %}
+
+    {% if ssik.config.ssikCartLayout is same as('metro') %}
+        {% set classes = classes|merge(['is-ssik-cart-layout']) %}
+    {% endif %}
+
+    {% if ssik.config.productImageObjectFit  %}
+        {% set classes = classes|merge([ssik.config.productImageObjectFit]) %}
+    {% endif %}
+
+    {% if ssik.config.productImageObjectPostion  %}
+        {% set classes = classes|merge([ssik.config.productImageObjectPostion]) %}
+    {% endif %}
+
+    {% for value in classes %}{% if value != '' %} {{ value }}{% endif %}{% endfor %}
+{% endapply %}
+{% endblock %}

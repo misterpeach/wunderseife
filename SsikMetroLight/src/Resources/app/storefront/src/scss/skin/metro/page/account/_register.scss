@@ -1,0 +1,172 @@
+.account-register {
+    & > .row {
+        justify-content: center;
+        & > div {
+            @include media-breakpoint-up(xl) {
+                flex: 0 0 50%;
+                max-width: 50%;
+                &:first-of-type {
+                    flex: 0 0 33.3333333333%;
+                    max-width: 33.3333333333%;
+                }
+            }
+        }
+    }
+
+    .card {
+        border: 1px solid var(--ssik-metro-input-border);
+        padding: 4rem;
+        .card-title {
+            padding: 0;
+            color: var(--ssik-metro-base-headline-color);
+            @include font-size(var(--ssik-metro-base-headline-font-size));
+            text-transform: uppercase;
+            border-bottom: 0;
+        }
+
+        .form-label {
+            @include font-size(var(--ssik-metro-input-label-font-size));
+        }
+    }
+
+    .login-card {
+        .login-form {
+            padding: 2rem 0;
+            .form-row > .form-group {
+                flex: 1 0 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .login-form-description {
+                display: none;
+            }
+
+            .login-password-recover {
+                @include font-size(var(--ssik-metro-base-font-size));
+                font-weight: 600;
+                a {
+                    border-bottom: 1px solid var(--ssik-metro-base-link-color);
+                    padding-bottom: 2px;
+                    &:hover {
+                        border-color: var(--ssik-metro-base-link-hover-color);    
+                    }
+                }
+            }
+
+            .login-submit {
+                margin-top: 2rem;
+                text-align: center;
+            }
+        }
+    }
+    .register-card {
+        .register-form {
+            padding: 2rem 0;
+        }
+
+        .register-address {
+            .register-billing, .register-shipping {
+                .card-title {
+                    padding: 0;
+                    background: none;
+                    font-weight: normal;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .register-different-shipping {
+                .custom-control-label {
+                    @include font-size(var(--ssik-metro-base-font-size));
+                    font-weight: 600;
+
+                    &::after, &::before {
+                        top:1px;
+                    }
+                    &::before {
+                        border-color: var(--ssik-metro-base-link-color);
+                    }
+                }
+            }
+        }
+
+        .basic-captcha {
+            justify-content: center;
+            &-content-code {
+                margin-bottom: 0;
+            }
+        }
+
+        .privacy-notice {
+            text-align: center;
+            padding: 2rem 4rem;
+            border: 1px solid var(--ssik-metro-input-border);
+            font-size: 90%;
+            color:var(--ssik-metro-base-color);
+        }
+
+        .register-required-info {
+            @include font-size(var(--ssik-metro-base-font-size));
+            font-weight: 600;
+            text-align: right;
+        }
+
+        .register-submit {
+            margin-top: 2rem;
+            text-align: center;
+
+        }
+    }
+
+    .login-advantages {
+        display: none;
+    }
+
+    &-hero {
+        text-align: center;
+        padding: 2rem 4rem;
+        color: var(--ssik-metro-base-color);
+        @include font-size(var(--ssik-metro-base-headline-font-size));
+        margin-bottom: 50px;
+        text-transform: uppercase;
+        margin-top: 30px;
+        letter-spacing: 1px;
+    }
+}
+
+.account-recover-password {
+    & > div {
+        @include media-breakpoint-up(xl) {
+            flex: 0 0 33.3333333333%;
+            max-width: 33.3333333333%;
+        }
+    }
+
+    .account-recover-password-form {
+        .card-title {
+            padding: 2rem 2.5rem;
+            color: var(--ssik-metro-base-headline-color);
+            @include font-size(var(--ssik-metro-base-headline-font-size));
+            text-transform: uppercase;
+            border-bottom: 0;
+        }
+
+        .card-body {
+            padding: 2rem 2.5rem;
+        }
+
+        .form-label {
+            @include font-size(var(--ssik-metro-input-label-font-size));
+        }
+
+        .account-recover-password-info {
+            text-align: center;
+            padding: 2rem 4rem;
+            border: 1px solid var(--ssik-metro-input-border);
+        }
+
+        .account-recover-password-form-actions {
+            text-align: center;
+        }
+    }
+}

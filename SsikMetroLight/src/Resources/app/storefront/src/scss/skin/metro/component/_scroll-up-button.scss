@@ -1,0 +1,30 @@
+.scroll-up-button {
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        border:0;
+        padding: 0;
+        box-shadow: unset !important;
+        background: var(--ssik-metro-base-btn-primary-hover-bg);
+        .icon {
+            width: 1.6rem;
+            height: 1.6rem;
+            color: var(--ssik-metro-base-btn-primary-hover-color);
+            transition: all .3s ease;
+            & > svg {
+                position: unset;
+            }
+        }
+        &:hover, &:focus, &:active {
+            background: var(--ssik-metro-base-btn-primary-hover-bg) !important;
+            .icon {
+                color: var(--ssik-metro-base-btn-primary-hover-color);
+                width: 2.4rem;
+                height: 2.4rem;
+            }
+        }
+    }
+}

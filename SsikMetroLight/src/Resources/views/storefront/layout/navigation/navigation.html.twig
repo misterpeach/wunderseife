@@ -1,0 +1,24 @@
+{% sw_extends '@Storefront/storefront/layout/navigation/navigation.html.twig' %}
+
+{% block layout_main_navigation_menu_flyout_wrapper %}
+    {% if ssik.config.dropdown == 'metro' %}
+        <div class="ssik-main-menu-dropdowns" data-ssik-main-dropdowns="true">
+            {% for treeItem in page.header.navigation.tree %}
+                {% if treeItem.children|length > 0 %}
+                    {% sw_include '@Storefront/storefront/ssik/navigation/dropdown.html.twig' with {
+                        navigationTree: treeItem.children,
+                        uid: treeItem.category.id
+                    } only %}
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% else %}
+        {{parent()}}
+    {% endif %}
+{% endblock %}
+
+{% block layout_main_navigation_menu_item %}
+    <div data-ssik-menu-id="{{ category.id }}">
+        {{parent()}}
+    </div>
+{% endblock %}

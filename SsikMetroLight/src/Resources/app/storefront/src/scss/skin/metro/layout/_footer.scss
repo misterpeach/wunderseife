@@ -1,0 +1,253 @@
+.footerlink {
+    color: var(--ssik-metro-footer-link-color);
+    display: inline-block;
+    line-height: 1.6;
+    &:hover {
+        color: var(--ssik-metro-footer-link-hover-color);
+    }
+}
+
+.footer-main-column-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    .footer-columns {
+        width: 100%;
+    }
+}
+
+.footer-logo-main-link {
+    display: block;
+    margin: 2rem 0;
+    @include media-breakpoint-up(sm) {
+        margin: 4rem 0 2rem 0;
+    }
+}
+
+.footer-logo-main-img {
+    height: $ssik-footer-logo-height;
+}
+
+.footer-main {
+    border: 0;
+    background: var(--ssik-metro-footer-bg);
+    color: var(--ssik-metro-footer-color);    
+    @include font-size(var(--ssik-metro-footer-font-size));
+
+    .footer-columns {
+        .footer-column {
+            .is-newsletter-show & {
+                @include media-breakpoint-up(md) {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+                @include media-breakpoint-up(lg) {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
+            }
+            
+        }
+    }
+}
+
+.footer-column {
+    border: 0;
+}
+
+.footer-column-headline {
+    @include font-size(var(--ssik-metro-footer-headline-font-size));
+    color: var(--ssik-metro-footer-headline-color);
+    //text-transform: uppercase;
+    align-items: center;
+    a {
+        color: var(--ssik-metro-footer-headline-color);
+        line-height: 1;
+    }
+    .icon {
+        color: var(--ssik-metro-footer-headline-color);
+    }
+
+    @include media-breakpoint-down(sm){
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--ssik-metro-footer-line);
+    }
+}
+
+.footer-contact-hotline {
+    a {
+        //@include font-size(16px);
+        @extend .footerlink;
+    }
+}
+
+.footer-column-content {
+    padding-bottom: 1rem;
+}
+
+.footer-link-item {
+    @include media-breakpoint-up(md){
+        padding: .5rem 0;
+    }
+
+    .footer-link {
+        @extend .footerlink;
+    }
+}
+
+.footer-contact-form, .footer-vat {
+    a {
+        @extend .footerlink;
+    }
+}
+
+.is-footer-logo {
+    .footer-column:first-child .footer-headline {
+        display: none;
+    }
+}
+
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    &-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: .5rem;
+        &-icon {
+            width: 2rem;
+            text-align: center;
+        }
+    }
+    a {
+        @extend .footerlink;
+    }
+
+    @include media-breakpoint-down(sm){
+        margin-top: 1rem;
+        
+    }
+}
+
+.footer-pre-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    margin: 2rem 0;
+
+    & > div {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            width: 33.3333%;
+        }
+    }
+    .footer-logos {
+        width: auto;
+        padding: 0;
+        gap: 1rem;
+
+        @include media-breakpoint-up(md) {
+            margin-left: auto;
+        }
+
+        .footer-logo {
+            padding: 0;
+            margin: 0;
+            img {
+                border: 0;
+                border-radius: .4rem;
+            }
+        }
+    }
+}
+
+.footer-bottom-wrapper {
+    background: var(--ssik-metro-footer-bg);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: 0 2rem;
+
+    .footer-minimal & {
+        padding: 0;
+        margin: 0;
+    }
+
+    @media (min-width:1420px) {
+        margin: 0;
+    }
+        
+    
+
+    .footer-bottom {
+        display: grid;
+        width: 100%;
+        padding: 2rem 0 0 0;
+        background: transparent;
+        border-top: 1px solid var(--ssik-metro-footer-line);
+        color: var(--ssik-metro-footer-color);
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "service"
+            "vat"
+            "copy";
+    
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: 2fr 1fr;
+            grid-template-areas: 
+                "service copy"
+                "vat copy";
+        }
+    
+        @include media-breakpoint-up(xl) {
+            max-width: 1360px;
+        }
+
+    
+        & > .container {
+            grid-area: service;
+            max-width: unset;
+            width: unset;
+            margin-left: 0;
+        }     
+        
+        .footer-vat {
+            grid-area: vat;
+            text-align: left;
+        }
+    
+        .footer-copyright {
+            grid-area: copy;
+            align-self: center;
+            justify-self: flex-start;
+            .icon {
+                display: none;
+            }
+    
+            @include media-breakpoint-up(lg) {
+                justify-self: flex-end;
+            }
+
+            a {
+                @extend .footerlink;
+            }
+        }
+    
+        .footer-service-menu-list {
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .footer-minimal & { 
+            padding: 1rem;
+        }
+    }
+}
+

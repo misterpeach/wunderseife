@@ -1,0 +1,32 @@
+.form-control,
+.form-select {
+    @include font-size(var(--ssik-metro-input-font-size));
+    color: var(--ssik-metro-input-color);
+    background: var(--ssik-metro-input-bg);
+    border: 1px solid var(--ssik-metro-input-border);
+    &:hover, &:focus {
+        color: var(--ssik-metro-input-hover-color);
+        background: var(--ssik-metro-input-hover-bg);
+        border-color: var(--ssik-metro-input-hover-border);
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+.form-select {
+    border-radius: 0;
+    background-image: linear-gradient(45deg, transparent 50%, var(--ssik-metro-input-color) 50%), linear-gradient(135deg, var(--ssik-metro-input-color) 50%, transparent 50%), radial-gradient(var(--ssik-metro-input-bg) 70%, transparent 72%);
+
+    background-position: calc(100% - 20px) calc(1em + 4px), calc(100% - 15px) calc(1em + 4px), calc(100% - .5em) .5em;
+    background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+    background-repeat: no-repeat;
+    
+
+    &:hover, &:focus {
+        background-image: linear-gradient(45deg, transparent 50%, var(--ssik-metro-input-hover-color) 50%), linear-gradient(135deg, var(--ssik-metro-input-hover-color) 50%, transparent 50%), radial-gradient(var(--ssik-metro-input-hover-bg) 70%, transparent 72%);
+        background-position: calc(100% - 20px) calc(1em + 4px), calc(100% - 15px) calc(1em + 4px), calc(100% - .5em) .5em;
+        background-size: 5px 5px, 5px 5px, 1.5em 1.5em;
+        background-repeat: no-repeat;
+        
+    }
+}

@@ -1,0 +1,32 @@
+{% sw_extends '@Storefront/storefront/layout/header/top-bar.html.twig' %}
+
+{% set buttonContactText = 'ssik.topbar.contact.buttonContactText' %}
+
+{% block layout_header_top_bar %}
+    <div class="ssik-top-bar {% if ssik.config.announcementbanner == 1 %}with-ads-banner{% endif %}">
+        <div class="ssik-top-bar-info dropdown">
+            {% if ssik.config.contactHeader == 1 %}
+                <button 
+                    class="btn dropdown-toggle top-bar-nav-btn"
+                    type="button"
+                    id="ssikDropdownTopContactHelp"
+                    data-bs-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false">
+                        <span class="top-bar-nav-text">{{ buttonContactText|trans|sw_sanitize }}</span>
+                        {% sw_icon 'icon-arrow' style { 'pack':'custom', 'namespace': 'SsikMetroLight', 'class':'ssik xxs' } %}
+                </button>
+                <div class="dropdown-menu dropdown-menu-left"
+                    aria-labelledby="ssikDropdownTopContactHelp">
+                    {% sw_include '@Storefront/storefront/ssik/footer-contact.html.twig' %}
+                </div>  
+            {% endif %}
+        </div>
+        {% if ssik.config.announcementbanner == 1 %}
+            <div class="ssik-top-bar-info is-ads-banner">
+                {{ "ssik.announcementbanner.text"|trans|sw_sanitize }}
+            </div>
+        {% endif %}
+        {{parent()}}
+    </div>
+{% endblock %}

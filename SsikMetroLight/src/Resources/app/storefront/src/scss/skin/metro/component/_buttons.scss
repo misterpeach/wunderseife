@@ -1,0 +1,94 @@
+.btn.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: var(--ssik-metro-btn-color);
+    border-color: var(--ssik-metro-btn-bg);
+    background: var(--ssik-metro-btn-bg);
+    @include font-size(var(--ssik-metro-btn-font-size));
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):focus,
+    &:hover, &:active, &:focus {
+        color: var(--ssik-metro-btn-hover-color);
+        border-color: var(--ssik-metro-btn-hover-bg);
+        background: var(--ssik-metro-btn-hover-bg);
+        box-shadow: none;
+    }
+}
+
+.btn.btn-primary {
+    padding: 12px 20px;
+    line-height: 1;
+    border-radius: 1rem;
+
+    color: var(--ssik-metro-base-btn-primary-color);
+    border-color: var(--ssik-metro-base-btn-primary-border);
+    background: var(--ssik-metro-base-btn-primary-bg);
+    @include font-size(var(--ssik-metro-base-btn-primary-font-size));
+
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):focus,
+    &:hover, &:active, &:focus {
+        color: var(--ssik-metro-base-btn-primary-hover-color);
+        border-color: var(--ssik-metro-base-btn-primary-hover-border);
+        background: var(--ssik-metro-base-btn-primary-hover-bg);
+        box-shadow: none;
+    }
+}
+
+.btn-link {
+    color: var(--ssik-metro-base-link-color);
+    &:hover {
+        color: var(--ssik-metro-base-link-hover-color);
+    }
+
+    .icon {
+        & > svg {
+            top: 0;
+        }
+    }
+}
+.btn.header-minimal-back-to-shop-button,
+.btn.btn-outline-primary {
+    color: var(--ssik-metro-base-link-color);
+    border-color: var(--ssik-metro-base-link-color);
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):focus,
+    &:hover, &:active, &:focus {
+        color: var(--ssik-metro-base-btn-primary-hover-color);
+        border-color: var(--ssik-metro-base-btn-primary-hover-border);
+        background: var(--ssik-metro-base-btn-primary-hover-bg);
+        box-shadow: none;
+    }
+}
+
+.cart-shipping-costs-btn {
+    display: block;
+    align-items: center;
+    .icon > svg {
+        position: unset;
+    }
+}
+
+.btn.filter-panel-wrapper-toggle {
+    .icon {
+        color: var(--ssik-metro-btn-color);
+    }
+    line-height: 3.4rem;
+}
+
+.image-zoom-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.btn-secondary {
+    align-items: center;
+    .icon > svg {
+        position: unset;
+    }
+}

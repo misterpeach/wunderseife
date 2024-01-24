@@ -1,0 +1,8 @@
+{% sw_extends '@Storefront/storefront/page/account/register/index.html.twig' %}
+
+{% block page_account_register_inner %}
+    <div class="account-register-hero">
+        {{ "ssik.account.join"|trans|sw_sanitize }}
+    </div>
+    {{parent()}}
+{% endblock %}

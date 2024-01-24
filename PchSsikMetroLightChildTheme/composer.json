@@ -1,0 +1,32 @@
+{
+  "name": "pchssikmetrolight/child-theme",
+  "description": "Child-Theme",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "misterpeach."
+    }
+  ],
+  "require": {
+    "shopware/core": "*",
+    "ssik/metro-light-theme": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PchSsikMetroLightChildTheme\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "PchSsikMetroLightChildTheme\\PchSsikMetroLightChildTheme",
+    "label": {
+      "de-DE": "Theme PchSsikMetroLightChildTheme plugin",
+      "en-GB": "Theme PchSsikMetroLightChildTheme plugin"
+    },
+    "description": {
+      "de-DE": "Child-Theme Plugin fuer installiertes Theme",
+      "de-DE": "Child-Theme Plugin for pre-installed Theme"
+    }
+  }
+}

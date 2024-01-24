@@ -1,0 +1,98 @@
+//global .dropdown-menu 
+.dropdown-menu {
+    color: var(--ssik-metro-base-color);
+    background: var(--ssik-metro-base-bg);
+    border-color: var(--ssik-metro-base-border);
+    @include font-size(var(--ssik-metro-base-font-size));
+    min-width: 20rem;
+}
+
+.dropdown-menu {
+    &-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        z-index: 3000;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+        min-width: 22rem;
+        padding: 1rem 0;
+        background: var(--ssik-metro-main-dropdown-bg);
+        list-style: none;
+        animation-duration: .4s;
+        animation-fill-mode: both;
+    }
+    &-item {
+        position: relative;
+    }
+
+    &-item &-list {
+        top:0;
+        left: 100%;
+    }
+    &-item:hover > &-list {
+        display: block;
+    }
+
+    &-link {
+        position: relative;
+        display: block;
+        padding: .25rem 1.5rem;
+        font-weight: var(--ssik-metro-main-dropdown-font-weight);
+        text-transform: var(--ssik-metro-main-dropdown-transform);
+        color: var(--ssik-metro-main-dropdown-color);
+        @include font-size(var(--ssik-metro-main-dropdown-font-size));
+        
+        &:hover {
+            text-decoration:none;
+            color: var(--ssik-metro-main-dropdown-hover-color);
+        }
+        
+        &.is-dropdown {
+            position: relative;
+            @include is-dropdown();
+            &::before {
+                right: 1rem;
+                width: .4rem;
+                height: .4rem;
+                border-color: var(--ssik-metro-main-dropdown-color);
+                transform: rotate(-45deg) translateY(calc(-1 * ( 50% - 2px )));
+            }
+            &:hover {
+                &::before {
+                    border-color: var(--ssik-metro-main-dropdown-hover-color);
+                }
+            }
+        }
+    }
+    
+
+    &-item:hover > &-link {
+        color: var(--ssik-metro-main-dropdown-hover-color);
+    }
+}
+
+@keyframes ssikFadeOutDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes ssikfadeOutUp {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+}

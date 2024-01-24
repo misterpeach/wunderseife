@@ -1,0 +1,69 @@
+.newsletter-form {
+    &-body {
+        position: relative;
+        display: flex;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        &-input {
+            width: 100%;
+        }
+        &-button {
+            position: absolute;
+            right: 3px;
+            top: 3px;
+        }
+    }
+    &-input.form-control, 
+    &-input.form-control:focus, 
+    &-input.form-control:active {
+        border-color: var(--ssik-metro-newsletter-input-border);
+        background: var(--ssik-metro-newsletter-input-bg);
+        color:  var(--ssik-metro-newsletter-input-color);
+        @include font-size(var(--ssik-metro-newsletter-input-font-size));
+        height: 55px;
+        border-radius: .5rem;
+    }
+    
+    &-captcha {
+        padding: 0 .5rem;
+        margin-bottom: .5rem;
+        label.form-label {
+            font-size: 1.1rem;
+        }
+        .basic-captcha-content-code {
+            max-width: unset;
+            margin-bottom: 0;
+        }
+        .basic-captcha-content-refresh-icon {
+            border: none;
+        }
+    }
+
+    .confirm-alert {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+
+    .input-group-prepend {
+        margin-right: 0;
+    }
+
+    .form-text {
+        color: var(--ssik-metro-footer-color);    
+        @include font-size(var(--ssik-metro-footer-font-size));
+    }
+}
+
+.btn.newsletter-form-submit {
+    @include font-size(var(--ssik-metro-newsletter-submit-font-size));
+    border-radius: .5rem;
+    font-weight: normal;
+    padding: 0;
+    width: 53px;
+    height: 49px;
+    text-transform: uppercase;
+    border-color: var(--ssik-metro-newsletter-submit-bg);
+    background: var(--ssik-metro-newsletter-submit-bg);
+    color: var(--ssik-metro-newsletter-submit-color);
+}

@@ -1,0 +1,283 @@
+:root {
+    //BASE
+    --ssik-metro-base-bg:                   #{$ssik-metro-base-bg};
+    --ssik-metro-base-font-size:            #{$ssik-metro-base-font-size};
+    --ssik-metro-base-color:                #{$ssik-metro-base-color};
+    --ssik-metro-base-border:               #{$ssik-metro-base-border};
+    --ssik-metro-base-headline-color:       #{$ssik-metro-base-headline-color};
+    --ssik-metro-base-headline-font-size:   #{$ssik-metro-base-headline-font-size};
+    --ssik-metro-base-logo-container-width: #{$ssik-metro-base-logo-container-width};
+    --ssik-metro-base-overlay-bg:           #{$ssik-metro-base-overlay-bg};
+    //link
+    --ssik-metro-base-link-color:           #{$ssik-metro-base-link-color};
+    --ssik-metro-base-link-hover-color:     #{$ssik-metro-base-link-hover-color};
+    //Forms
+    --ssik-metro-input-bg:                     #{$ssik-metro-input-bg};
+    --ssik-metro-input-color:                  #{$ssik-metro-input-color};
+    --ssik-metro-input-font-size:              #{$ssik-metro-input-font-size};
+    --ssik-metro-input-label-color:            #{$ssik-metro-input-label-color};
+    --ssik-metro-input-label-font-size:        #{$ssik-metro-input-label-font-size};
+    --ssik-metro-input-border:                 #{$ssik-metro-input-border};
+    --ssik-metro-input-hover-bg:               #{$ssik-metro-input-hover-bg};
+    --ssik-metro-input-hover-color:            #{$ssik-metro-input-hover-color};
+    --ssik-metro-input-hover-border:           #{$ssik-metro-input-hover-border};
+    //btm
+    --ssik-metro-btn-bg:                       #{$ssik-metro-btn-bg};
+    --ssik-metro-btn-color:                    #{$ssik-metro-btn-color};
+    --ssik-metro-btn-hover-bg:                 #{$ssik-metro-btn-hover-bg};
+    --ssik-metro-btn-hover-color:              #{$ssik-metro-btn-hover-color};
+    --ssik-metro-btn-font-size:                #{$ssik-metro-btn-font-size};
+    //primary
+    --ssik-metro-base-btn-primary-bg:           #{$ssik-metro-base-btn-primary-bg};
+    --ssik-metro-base-btn-primary-color:        #{$ssik-metro-base-btn-primary-color};
+    --ssik-metro-base-btn-primary-font-size:    #{$ssik-metro-base-btn-primary-font-size};
+    --ssik-metro-base-btn-primary-border:       #{$ssik-metro-base-btn-primary-border};
+    --ssik-metro-base-btn-primary-hover-bg:     #{$ssik-metro-base-btn-primary-hover-bg};
+    --ssik-metro-base-btn-primary-hover-color:  #{$ssik-metro-base-btn-primary-hover-color};
+    --ssik-metro-base-btn-primary-hover-border:  #{$ssik-metro-base-btn-primary-hover-border};
+    //ads
+    --ssik-metro-ads-bg:        #{$ssik-metro-ads-bg};
+    --ssik-metro-ads-color:     #{$ssik-metro-ads-color};
+    --ssik-metro-ads-font-size: #{$ssik-metro-ads-font-size};
+    //topbar
+    --ssik-metro-topbar-bg:         #{$ssik-metro-topbar-bg};
+    --ssik-metro-topbar-color:      #{$ssik-metro-topbar-color};
+    --ssik-metro-topbar-font-size:  #{$ssik-metro-topbar-font-size};
+    //topbar btn
+    --ssik-metro-topbar-btn-bg:             #{$ssik-metro-topbar-btn-bg};
+    --ssik-metro-topbar-btn-color:          #{$ssik-metro-topbar-btn-color};
+    --ssik-metro-topbar-btn-font-size:      #{$ssik-metro-topbar-btn-font-size};
+    --ssik-metro-topbar-btn-hover-bg:       #{$ssik-metro-topbar-btn-hover-bg};
+    --ssik-metro-topbar-btn-hover-color:    #{$ssik-metro-topbar-btn-hover-color};
+    // HEADER
+    --ssik-metro-header-bg: #{$ssik-metro-header-bg};
+    --ssik-metro-header-color: #{$ssik-metro-header-color};
+    //actions buttons
+    --ssik-metro-actions-btn-color:         #{$ssik-metro-actions-btn-color};
+    --ssik-metro-actions-btn-hover-color:   #{$ssik-metro-actions-btn-hover-color};
+    // actions badges
+    --ssik-metro-action-badge-bg:         #{$ssik-metro-action-badge-bg};
+    --ssik-metro-action-badge-color:      #{$ssik-metro-action-badge-color};
+    //usp header
+    --ssik-metro-uspbar-bg:                 #{$ssik-metro-uspbar-bg};
+    --ssik-metro-uspbar-icon-color:         #{$ssik-metro-uspbar-icon-color};
+    --ssik-metro-uspbar-icon-font-size:     #{$ssik-metro-uspbar-icon-font-size};
+    --ssik-metro-uspbar-text-color:         #{$ssik-metro-uspbar-text-color};
+    --ssik-metro-uspbar-text-font-size:     #{$ssik-metro-uspbar-text-font-size};
+    //main-nav
+    --ssik-metro-main-navigation-bg:            #{$ssik-metro-main-navigation-bg};
+    --ssik-metro-main-navigation-color:         #{$ssik-metro-main-navigation-color};
+    --ssik-metro-main-navigation-align:         #{$ssik-metro-main-navigation-align};
+    --ssik-metro-main-navigation-transform:     #{$ssik-metro-main-navigation-transform};
+    --ssik-metro-main-navigation-font-size:     #{$ssik-metro-main-navigation-font-size};
+    --ssik-metro-main-navigation-font-weight:   #{$ssik-metro-main-navigation-font-weight};
+    --ssik-metro-main-navigation-hover-color:   #{$ssik-metro-main-navigation-hover-color};
+    --ssik-metro-main-navigation-hover-bg:      #{$ssik-metro-main-navigation-hover-bg};
+    //Sticky Nav
+    --ssik-metro-sticky-navigation-bg:           #{$ssik-metro-sticky-navigation-bg};                  //#F5F5FB;
+    --ssik-metro-sticky-navigation-color:        #{$ssik-metro-sticky-navigation-color};                  //#F5F5FB;
+    --ssik-metro-sticky-navigation-hover-bg:     #{$ssik-metro-sticky-navigation-hover-bg};                  //#F5F5FB;
+    --ssik-metro-sticky-navigation-hover-color:  #{$ssik-metro-sticky-navigation-hover-color};                  //#F5F5FB;
+    --ssik-metro-sticky-navigation-z:            #{$ssik-metro-sticky-navigation-z};
+    //Main dropdowm
+    --ssik-metro-main-dropdown-bg:            #{$ssik-metro-main-dropdown-bg};
+    --ssik-metro-main-dropdown-color:         #{$ssik-metro-main-dropdown-color};
+    --ssik-metro-main-dropdown-font-size:     #{$ssik-metro-main-dropdown-font-size};
+    --ssik-metro-main-dropdown-transform:     #{$ssik-metro-main-dropdown-transform};
+    --ssik-metro-main-dropdown-font-weight:   #{$ssik-metro-main-dropdown-font-weight};
+    --ssik-metro-main-dropdown-hover-color:   #{$ssik-metro-main-dropdown-hover-color};
+    //navigation-flyout
+    --ssik-metro-navigation-flyout-bg:                       #{$ssik-metro-navigation-flyout-bg};                        //#FFFFFF};
+    --ssik-metro-navigation-flyout-link-color:               #{$ssik-metro-navigation-flyout-link-color};                //#414A98};
+    --ssik-metro-navigation-flyout-link-hover-color:         #{$ssik-metro-navigation-flyout-link-hover-color};          //#FF7B8C};
+    --ssik-metro-navigation-flyout-link-font-size:           #{$ssik-metro-navigation-flyout-link-font-size};            //14px};
+    --ssik-metro-navigation-flyout-category-link-font-size:  #{$ssik-metro-navigation-flyout-category-link-font-size};   //16px;
+    //navigation-offcanvas
+    --ssik-metro-nav-off-color:                     #{$ssik-metro-nav-off-color};
+    --ssik-metro-nav-off-link-color:                #{$ssik-metro-nav-off-link-color};
+    --ssik-metro-nav-off-link-hover-color:          #{$ssik-metro-nav-off-link-hover-color};
+    --ssik-metro-nav-off-link-font-size:            #{$ssik-metro-nav-off-link-font-size};
+    --ssik-metro-nav-off-link-border:               #{$ssik-metro-nav-off-link-border};
+    // Header Search Form
+    --ssik-metro-search-input-bg:           #{$ssik-metro-search-input-bg};
+    --ssik-metro-search-input-color:        #{$ssik-metro-search-input-color};
+    --ssik-metro-search-input-font-size:    #{$ssik-metro-search-input-font-size};
+    --ssik-metro-search-input-border:       #{$ssik-metro-search-input-border};
+    --ssik-metro-search-icon-color:         #{$ssik-metro-search-icon-color};
+    --ssik-metro-search-icon-hover-color:   #{$ssik-metro-search-icon-hover-color};
+    //listing
+    --ssik-metro-listing-headline-color:        #{$ssik-metro-listing-headline-color};
+    --ssik-metro-listing-headline-font-size:    #{$ssik-metro-listing-headline-font-size};
+    //sidebar
+    --ssik-metro-sidebar-headline-color:        #{$ssik-metro-sidebar-headline-color};
+    --ssik-metro-sidebar-headline-font-size:    #{$ssik-metro-sidebar-headline-font-size};
+    --ssik-metro-sidebar-catalog-link-color:         #{$ssik-metro-sidebar-catalog-link-color};
+    --ssik-metro-sidebar-catalog-link-hover-color:   #{$ssik-metro-sidebar-catalog-link-hover-color};
+    --ssik-metro-sidebar-catalog-link-font-size:     #{$ssik-metro-sidebar-catalog-link-font-size};
+    //breadcrums
+    --ssik-metro-breadcrumbs-bg:                  #{$ssik-metro-breadcrumbs-bg};
+    --ssik-metro-breadcrumbs-link-font-size:      #{$ssik-metro-breadcrumbs-link-font-size};
+    --ssik-metro-breadcrumbs-link-color:          #{$ssik-metro-breadcrumbs-link-color};
+    --ssik-metro-breadcrumbs-link-hover-color:    #{$ssik-metro-breadcrumbs-link-hover-color};
+    //filter
+    --ssik-metro-filter-item-bg:                  #{$ssik-metro-filter-item-bg};
+    --ssik-metro-filter-item-color:               #{$ssik-metro-filter-item-color};
+    --ssik-metro-filter-item-hover-bg:            #{$ssik-metro-filter-item-hover-bg};
+    --ssik-metro-filter-item-hover-color:         #{$ssik-metro-filter-item-hover-color};
+    --ssik-metro-filter-item-font-size:           #{$ssik-metro-filter-item-font-size};
+    --ssik-metro-filter-item-border:              #{$ssik-metro-filter-item-border};
+    --ssik-metro-filter-item-hover-border:        #{$ssik-metro-filter-item-hover-border};
+    --ssik-metro-filter-select-color:             #{$ssik-metro-filter-select-color};
+    --ssik-metro-filter-select-border:            #{$ssik-metro-filter-select-border};
+    --ssik-metro-filter-select-hover-color:       #{$ssik-metro-filter-select-hover-color};
+    //Pagination
+    --ssik-metro-pagination-bg:              #{$ssik-metro-pagination-bg};         
+    --ssik-metro-pagination-color:           #{$ssik-metro-pagination-color};      
+    --ssik-metro-pagination-hover-bg:        #{$ssik-metro-pagination-hover-bg};          
+    --ssik-metro-pagination-hover-color:     #{$ssik-metro-pagination-hover-color};      
+    --ssik-metro-pagination-font-size:       #{$ssik-metro-pagination-font-size};
+    ///Product Card
+    --ssik-metro-product-box-name-color:              #{$ssik-metro-product-box-name-color};
+    --ssik-metro-product-box-name-hover-color:        #{$ssik-metro-product-box-name-hover-color};
+    --ssik-metro-product-box-name-font-size:          #{$ssik-metro-product-box-name-font-size};
+
+    --ssik-metro-product-box-brand-color:             #{$ssik-metro-product-box-brand-color};
+    --ssik-metro-product-box-brand-font-size:         #{$ssik-metro-product-box-brand-font-size};
+
+    --ssik-metro-product-box-price-color:             #{$ssik-metro-product-box-price-color};
+    --ssik-metro-product-box-discount-price-color:    #{$ssik-metro-product-box-discount-price-color};
+    --ssik-metro-product-box-price-font-size:         #{$ssik-metro-product-box-price-font-size};
+    --ssik-metro-product-box-bg:                      #{$ssik-metro-product-box-bg};
+    --ssik-metro-product-box-border:                  #{$ssik-metro-product-box-border};
+    --ssik-metro-product-box-border-radius:           #{$ssik-metro-product-box-border-radius};
+    --ssik-metro-product-box-buy-bg:                  #{$ssik-metro-product-box-buy-bg};  
+    --ssik-metro-product-box-buy-color:               #{$ssik-metro-product-box-buy-color};  
+    --ssik-metro-product-box-buy-hover-bg:            #{$ssik-metro-product-box-buy-hover-bg};  
+    --ssik-metro-product-box-buy-hover-color:         #{$ssik-metro-product-box-buy-hover-color};
+    --ssik-metro-product-box-action-bg:               #{$ssik-metro-product-box-action-bg};  
+    --ssik-metro-product-box-action-color:            #{$ssik-metro-product-box-action-color}; 
+    --ssik-metro-product-box-action-hover-bg:         #{$ssik-metro-product-box-action-hover-bg};  
+    --ssik-metro-product-box-action-hover-color:      #{$ssik-metro-product-box-action-hover-color};  
+    //Product detail
+    --ssik-metro-product-detail-name-color:           #{$ssik-metro-product-detail-name-color};
+    --ssik-metro-product-detail-name-font-size:       #{$ssik-metro-product-detail-name-font-size};
+    --ssik-metro-product-detail-price-color:          #{$ssik-metro-product-detail-price-color};
+    --ssik-metro-product-detail-price-font-size:      #{$ssik-metro-product-detail-price-font-size};
+    --ssik-metro-product-detail-old-price-color:      #{$ssik-metro-product-detail-old-price-color};
+    --ssik-metro-product-detail-new-price-color:      #{$ssik-metro-product-detail-new-price-color};
+    --ssik-metro-product-detail-info-color:           #{$ssik-metro-product-detail-info-color};
+    --ssik-metro-product-detail-info-font-size:       #{$ssik-metro-product-detail-info-font-size};
+    --ssik-metro-product-detail-buybtn-bg:            #{$ssik-metro-product-detail-buybtn-bg};
+    --ssik-metro-product-detail-buybtn-color:         #{$ssik-metro-product-detail-buybtn-color};
+    --ssik-metro-product-detail-buybtn-font-size:     #{$ssik-metro-product-detail-buybtn-font-size};
+    --ssik-metro-product-detail-buybtn-hover-bg:      #{$ssik-metro-product-detail-buybtn-hover-bg};
+    --ssik-metro-product-detail-buybtn-hover-color:   #{$ssik-metro-product-detail-buybtn-hover-color};
+    --ssik-metro-product-detail-wishlist-bg:            #{$ssik-metro-product-detail-wishlist-bg};
+    --ssik-metro-product-detail-wishlist-color:         #{$ssik-metro-product-detail-wishlist-color};
+    --ssik-metro-product-detail-wishlist-hover-bg:      #{$ssik-metro-product-detail-wishlist-hover-bg};
+    --ssik-metro-product-detail-wishlist-hover-color:   #{$ssik-metro-product-detail-wishlist-hover-color};
+    
+    //Badge
+    --ssik-metro-badge-font-size:                     #{$ssik-metro-badge-font-size};  
+    --ssik-metro-badge-new-bg:                        #{$ssik-metro-badge-new-bg};
+    --ssik-metro-badge-new-color:                     #{$ssik-metro-badge-new-color};   
+    --ssik-metro-badge-freeshipp-bg:                  #{$ssik-metro-badge-freeshipp-bg}; 
+    --ssik-metro-badge-freeshipp-color:               #{$ssik-metro-badge-freeshipp-color}; 
+    --ssik-metro-badge-topseller-bg:                  #{$ssik-metro-badge-topseller-bg};
+    --ssik-metro-badge-topseller-color:               #{$ssik-metro-badge-topseller-color};
+    --ssik-metro-badge-discount-bg:                   #{$ssik-metro-badge-discount-bg};
+    --ssik-metro-badge-discount-color:                #{$ssik-metro-badge-discount-color};
+    //counter
+    --ssik-metro-quantity-bg:                       #{$ssik-metro-quantity-bg}; 
+    --ssik-metro-quantity-font-size:                #{$ssik-metro-quantity-font-size}; 
+    --ssik-metro-quantity-border:                   #{$ssik-metro-quantity-border}; 
+    --ssik-metro-quantity-btn:                      #{$ssik-metro-quantity-btn};
+    --ssik-metro-quantity-hover-btn:                #{darken($ssik-metro-quantity-btn, 5%)};    
+    //FOOTER
+    --ssik-metro-footer-bg:                     #{$ssik-metro-footer-bg};                       //#F5F5FB;
+    --ssik-metro-footer-color:                  #{$ssik-metro-footer-color};  //#677791;
+    --ssik-metro-footer-font-size:              #{$ssik-metro-footer-font-size};    //#677791;
+    --ssik-metro-footer-link-color:             #{$ssik-metro-footer-link-color};  //#677791;
+    --ssik-metro-footer-link-hover-color:       #{$ssik-metro-footer-link-hover-color};  //#677791;
+    --ssik-metro-footer-headline-color:         #{$ssik-metro-footer-headline-color};    //#677791;
+    --ssik-metro-footer-headline-font-size:     #{$ssik-metro-footer-headline-font-size};    //#677791;
+    --ssik-metro-footer-line:                   #{$ssik-metro-footer-line};    //#677791;
+    //SOCIAL ICONS
+    --ssik-metro-social-icon-bg:                #{$ssik-metro-social-icon-bg}; //#FFFFFF;
+    --ssik-metro-social-icon-color:             #{$ssik-metro-social-icon-color}; //#677791;
+    --ssik-metro-social-icon-hover-bg:          #{$ssik-metro-social-icon-hover-bg}; //#FFFFFF;
+    --ssik-metro-social-icon-hover-color:       #{$ssik-metro-social-icon-hover-color}; //#677791;
+    //usp-footer
+    --ssik-metro-footer-uspbar-bg:                 #{$ssik-metro-footer-uspbar-bg};          //#343449    
+    --ssik-metro-footer-uspbar-icon-color:         #{$ssik-metro-footer-uspbar-icon-color};          //#FFC700    
+    --ssik-metro-footer-uspbar-icon-font-size:     #{$ssik-metro-footer-uspbar-icon-font-size};      //44px         
+    --ssik-metro-footer-uspbar-text-color:         #{$ssik-metro-footer-uspbar-text-color};          //#FFFFFF    
+    --ssik-metro-footer-uspbar-text-font-size:     #{$ssik-metro-footer-uspbar-text-font-size};      //16px         
+    --ssik-metro-footer-uspbar-desc-color:         #{$ssik-metro-footer-uspbar-desc-color};          //#FFFFFF    
+    --ssik-metro-footer-uspbar-desc-font-size:     #{$ssik-metro-footer-uspbar-desc-font-size};      //16px    
+    //newsletter
+    --ssik-metro-newsletter-input-bg:             #{$ssik-metro-newsletter-input-bg};           
+    --ssik-metro-newsletter-input-border:         #{$ssik-metro-newsletter-input-border};       
+    --ssik-metro-newsletter-input-color:          #{$ssik-metro-newsletter-input-color};        
+    --ssik-metro-newsletter-input-font-size:      #{$ssik-metro-newsletter-input-font-size};    
+    --ssik-metro-newsletter-submit-bg:            #{$ssik-metro-newsletter-submit-bg};          
+    --ssik-metro-newsletter-submit-color:         #{$ssik-metro-newsletter-submit-color};       
+    --ssik-metro-newsletter-submit-font-size:     #{$ssik-metro-newsletter-submit-font-size};   
+    //cookie-permission-container
+    --ssik-metro-cookie-bg:                #{$ssik-metro-cookie-bg};
+    --ssik-metro-cookie-color:             #{$ssik-metro-cookie-color};
+    --ssik-metro-cookie-link-color:        #{$ssik-metro-cookie-link-color};
+    --ssik-metro-cookie-btn-bg:            #{$ssik-metro-cookie-btn-bg};
+    --ssik-metro-cookie-btn-color:         #{$ssik-metro-cookie-btn-color};    
+    //Slider
+    --ssik-metro-slider-nav-bg:            #{$ssik-metro-slider-nav-bg};
+    --ssik-metro-slider-nav-hover-bg:      #{$ssik-metro-slider-nav-hover-bg};
+    --ssik-metro-slider-nav-color:         #{$ssik-metro-slider-nav-color};
+    --ssik-metro-slider-nav-hover-color:   #{$ssik-metro-slider-nav-hover-color};
+    --ssik-metro-slider-dots-bg:           #{$ssik-metro-slider-dots-bg};
+    --ssik-metro-slider-dots-hover-bg:     #{$ssik-metro-slider-dots-hover-bg};
+    --ssik-metro-slider-detail-active-border:  #{$ssik-metro-slider-detail-active-border};
+    //cartoffcanvas
+    --ssik-metro-cart-offcanvas-bg:                         #{$ssik-metro-cart-offcanvas-bg};
+    --ssik-metro-cart-offcanvas-color:                      #{$ssik-metro-cart-offcanvas-color};
+    --ssik-metro-cart-offcanvas-border:                     #{$ssik-metro-cart-offcanvas-border};
+    --ssik-metro-cart-offcanvas-closebtn-bg:                #{$ssik-metro-cart-offcanvas-closebtn-bg};
+    --ssik-metro-cart-offcanvas-closebtn-color:             #{$ssik-metro-cart-offcanvas-closebtn-color};
+    --ssik-metro-cart-offcanvas-closebtn-hover-bg:          #{$ssik-metro-cart-offcanvas-closebtn-hover-bg};
+    --ssik-metro-cart-offcanvas-closebtn-hover-color:       #{$ssik-metro-cart-offcanvas-closebtn-hover-color};
+    --ssik-metro-cart-offcanvas-closebtn-font-size:         #{$ssik-metro-cart-offcanvas-closebtn-font-size};
+    --ssik-metro-cart-offcanvas-headline-color:             #{$ssik-metro-cart-offcanvas-headline-color};
+    --ssik-metro-cart-offcanvas-headline-font-size:         #{$ssik-metro-cart-offcanvas-headline-font-size};
+    --ssik-metro-cart-offcanvas-promoinput-bg:              #{$ssik-metro-cart-offcanvas-promoinput-bg};
+    --ssik-metro-cart-offcanvas-promoinput-color:           #{$ssik-metro-cart-offcanvas-promoinput-color};
+    --ssik-metro-cart-offcanvas-promoinput-border:          #{$ssik-metro-cart-offcanvas-promoinput-border};
+    --ssik-metro-cart-offcanvas-promotionbtn-bg:            #{$ssik-metro-cart-offcanvas-promotionbtn-bg};
+    --ssik-metro-cart-offcanvas-promotionbtn-color:         #{$ssik-metro-cart-offcanvas-promotionbtn-color};
+    --ssik-metro-cart-offcanvas-promotionbtn-hover-bg:      #{$ssik-metro-cart-offcanvas-promotionbtn-hover-bg};
+    --ssik-metro-cart-offcanvas-promotionbtn-hover-color:   #{$ssik-metro-cart-offcanvas-promotionbtn-hover-color};
+    --ssik-metro-cart-offcanvas-promotionbtn-font-size:     #{$ssik-metro-cart-offcanvas-promotionbtn-font-size};
+    --ssik-metro-cart-offcanvas-checkoutbtn-bg:             #{$ssik-metro-cart-offcanvas-checkoutbtn-bg};
+    --ssik-metro-cart-offcanvas-checkoutbtn-color:          #{$ssik-metro-cart-offcanvas-checkoutbtn-color};
+    --ssik-metro-cart-offcanvas-checkoutbtn-hover-bg:       #{$ssik-metro-cart-offcanvas-checkoutbtn-hover-bg};
+    --ssik-metro-cart-offcanvas-checkoutbtn-hover-color:    #{$ssik-metro-cart-offcanvas-checkoutbtn-hover-color};
+    --ssik-metro-cart-offcanvas-checkoutbtn-font-size:      #{$ssik-metro-cart-offcanvas-checkoutbtn-font-size};
+    --ssik-metro-cart-offcanvas-basketbtn-bg:               #{$ssik-metro-cart-offcanvas-basketbtn-bg};
+    --ssik-metro-cart-offcanvas-basketbtn-color:            #{$ssik-metro-cart-offcanvas-basketbtn-color};
+    --ssik-metro-cart-offcanvas-basketbtn-hover-bg:         #{$ssik-metro-cart-offcanvas-basketbtn-hover-bg};
+    --ssik-metro-cart-offcanvas-basketbtn-hover-color:      #{$ssik-metro-cart-offcanvas-basketbtn-hover-color};
+    --ssik-metro-cart-offcanvas-basketbtn-font-size:        #{$ssik-metro-cart-offcanvas-basketbtn-font-size};
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+$ssik-is-loading-color: var(--ssik-metro-base-link-hover-color);

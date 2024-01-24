@@ -1,0 +1,54 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+
+{% set ssik = { 'version': 'v3.12.0' } %}
+{% set ssik = ssik|merge({ 'theme': 'SsikMetroLight' }) %}
+
+{% set config = {} %}       
+{% for key, value in config( ssik.theme ~ '.config') %}
+    {% set config = config|merge({(key):value}) %}
+{% endfor %}
+
+{% set ssik = ssik|merge({config}) %}
+
+{% block base_body_classes %}{{parent()}} ssik-base {{ssik.version}} {% sw_include '@Storefront/storefront/base-classes.html.twig' %}{% endblock %}
+
+{% block base_body_inner %}
+    {% if ssik.config.ssikGTMBody is not empty %}
+        {{ssik.config.ssikGTMBody|raw}}
+    {% endif %}
+    {{parent()}}
+{% endblock %}
+
+{% block base_header %}
+    {% block ssik_base_header_floating %}
+        {% sw_include '@Storefront/storefront/ssik/header-floating.html.twig' %} 
+    {% endblock %}
+    {% if ssik.config.isUspBarShow is same as('top') %}
+        {% sw_include '@Storefront/storefront/ssik/usp-bar.html.twig' %}
+    {% endif %}
+    
+   {{parent()}}
+{% endblock %}
+
+{% block base_navigation %} 
+
+    {% if ssik.config.headerStyle is empty or ssik.config.headerStyle is same as ('shopware') %}
+        {{parent()}} 
+    {% endif %}
+    
+    {% if ssik.config.isUspBarShow is same as('after') %}
+        {% sw_include '@Storefront/storefront/ssik/usp-bar.html.twig' %}
+    {% endif %}
+{% endblock %}
+
+{% block base_footer %} 
+    {% if ssik.config.isFooterUspBarShow == 1 %}
+        {% sw_include '@Storefront/storefront/ssik/usp-footer.html.twig' %}
+    {% endif %}
+
+    {{parent()}}
+
+    {% if ssik.config.ssikAccountWidget == 1 && not context.customer %}
+        {% sw_include '@Storefront/storefront/ssik/login-form-modal.html.twig' %}
+    {% endif %}
+{% endblock %}

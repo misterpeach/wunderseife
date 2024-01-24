@@ -1,0 +1,20 @@
+.account-aside-btn {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    .icon {
+        margin-right: .5rem;
+    }
+}
+
+.account-aside-header {
+    color: var(--ssik-metro-base-headline-color);
+}
+
+.account-aside-item {
+    color: var(--ssik-metro-base-link-color);
+    &:hover,
+    &.is-active {
+        color: var(--ssik-metro-base-link-hover-color);
+    }
+}

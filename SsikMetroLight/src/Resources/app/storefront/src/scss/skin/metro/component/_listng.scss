@@ -1,0 +1,158 @@
+.ssik-listing {
+    .cms-element-product-listing {
+        &-actions {
+            .pagination-nav {
+                display: none;
+            }
+        }
+        .cms-listing-row {
+            display: grid;
+            justify-content: center;
+            gap: .5rem;
+            margin-right: 0;
+            margin-left: 0;
+        
+            grid-template-columns: 1fr;
+
+            @include media-breakpoint-up(sm) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            @include media-breakpoint-up(md) {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+            @include media-breakpoint-up(xl) {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+            }
+        }
+    }
+    .cms-listing-col {
+        padding: 0;
+        margin-bottom: 1rem;
+        max-width: unset;
+        flex: unset;
+        width: unset;
+    }
+
+    .listing-action {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .filter-panel-wrapper-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+            height: 42px;
+            padding: 0;
+            line-height: 1;
+            color: var(--ssik-metro-filter-item-color);
+            border-color: var(--ssik-metro-filter-item-border);
+            .icon {
+                width: 2rem;
+                height: 2rem;
+                color: var(--ssik-metro-filter-item-color);
+            }
+
+            &:hover {
+                color: var(--ssik-metro-filter-item-hover-color);
+                border: 1px solid var(--ssik-metro-filter-item-hover-border);
+                background: transparent;
+                .icon {
+                    color: var(--ssik-metro-filter-item-hover-color);
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+
+        .sorting {
+            margin: 0;
+            color: var(--ssik-metro-filter-item-color);
+            border-color: var(--ssik-metro-filter-item-border);
+        }
+    }
+
+    
+    
+}
+
+.ssik-sidebar-content {
+    .cms-section-sidebar-sidebar-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+
+        .cms-block-category-navigation {
+            padding-bottom: 3.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        &.is-sidebar-nav {
+            
+
+            flex: 0 0 20%;
+            max-width: 20%;
+            padding: 0;
+        }
+    }
+}
+
+.ssik-sidebar-main-content {
+    .cms-section-sidebar-main-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+
+    &.is-sidebar-nav {
+        padding-right: 0;
+
+        @include media-breakpoint-down(md) { 
+            padding-left: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            flex: 0 0 80%;
+            max-width: 80%;
+        }
+
+        .cms-listing-row {
+            grid-template-columns: 1fr;
+
+            @include media-breakpoint-up(sm) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            @include media-breakpoint-up(md) {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            @include media-breakpoint-up(xl) {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+            }
+        }
+        
+        .cms-element-product-listing-actions {
+            margin-left: 0;
+            margin-right: 0;
+            .col-md-auto {
+                padding-right: 0;
+                padding-left: 0;
+            }
+    
+            .pagination-nav {
+                display: none;
+            }
+        }
+    }
+}

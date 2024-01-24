@@ -1,0 +1,92 @@
+{
+  "footer" : {
+    "copyrightInfo" : "The Metro Light Theme by <a href=\"https://wonderthemes.de/\">Wonderthemes.de</a>"
+  },
+    "ssik": {
+        "topbar": {
+            "contact": {
+                "buttonContactText": "Kontakt/Standorte"
+            }
+        },
+        "header": {
+            "afterlogo" : {
+              "head" : "Brauchen Sie Hilfe? Rufen Sie uns an",
+              "text" : "<a href=\"tel:(+484) 490 012345 990\">(+484) 490 012345 991</a>"
+            },
+            "usp": {
+                "usp1" : "Kostenloser Versand ab 49 €",
+                "usp2" : "30 Tage Rückgaberecht",
+                "usp3" : "Kostenlose Rückgabe",
+                "usp4" : "Sicher Einkaufen dank SSL"
+            },
+            "new": {
+                "available": "24/7 erreichbar unter",
+                "phone": "<a href=\"tel:(+484) 490 012345 990\">(+484) 490 012345 991</a>"
+            }
+        },
+        "announcementbanner": {
+            "text": "EXTRA 20% off Outlet*. Use Code: EXTRA20 at checkout!!!"
+        },
+        "listing" : {
+            "addtocart": "In den Warenkorb",
+            "boxLabelFreeShipp" : "Kostenloser Versand",
+            "quickview" : {
+                "title":"Schnellansicht",
+                "gotodetail": "Weiterlesen"
+            }
+        },
+        "detail" : {
+          "brand": "Marke"
+        },
+        "footer": {
+            "newsletter": {
+                "title": "Newsletter abonnieren",
+                "helptext": "Wir werden Ihre E-Mail-Adresse niemals an Dritte weitergeben.",
+                "submit": "ok"
+            },
+            "contact" : {
+                "item1" : {
+                  "text" : "Meiereistrasse 7, 1020 Wien"
+                },
+                "item2" : {
+                  "text" : "info@wonderthemes.de"
+                },
+                "item3" : {
+                  "text" : "+44 (0) 000 1234567"
+                },
+                "item4" : {
+                  "text" : "9:00 bis 18:00 Uhr"
+                }
+            },
+            "usp" : {
+                "title": "Warum bei uns einkaufen?",
+                "item1" : {
+                  "text" : "Qualität und Sparsamkeit",
+                  "desc" : "Umfassende Qualitätskontrolle und erschwingliche Preise"
+                },
+                "item2" : {
+                  "text" : "Globales Lager",
+                  "desc" : "100 Überseelager"
+                },
+                "item3" : {
+                  "text" : "Schnelle Lieferung",
+                  "desc" : "Schnelle und bequeme Lieferung von Tür zu Tür"
+                },
+                "item4" : {
+                  "text" : "Zahlungssicherheit",
+                  "desc" : "Mehr als 10 verschiedene sichere Zahlungsmethoden"
+                },
+                "item5" : {
+                  "text" : "Habe Fragen?",
+                  "desc" : "24/7 Kundenservice - Wir sind hier und helfen gerne!"
+                }
+              }
+        },
+        "account" : {
+            "join" : "Mach mit",
+            "login" : "Anmelden",
+            "signup" : "Registrieren",
+            "error" : "Etwas ist schief gelaufen"
+        }
+    }
+}

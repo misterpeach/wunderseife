@@ -1,0 +1,60 @@
+{% block ssik_footer_contact %}
+
+    <div class="contact-footer">
+        <div class="contact-footer-item">
+            {% if ssik.config.footerContactIcon1 is not empty  %}
+                <div class="contact-footer-item-icon">
+                    <i class="{{ssik.config.footerContactIcon1}}"></i>
+                </div>
+            {% endif %}
+            <div class="contact-footer-item-text">
+                {{ "ssik.footer.contact.item1.text"|trans|sw_sanitize }}
+            </div>
+        </div>
+        <div class="contact-footer-item">
+            {% if ssik.config.footerContactIcon2 is not empty  %}
+                <div class="contact-footer-item-icon">
+                    <i class="{{ssik.config.footerContactIcon2}}"></i>
+                </div>
+            {% endif %}
+            <div class="contact-footer-item-text">
+                {{ "ssik.footer.contact.item2.text"|trans|sw_sanitize }}
+            </div>
+        </div>
+
+        <div class="contact-footer-item">
+            {% if ssik.config.footerContactIcon3 is not empty  %}
+                <div class="contact-footer-item-icon">
+                    <i class="{{ssik.config.footerContactIcon3}}"></i>
+                </div>
+            {% endif %}
+            <div class="contact-footer-item-text">
+                {{ "ssik.footer.contact.item3.text"|trans|sw_sanitize }}
+            </div>
+        </div>
+
+        <div class="contact-footer-item">
+            {% if ssik.config.footerContactIcon4 is not empty  %}
+                <div class="contact-footer-item-icon">
+                    <i class="{{ssik.config.footerContactIcon4}}"></i>
+                </div>
+            {% endif %}
+            <div class="contact-footer-item-text">
+                {{ "ssik.footer.contact.item4.text"|trans|sw_sanitize }}
+            </div>
+        </div>
+
+        <div class="contact-footer-item">
+            {% if ssik.config.footerContactIcon5 is not empty  %}
+                <div class="contact-footer-item-icon">
+                    <i class="{{ssik.config.footerContactIcon5}}"></i>
+                </div>
+            {% endif %}
+            <div class="contact-footer-item-text">
+                    {{ 'footer.serviceContactLink'|trans({
+                            '%url%': path('frontend.cms.page', { id: config('core.basicInformation.contactPage') })
+                    })|raw }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

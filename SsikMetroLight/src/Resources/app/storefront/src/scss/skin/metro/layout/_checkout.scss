@@ -1,0 +1,140 @@
+.is-act-confirmpage, .is-act-finishpage, .is-act-checkoutregisterpage {
+    .checkout {
+        padding-top: 0;
+    }
+}
+
+.checkout {
+    &-aside {
+        &-summary {
+            &-list, &-total {
+                font-size: 1.4rem;
+            }
+        }
+       
+        &-container {
+            @include media-breakpoint-down(md) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    &-cart-container {
+        @include media-breakpoint-down(md) {
+            margin-bottom: 2rem;
+
+            // .cart-item-row {
+            //     margin-right: 1.5rem;
+            //     margin-left: 1.5rem;
+            // }
+        }
+
+        .panel-wrap {
+            //background: $ssik-color-white;
+            padding-bottom: 2rem;
+            height: 100%;
+        }
+
+        // .cart-add-product {
+        //     padding-right: 2rem;
+        //     padding-left: 2rem;
+        // }
+
+        .address-main-header, .finish-header {
+            font-size: 2.6rem;
+            line-height: 2.6rem;
+            font-weight: normal;
+            color: var(--ssik-metro-base-color);
+            text-align: left;
+            padding: 2rem 0;
+            margin-bottom: 0;
+            
+        }
+        .register-login-collapse-toogle {
+            padding: 1rem 0;
+        }
+
+        .finish-header {
+            text-align: center;
+        }
+
+        .login-collapse-toggle, .data-protection-information a {
+            color: var(--ssik-metro-base-link-color);
+            &:hover {
+                color: var(--ssik-metro-base-link-hover-color);
+            }
+        }
+    }
+
+    &-product-table {
+        margin-bottom: 0;
+    }
+}
+
+.is-act-cartpage {
+    .checkout {
+        .panel-wrap {
+            box-shadow:unset;
+        }
+    }
+}
+
+
+.payment-method-description > p {
+    color: inherit;
+}
+
+.shipping-method-description > p {
+    color: var(--ssik-metro-base-color);
+}
+
+.payment-method-description > p {
+    color: var(--ssik-metro-base-color);
+}
+
+.is-act-finishpage,
+.is-ctl-accountorder,
+.is-act-confirmpage {
+    .checkout {
+        .checkout-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas: "add"
+                                  "aside"   
+                                  "main";
+        
+            @include media-breakpoint-up(lg) {
+                grid-template-columns: 2fr 1fr;
+                grid-template-areas: "main add"
+                                     "main aside";
+                grid-template-rows: min-content 1fr;
+            }
+            
+        }
+
+        .checkout-main {
+            margin-left: 0;
+            flex: unset;
+            max-width: unset;
+            grid-area: main;
+            width: 100%;
+        }
+
+        .checkout-aside {
+            flex: unset;
+            margin-left: 0;
+            max-width: unset;
+            grid-area: aside;
+            width: 100%;
+        }
+
+        .checkout-additional {
+            margin-left: 0;
+            flex: unset;
+            max-width: unset;
+            grid-area: add;
+            width: 100%;
+        }
+    }
+}

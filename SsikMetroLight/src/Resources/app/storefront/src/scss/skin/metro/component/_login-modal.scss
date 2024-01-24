@@ -1,0 +1,169 @@
+.login-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    display: grid;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(117,117,117, .45);
+    background: var(--ssik-metro-base-overlay-bg);
+    transition: opacity .2s;
+
+    opacity: 0;
+    visibility: hidden;
+
+    &.is-opened {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &-errors, &-success {
+        display: none;
+        padding: 1rem 0 2rem 0;
+        font-size: 1.4rem;
+    }
+
+    &-errors {
+        color: $sw-color-danger;
+        .is-error & {
+            display: block;
+        }
+    }
+
+    &-success {
+        color: $sw-color-success;
+        .is-success & {
+            display: block;
+        }
+    }
+
+    &-inner {
+        position: relative;
+        z-index: 50;
+        display: grid;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        max-width: 360px;
+        padding: 40px 40px 20px;
+        background: var(--ssik-metro-base-bg);
+        transition: .2s;
+        transform: translateY(50px);
+        .is-progress & {
+            @include is-loading(var(--ssik-metro-btn-bg));
+        }
+        .is-hide {
+            display: none;
+        }
+    }
+
+    &.is-opened  &-inner {
+        transform: translateY(0);
+    }
+
+    &-close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: end;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        transition: .2s;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-title {
+        margin: 0 0 15px;
+        color: var(--ssik-metro-base-headline-color);
+        font-size: var(--ssik-metro-base-headline-font-size);
+        line-height: 1.17;
+    }
+
+    &-info {
+        color: var(--ssik-metro-base-color);
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    &-form {
+        &-field {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+
+            .form-label {
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+            }
+        }
+
+        &-submit {
+            margin-top: 10px;
+            width: 100%;
+            height: 4rem;
+            .is-success & {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include button-variant($sw-color-success, $sw-color-success);
+            }
+            .text-default {
+                .is-success & {
+                    display: none;
+                }
+            }
+            .success-icon {
+                display: none;
+                .is-success & {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+
+        .recovery-pass {
+            position: absolute;
+            right: 0;
+            color: var(--ssik-metro-base-link-color);
+            font-size: 1rem;
+            top: -2px;
+            border-bottom: 1px dashed var(--ssik-metro-base-link-color);
+        }
+    }
+
+    &-registration-link {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        color:var(--ssik-metro-base-link-color);
+        
+        &.is-toggle {
+            span {
+                border-bottom: 1px dashed var(--ssik-metro-base-link-color);
+            }
+        }
+
+        &:hover {
+            &.is-toggle {
+                span {
+                    border-bottom: 1px dashed var(--ssik-metro-base-link-hover-color);
+                }
+            }
+        }
+    }
+}

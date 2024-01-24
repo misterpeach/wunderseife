@@ -1,0 +1,94 @@
+.pagination-nav {
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+    .pagination {
+        gap: .5rem;
+        justify-content: center;
+
+        .page-item {
+            .page-link {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                width: 3rem;
+                height: 3rem;
+                border: 0;
+                line-height: 1;
+                background: var(--ssik-metro-pagination-bg);
+                color: var(--ssik-metro-pagination-color);
+                @include font-size(var(--ssik-metro-pagination-font-size));
+                border-radius: .6rem;
+                .icon {
+                    display: none;
+                    & > svg {
+                        top:0;
+                    }
+                }
+
+                &:hover {
+                    background: var(--ssik-metro-pagination-hover-bg);
+                    color: var(--ssik-metro-pagination-hover-color);    
+                    
+                }
+            }
+
+            &.active .page-link {
+                background: var(--ssik-metro-pagination-hover-bg);
+                color: var(--ssik-metro-pagination-hover-color);
+            }
+
+            &.page-next {
+                .page-link {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: .8rem;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        border: solid var(--ssik-metro-pagination-color);
+                        border-width: 0 1px 1px 0;
+                        transform: rotate(-45deg) translateY(calc(-1*(50% + 2px)));
+                    }
+                    &:hover {
+                        &::before {
+                            border-color: var(--ssik-metro-pagination-hover-color);
+                        }
+                    }
+                }
+            }
+
+            &.page-prev {
+                .page-link {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: .4rem;
+                        display: block;
+                        width: 1rem;
+                        height: 1rem;
+                        border: solid var(--ssik-metro-pagination-color);
+                        border-width: 1px 0 0 1px;
+                        transform: rotate(-45deg) translateY(calc(-1*(50% + 2px)));
+                    }
+                    &:hover {
+                        &::before {
+                            border-color: var(--ssik-metro-pagination-hover-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        .page-first,
+        .page-last,
+        .disabled {
+            display: none;
+        }
+
+    }
+}

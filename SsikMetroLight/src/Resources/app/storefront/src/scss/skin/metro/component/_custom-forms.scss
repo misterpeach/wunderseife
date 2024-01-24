@@ -1,0 +1,67 @@
+// .custom-control-input {
+
+//     .custom-control-label:before {
+//         background: $ssik-custom-control-label-bg;
+//     }
+
+//     &:focus ~ .custom-control-label:before {
+//         box-shadow: none;
+//     }
+
+//     &:checked ~ .custom-control-label:before {
+//         border-color: $ssik-custom-control-label-active-bg;
+//         background-color: $ssik-custom-control-label-active-bg;
+//     }
+
+//     &:focus:not(:checked) ~ .custom-control-label::before {
+//         border-color: $ssik-custom-control-label-active-bg;
+//     }
+
+//     &:not(:disabled):active ~ .custom-control-label::before {
+//         background-color: $ssik-custom-control-label-active-bg;
+//         border-color: $ssik-custom-control-label-active-bg;
+//     }
+// }
+
+// .custom-control {
+//     padding-left: 2rem;
+//     &-label {
+//         &::before, &::after {
+//             top: 6px;
+//             left: -2rem;
+//             width: 1.5rem;
+//             height: 1.5rem;
+            
+//         }
+//     }
+// }
+// .custom-checkbox .custom-control-label::before {
+//     border-radius: 0;
+// }
+// .custom-switch .custom-control-label::after {
+//     top: calc(0.15625rem + 9px);
+// }
+
+.form-check {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    &-input {
+        margin: 0;
+        float: unset;
+        vertical-align: unset;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: $ssik-custom-control-label-bg;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:checked {
+            border-color: $ssik-custom-control-label-active-bg;
+            background-color: $ssik-custom-control-label-active-bg;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+{% block layout_top_bar %}
+    <div class="ssik-top-bar-container">
+        <div class="container">
+            {{parent()}}
+        </div>
+    </div>
+{% endblock %}
+
+{% block layout_header_navigation %}
+    <div class="container ssik-header-container {% if ssik.config.headerStyle == 'metro' %}is-header-inline{% endif %}">
+        {{parent()}}
+    </div>
+{% endblock %}
+
+{% block layout_header_logo %}
+    {{parent()}}
+    
+    {% if ssik.config.headerStyle is same as ('shopware') %}
+        {% if ssik.config.isAfterLogoShow == 1 %}
+            {% sw_include '@Storefront/storefront/ssik/header-after-logo.html.twig' %}
+        {% endif %}
+    {% endif %}
+
+    {% if ssik.config.headerStyle == 'metro' %}
+        {% sw_include '@Storefront/storefront/ssik/header-nav-inline.html.twig' %}
+    {% endif %}
+{% endblock %}
+
+
+{% block layout_header_actions_account %}
+    
+    {% if ssik.config.headerStyle == 'metro' %}
+        <div class="col-auto col-search">
+            <button type="button" class="header-actions-btn header-actions-search-btn" data-ssik-search-form="true">
+                {% sw_icon 'icon-search' style { 'pack':'line', 'namespace': 'SsikMetroLight', 'class':'ssik md' } %} 
+            </button>
+        </div>
+    {% endif %}
+
+    {{parent()}}
+{% endblock %}

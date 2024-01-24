@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/layout/meta.html.twig' %}
+
+{% set ssikGTMHead = config('SsikMetroLight.config.ssikGTMHead') %}
+
+{% block layout_head_javascript_tracking %}
+    {{parent()}}
+    {% if ssikGTMHead is not empty %}
+        {{ssikGTMHead|raw}}
+    {% endif %}
+{% endblock %}

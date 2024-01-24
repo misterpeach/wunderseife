@@ -1,0 +1,57 @@
+@mixin close {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: #000;
+    }
+
+    &::before {
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        transform: rotate(45deg);
+    }
+}
+
+@mixin is-loading($color) {
+    &:after {
+        content: '';
+        position: absolute;
+        background: $color;
+        top: 0;
+        width: 100%;
+        height: .3rem;
+        animation: is-loading 3s linear infinite;
+    }
+}
+
+@mixin is-dropdown($color: #131313) {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        display: block;
+        width: .6rem;
+        height: .6rem;
+        border: solid $color;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg) translateY(calc(-1*(50% + 2px)));
+        
+    }
+}
+
+@keyframes is-loading {
+    from {left: 0%; width: 0; z-index:100;}
+    to {left: 0; width: 100%;}
+}

@@ -1,0 +1,91 @@
+
+.section-usp-bar {
+    background: var(--ssik-metro-uspbar-bg);
+    
+    padding: .5rem 0;
+    @include media-breakpoint-down(md) {
+        padding: 0;
+    }
+}
+
+.usp-bar-controls {
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+
+    .btn-ctrl {
+        position: absolute;
+        display: block;
+        background: unset;
+        border: unset;
+        font-size: 0;
+        top: 0;
+        width: 2rem;
+        height: 3rem;
+        //transform: translateY(calc(-1*(50% + 6px)));
+        z-index: 5;
+        @include is-dropdown(var(--ssik-metro-uspbar-icon-color));
+
+        &::before {
+            top:.8rem;
+            right: unset;
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+
+        &.prev {
+            left: 2rem;
+            &:before {  
+                transform: rotate(135deg);
+            }
+        }
+
+        &.next {
+            right: 1.5rem;
+            &:before {
+                transform: rotate(315deg);
+            }
+        }
+    }
+}
+
+.usp-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    
+    @include media-breakpoint-down(md) {
+        flex-wrap: wrap;
+        overflow: hidden;
+        height: 3rem;
+    }
+
+    &-item {
+        display: flex !important;
+        align-items: center;
+        color: var(--ssik-metro-uspbar-text-color);
+        @include font-size(var(--ssik-metro-uspbar-text-font-size));
+        text-transform: uppercase;
+
+        @include media-breakpoint-down(md) {
+            justify-content: center;
+            width: 100%;
+            height: 3rem;
+        }
+
+        &-icon {
+            display: flex;
+            margin-right: .5rem;
+            .icon {
+                width: var(--ssik-metro-uspbar-icon-font-size);
+                height: var(--ssik-metro-uspbar-icon-font-size);
+                color: var(--ssik-metro-uspbar-icon-color);
+            }
+            svg {
+                vertical-align: unset;
+                height: 100%;
+            }
+        }
+    }
+}

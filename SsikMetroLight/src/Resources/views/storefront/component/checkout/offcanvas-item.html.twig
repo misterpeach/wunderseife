@@ -1,0 +1,25 @@
+{% sw_extends '@Storefront/storefront/component/checkout/offcanvas-item.html.twig' %}
+
+{# {% set isQuantityPlusMinus = config('SsikMetroLight.config.isQuantityPlusMinus') %} #}
+
+{% block component_offcanvas_product_buy_quantity %}
+    {{parent()}}
+    {# {% if isQuantityPlusMinus == 1 %}
+        {% sw_include '@SsikMetroLight/storefront/ssik/ssik-buy-widget-quantity.html.twig' with {
+            modify: 'is-offcanvas',
+            value: quantity,
+            minPurchase: quantityInformation.minPurchase,
+            maxPurchase: maxQuantity,
+            step: quantityInformation.purchaseSteps
+        } %}
+    {% endif %}         #}
+{% endblock %}
+
+{% block component_offcanvas_product_remove_submit %}
+    <button type="submit"
+            title="{{ "checkout.removeLineItem"|trans|striptags }}"
+            data-product-id="{{ lineItem.id }}"
+            class="btn btn-light cart-item-remove-button">
+        {% sw_icon 'icon-trash' style { 'pack':'custom', 'namespace': 'SsikMetroLight', 'class':'ssik xxs' } %}
+    </button>
+{% endblock %}

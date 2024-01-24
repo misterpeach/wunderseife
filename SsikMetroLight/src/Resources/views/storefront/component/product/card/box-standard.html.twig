@@ -1,0 +1,57 @@
+{% sw_extends '@Storefront/storefront/component/product/card/box-standard.html.twig' %}
+
+{% if aspectRatio is empty %}
+    {% set aspectRatio = 1 %}
+{% endif %}
+
+{% set productCard = config('SsikMetroLight.config.productCard') %}
+{% set productBoxHover = config('SsikMetroLight.config.productBoxHover') %}
+
+
+{% if productBoxHover == 1 %}
+    {% set count = 0 %}
+    {% set productImgHoverMedia = '' %}
+    {% if product.media.elements %}
+        {% for key, imgHover in product.media.elements|sort((a, b) => a.position <=> b.position) %}
+            {% if product.cover.id != key and count == 0 %}
+                {% set count = 1 %}
+                {% set productImgHoverMedia = imgHover.media %}
+            {% endif %} 
+        {% endfor %}
+        {% if productImgHoverMedia.thumbnails|length > 0 %}
+            {% set thumbnails = productImgHoverMedia.thumbnails|sort|reverse %}
+            {% set srcsetValue %}{% apply spaceless %}
+                {{ productImgHoverMedia|sw_encode_media_url }} {{ thumbnails|first.width + 1 }}w, {% for thumbnail in thumbnails %}{{ thumbnail.url | sw_encode_url }} {{ thumbnail.width }}w{% if not loop.last %}, {% endif %}{% endfor %}
+            {% endapply %}{% endset %}
+        {% endif %}
+    {% endif %}
+{% endif %}
+
+{% block component_product_box_image %}
+    {% if productCard is not empty and productCard is not same as('shopware') %}
+        <div class="product-image-wrapper-aspect-ratio " 
+            {% if productImgHoverMedia %}
+                data-product-img-hover-src="{{productImgHoverMedia|sw_encode_media_url}}"     
+            {% endif %}
+            data-aspect-ratio="{{aspectRatio}}" style="--aspect-ratio:{{aspectRatio}};">
+
+            {{parent()}}
+        </div>
+    {% else %}
+        {{parent()}}
+    {% endif %}
+{% endblock %}
+
+{% block component_product_box_rating %}
+    <div class="product-info-brand">
+        <span>{{ product.manufacturer.name }}</span>
+    </div>
+    {% if config('core.listing.showReview') %}
+        <div class="product-rating">
+            {% sw_include '@Storefront/storefront/component/review/rating.html.twig' with {
+                points: product.ratingAverage,
+                style: 'text-primary'
+            } %}
+        </div>
+    {% endif %}
+{% endblock %}

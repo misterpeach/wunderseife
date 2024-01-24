@@ -1,0 +1,114 @@
+{% block ssik_login_form_modal %}
+
+    {% set storefrontUrl = null %}  
+    {% if context && context.domainId && context.salesChannel %}
+        {% if context.salesChannel.domains && context.salesChannel.domains.elements|length > 0 %}
+            {% set storefrontUrl = context.salesChannel.domains.elements[context.domainId].url %}   
+        {% endif %}
+    {% endif %}
+
+    {% set loginModalOptions = {
+        opener: ".ssik-login-modal-open",
+        storefrontUrl: storefrontUrl,
+    } %}
+
+    <div class="login-modal" data-ssik-login-modal="true" data-ssik-login-modal-options='{{ loginModalOptions|json_encode }}'>   
+        <div class="login-modal-inner">
+            <button type="button" class="login-modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                    {% sw_icon 'x' style { 'size': 'sm' } %}
+                </span>
+            </button>  
+            <form name="login" action="" method="post">
+                <div class="login-modal-title">
+                    {{ "ssik.account.login"|trans|sw_sanitize }}
+                </div>
+                <div class="login-modal-errors">
+                    {{ "ssik.account.error"|trans|sw_sanitize }}
+                </div>
+                <div class="login-modal-form">
+                    <div class="login-modal-form-field">
+                        <label class="form-label" for="ssikLoginMail">
+                            {{ "account.loginMailLabel"|trans|sw_sanitize }}
+                        </label>
+                        <input type="email"
+                            class="form-control"
+                            id="ssikLoginMail"
+                            placeholder="{{ "account.loginMailPlaceholder"|trans|striptags }}"
+                            name="ssikUsername"
+                            required="required">
+                    </div>
+
+                    <div class="login-modal-form-field">
+                        
+                        <a class="recovery-pass is-toggle" href="{{ seoUrl('frontend.account.recover.page') }}">
+                            {{ 'account.loginPasswordRecover'|trans }}
+                        </a>
+                        <label class="form-label" for="ssjiLoginPassword">
+                            {{ "account.loginPasswordLabel"|trans|sw_sanitize }}
+                        </label>
+                        <input type="password"
+                            class="form-control"
+                            id="ssikLoginPassword"
+                            placeholder="{{ "account.loginPasswordPlaceholder"|trans|striptags }}"
+                            name="ssikPassword"
+                            required="required">
+                    </div>
+
+                    <div class="login-modal-form-field">
+                        <button class="btn btn-primary login-modal-form-submit" type="submit">
+                            <span class="text-default">{{ "account.loginSubmit"|trans|sw_sanitize }}</span>
+                            <span class="success-icon">{% sw_icon 'icon-tick' style { 'pack':'custom', 'namespace': 'SsikMetroLight', 'class':'ssik md' } %}</span>
+                        </button>
+                    </div>
+
+                    <div class="login-modal-form-field">
+                        <a class="login-modal-registration-link" 
+                            href="{{ path('frontend.account.login.page') }}"
+                            title="{{ "ssik.account.signup"|trans|sw_sanitize }}">
+                               {{ "ssik.account.signup"|trans|sw_sanitize }}
+                        </a>
+                    </div>
+                
+                </div>
+            </form> 
+            <form class="is-hide" name="restore" action="" method="post">
+                <div class="login-modal-title">{{ 'account.profileRecoverPasswordTitle'|trans }}</div>
+                
+                <div class="login-modal-success">
+                    {{ 'account.recoveryMailSend'|trans|sw_sanitize}}
+                </div>
+                
+                <div class="login-modal-info">
+                    {{ 'account.profileRecoverPasswordInfo'|trans }}
+                </div>
+                <div class="login-modal-form">
+                    <div class="login-modal-form-field">
+        
+                        <label class="form-label" for="ssikLoginMail">
+                            {{ "account.loginMailLabel"|trans|sw_sanitize }}
+                        </label>
+                        <input type="email"
+                            class="form-control"
+                            id="ssikRestoreMail"
+                            placeholder="{{ "account.loginMailPlaceholder"|trans|striptags }}"
+                            name="ssikRestoreUsername"
+                            required="required">            
+                    </div>
+                    <div class="login-modal-form-field">
+                        <button class="btn btn-primary login-modal-form-submit" type="submit" title="{{ 'account.profileRecoverPasswordSubmit'|trans }}">
+                            <span class="text-default">{{ 'account.profileRecoverPasswordSubmit'|trans }}</span>
+                            <span class="success-icon">{% sw_icon 'icon-tick' style { 'pack':'custom', 'namespace': 'SsikMetroLight', 'class':'ssik md' } %}</span>
+                        </button>
+                    </div>
+                    <div class="login-modal-form-field">
+                        <a class="login-modal-registration-link is-toggle" href="#" role="button" title="{{ "ssik.account.login"|trans|sw_sanitize }}">
+                            <span>{{ "ssik.account.login"|trans|sw_sanitize }}</span>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

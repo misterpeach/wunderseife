@@ -1,0 +1,84 @@
+{% sw_extends '@Storefront/storefront/component/product/listing.html.twig' %}
+
+{% set productCard = config('SsikMetroLight.config.productCard') %}
+{% set productBoxHover = config('SsikMetroLight.config.productBoxHover') %}
+{% set productImageRatio = config('SsikMetroLight.config.productImageRatio') %}
+
+{% block element_product_listing_wrapper_content %}
+    <div class="ssik-listing"
+        {% if productCard is not empty and productCard is not same as('shopware') and productBoxHover == 1 %}data-product-img-hover="true"{% endif %}>
+
+        {% block ssik_element_product_listing_title_page %}
+            <div class="ssik-listing-category-active-title">
+                <h1 itemprop="name" class="section-title">
+                    {{page.header.navigation.active.translated.name}}
+                </h1>
+            </div>
+        {% endblock %}
+
+        {{parent()}}
+    </div>
+{% endblock %}
+
+{% block element_product_listing_sorting %}
+    <div class="listing-action">
+        {% if searchResult.total > 0 %}
+            <button class="btn header-actions-btn filter-panel-wrapper-toggle"
+                    type="button"
+                    data-offcanvas-filter="true"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-label="{{ "general.menuLink"|trans }}">
+
+                    {% sw_icon 'icon-filter' style { 'pack':'line', 'namespace': 'SsikMetroLight', 'class':'ssik md' } %}
+                    <span>
+                        {{ "listing.filterTitleText"|trans }}
+                    </span>
+            </button>
+        {% endif %}
+
+        {{parent()}}
+    </div>  
+{% endblock %}
+
+{% block element_product_listing_col %}
+    {% if productCard is not same as('shopware') %}
+        
+        {% set aspectRatio = 1 %}
+        {% set itemRatioSum = 0 %}
+
+        {% set first = searchResult.elements|first %}
+
+        {% if first and first.cover %}
+            {% set cover = first.cover.media %}
+            
+            {% set height = cover.metaData['height'] > 0 ? cover.metaData['height'] : 100 %}
+            {% set aspectRatio = (cover.metaData['width'] / height) %}
+        {% endif %}
+
+        {% for product in searchResult %}
+            {% if product %}
+                    {% set itemRatio = 1 %}
+                    {% if product.cover %}
+                        {% set cover = product.cover.media %}
+                        {% set height = cover.metaData['height'] > 0 ? cover.metaData['height'] : 100 %}
+                        {% set itemRatio = (cover.metaData['width'] / height) %} 
+                        {% set itemRatioSum = itemRatioSum + itemRatio %} 
+                    {% endif %}
+                    {% if productImageRatio is same as('max') %}
+                        {% set aspectRatio = (itemRatio < aspectRatio) ? itemRatio : aspectRatio %} 
+                    {% endif %}
+
+                    {% if productImageRatio is same as('min') %}
+                        {% set aspectRatio = (itemRatio > aspectRatio) ? itemRatio : aspectRatio %} 
+                    {% endif %} 
+            {% endif %}
+        {% endfor %}
+        {% if productImageRatio is same as('avg') && itemRatioSum != 0 %}
+            {% set aspectRatio = itemRatioSum / searchResult.elements|length %} 
+        {% endif %}
+    {% endif %}   
+        
+    {{parent()}}
+
+{% endblock %}

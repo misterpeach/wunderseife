@@ -1,0 +1,41 @@
+{
+  "name": "ssik/metro-light-theme",
+  "description": "Metro Light Theme for Shopware 6",
+  "version": "v3.12.0",
+  "type": "shopware-platform-plugin",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "wonderthemes.de",
+      "homepage": "https://wonderthemes.de/"
+    }
+  ],
+  "require": {
+    "shopware/core": "6.5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "SsikMetroLight\\": "src/"
+    }
+  },
+  "extra": {
+    "shopware-plugin-class": "SsikMetroLight\\SsikMetroLight",
+    "plugin-icon": "src/Resources/config/SsikMetroLightPluginLogo.png",
+    "label": {
+      "de-DE": "Theme Metro Light",
+      "en-GB": "The MetroLight"
+    },
+    "description": {
+      "de-DE": "Metro ist ein völlig kostenloses mobiles Thema mit vielen anpassbaren Funktionen ermöglicht es Ihnen, das Aussehen Ihres Shops flexibel anzupassen und in kurzer Zeit Arbeit anzufangen.",
+      "en-GB": "Fully free, mobile theme with lots of customizable functions allows setting the skin of your shop flexibly and starting the work within a short time."
+    },
+    "manufacturerLink": {
+      "de-DE": "https://wonderthemes.de/",
+      "en-GB": "https://wonderthemes.de/"
+    },
+    "supportLink": {
+      "de-DE": "https://wonderthemes.de/",
+      "en-GB": "https://wonderthemes.de/"
+    }
+  }
+}

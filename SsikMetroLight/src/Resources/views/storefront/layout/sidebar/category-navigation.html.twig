@@ -1,0 +1,49 @@
+{% sw_extends '@Storefront/storefront/layout/sidebar/category-navigation.html.twig' %}
+
+{% set ssikSidebarTitleShow = config('SsikMetroLight.config.ssikSidebarTitleShow') %}
+{% set shopCatalogId = config('SsikMetroLight.config.shopCatalogId') %}
+
+{% block layout_navigation_categories_list %}
+    {% if ssikSidebarTitleShow == 1 %}
+        {% if level == 0 %}
+            {% if not isBlockHeader %}
+                {% set title = "general.categories"|trans|sw_sanitize %}
+                <div class="section-title in-sidebar">{{ title }}</div>
+            {% endif %}
+        {% endif %}
+    {% endif %}    
+
+    {% if shopCatalogId %}
+        {% if navigationTree[shopCatalogId] %}
+            {% set extraMenu = navigationTree[shopCatalogId] %}
+            {% if extraMenu.children|length > 0 %}
+                {% sw_include '@Storefront/storefront/ssik/navigation/catalog-only.html.twig' with {
+                    navigationTree: extraMenu.children,
+                    level: 0,
+                    activeResult: activeResult
+                } only %}
+            {% endif %}
+        {% endif %}
+    {% else %}        
+        {{ parent() }}
+    {% endif %} 
+
+{% endblock %}
+
+
+{% block layout_navigation_categories_list_entry %}
+    <li class="category-navigation-entry {% if item.children|length > 0 %}is-dropdown{% endif %}">
+        {% if (item.category.id in activeResult.id) or (item.category.id in activeResult.path) %}
+            {% block layout_navigation_categories_link_children %}
+                {{parent()}}
+            {% endblock %}
+            {% block layout_navigation_categories_recoursion %}
+                {{parent()}}
+            {% endblock %}
+        {% else %}
+            {% block layout_navigation_categories_link %}
+                {{parent()}}
+            {% endblock %}
+        {% endif %}
+    </li>
+{% endblock %}

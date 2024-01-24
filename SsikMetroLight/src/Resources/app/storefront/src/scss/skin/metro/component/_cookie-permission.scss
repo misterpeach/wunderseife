@@ -1,0 +1,19 @@
+.cookie-permission-container {
+    color: var(--ssik-metro-cookie-color);
+    background: var(--ssik-metro-cookie-bg);
+    padding: 2rem 0;
+
+    a {
+        color: var(--ssik-metro-cookie-link-color);
+    }
+
+    .btn {
+        line-height: 1;
+        border-radius: 2rem;
+        padding: .6rem 1.4rem;
+        font-weight: normal;
+        background: var(--ssik-metro-cookie-btn-bg);
+        border-color: var(--ssik-metro-cookie-btn-bg);
+        color: var(--ssik-metro-cookie-btn-color);
+    }
+}

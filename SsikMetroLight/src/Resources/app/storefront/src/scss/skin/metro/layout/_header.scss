@@ -1,0 +1,257 @@
+//reset
+.header-main > .container {
+    max-width: unset;
+    padding: unset;
+}
+
+.header-main {
+    background: var(--ssik-metro-header-bg);
+}
+
+//Default
+.ssik-header-container {
+    .header-row {
+
+        padding: 1.5rem 0;
+
+        @include media-breakpoint-up(lg) {
+            padding: 2.5rem 0;
+        }
+
+        .header-logo-col { 
+            position: relative;
+            padding-bottom: 0;
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+                flex: 0 0 100%;
+                margin-top: 0;
+                margin-bottom: 1.5rem;
+            }
+
+            .header-logo-main {
+                max-width: var(--ssik-metro-base-logo-container-width);
+                margin: 0 auto;
+            }
+
+            .header-logo-picture {
+                max-width: unset;
+            }
+        }
+
+        .header-info-col {
+            display: none;
+
+            @include media-breakpoint-up(lg) {
+                display: flex;
+                flex-grow: 1;
+                justify-content: center;
+                width: auto;
+            }
+        }
+
+        .header-search-col {
+            position: relative;
+            // block for nav-main-toggle
+            & > .row > .col-sm-auto {
+                display: block !important;
+
+                @include media-breakpoint-up(sm) {
+                    display: flex !important;
+                    align-items: center;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    display: none !important;
+                }
+
+                .nav-main-toggle {
+                    position: absolute;
+                    top: 1.25rem;
+                    left: 1rem;
+                    z-index: 5;
+                    @include media-breakpoint-up(sm) {
+                        position: unset;
+                    }
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                flex-basis: 0;
+                flex-grow: 1;
+                padding-right: 0;
+
+                #searchCollapse {
+                    display: block;
+                }
+
+                .header-search-form {
+                    margin-left: 4rem;
+                }
+            }
+
+            @include media-breakpoint-up(xl) {
+                min-width: 20rem;
+            }
+        }
+
+        .header-actions-col {
+            
+            @include media-breakpoint-down(sm) {
+                order: 3 !important;
+                flex: 0 0 auto;
+                width: auto;
+                .d-sm-none {
+                    display: none !important;
+                }
+            }
+            & > div {
+                align-items: center;
+                div.col-search {
+                    display: none;
+                    @include media-breakpoint-up(xl) {
+                        display: block;
+                        order: -10;
+                    }
+                }
+            }
+
+            @include media-breakpoint-up(sm) {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.is-header-inline {
+    position: relative;
+    .header-row {
+        .header-info-col {
+            display: none;
+            @include media-breakpoint-up(xl) {
+                display: flex;
+                flex-grow: 1;
+                justify-content: center;
+            }
+        }
+        .header-search-col {
+            @include media-breakpoint-up(xl) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 180px;
+                padding: 20px;
+                background: #FFF;
+                z-index: 10;
+                //visibility: hidden;
+                //opacity: 0;
+                box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+                transition: all .2s linear;
+                transform: translateY(-200%);
+
+                //transform: translateY(0);
+
+                .is-search-open & {
+                    transform: translateY(0);
+                }
+            }
+
+            .close-btn {
+                display: none;
+                @include media-breakpoint-up(xl) {
+                    @include close;
+                    position: absolute;
+                    top:2rem;
+                    right: 2rem;
+                    z-index: 12;
+                }
+            }
+        }
+    }  
+    
+    .is-search-open & {
+        position: unset;
+    }
+}
+
+.is-ssik-header-shopware {
+    .header-search-input {
+        height: 4rem;
+    }
+    .header-search-icon {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .ssik-header-container {
+        .header-after-logo {
+            display: none;
+            @include media-breakpoint-up(xl) {
+                display: flex;
+            }
+        }
+    }
+}
+
+.header-after-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-start;
+    color: var(--ssik-metro-header-color);
+    &-content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: .25rem;
+    }
+    .icon {
+        width: 4rem;
+        height: 4rem;
+        color: var(--ssik-metro-header-color);
+    }
+    &-head {
+        font-weight: 700;
+        @include font-size(18px);
+        line-height: 1;
+    }
+
+    &-text {
+        @include font-size(var(--ssik-metro-base-font-size));
+        line-height: 1;
+    }
+}
+
+.header-minimal {
+    .nav-main-toggle {
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+    }
+
+    .header-minimal-logo { 
+        
+        .header-logo-main {
+            max-width: var(--ssik-metro-base-logo-container-width);
+        }
+
+        .header-logo-picture {
+            max-width: unset;
+        }
+    }
+}
+
+.is-ctl-maintenance {
+    .header-main > .container, .cms-section .header-main > .boxed {
+        max-width: 1400px;
+        padding: 0 20px;
+    }
+
+    .nav-main-toggle {
+        display: none;
+    }
+}

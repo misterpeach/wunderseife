@@ -1,0 +1,13 @@
+.filter-boolean {
+    border:0;
+    padding-left: 0;
+    border-radius: 0;
+    &:hover {
+        color: $ssik-custom-control-label-active-bg;
+    }
+
+    .custom-control-label::before, .custom-control-label::after {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

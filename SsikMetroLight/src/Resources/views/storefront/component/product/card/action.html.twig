@@ -1,0 +1,22 @@
+{% sw_extends '@Storefront/storefront/component/product/card/action.html.twig' %}
+
+{% block page_product_detail_product_buy_button %}
+    {% if ssik.config.productCard is not empty and ssik.config.productCard is same as('metro') %}
+        <div class="btn-buy ssik-custom-add-to-cart" data-ssik-add-cart="true">
+            {% sw_icon 'icon-plus' style { 'pack':'line', 'namespace': 'SsikMetroLight', 'class':'ssik md' } %}
+            {{ "ssik.listing.addtocart"|trans|sw_sanitize }}
+        </div>
+    {% endif %}
+    {{parent()}}
+{% endblock %}
+
+{% block component_product_box_action_detail %}
+    {% if ssik.config.productCard is not empty and ssik.config.productCard is same as('metro') %}
+        <a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}"
+            class="btn-buy ssik-custom-add-to-cart is-detail"
+            title="{{ "listing.boxProductDetails"|trans|striptags }}">
+            {{ "listing.boxProductDetails"|trans|sw_sanitize }}
+        </a>
+    {% endif %}
+    {{parent()}}
+{% endblock %}

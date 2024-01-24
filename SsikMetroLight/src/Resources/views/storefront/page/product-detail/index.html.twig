@@ -1,0 +1,69 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/index.html.twig' %}
+
+{% block page_product_detail_media %}
+    <div class="ssik-product-detail-media">
+        {% if ssik.config.isProductDetailCustom == 1 %}
+            {% if page.product.media %}
+                {% sw_include '@Storefront/storefront/element/cms-element-image-gallery.html.twig' with {
+                    'mediaItems': mediaItems,
+                    'zoom': ssik.config.productDetailImageZoom == 1 ? false : true,
+                    'zoomModal': true,
+                    'displayMode': false,
+                    'gutter': 5,
+                    'minHeight': false,
+                    'navigationArrows': 'inside',
+                    'navigationDots': false,
+                    'galleryPosition': 'left',
+                    'isProduct': true,
+                    'fallbackImageTitle': page.product.translated.name,
+                    'startIndexThumbnails': 1,
+                    'startIndexSlider': 1,
+                    'keepAspectRatioOnZoom': false
+                } %}
+            {% endif %}
+        {% else %}
+            {{parent()}}
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block page_product_detail_buy %}
+    <div class="ssik-priduct-detail-buy">
+        <div class="ssik-product-detail-name-container">
+            <div class="ssik-product-detail-name">
+                {{ page.product.translated.name }}
+            </div>
+            <div class="ssik-product-detail-info">
+                {% if page.product.productNumber %}
+                    <div class="ssik-product-detail-ordernumber-container">
+                        <span class="label">
+                            {{ "detail.productNumberLabel"|trans|sw_sanitize }}
+                        </span>
+                        <span class="product-detail-ordernumber">
+                            {{ page.product.productNumber }}
+                        </span>
+                    </div>
+                {% endif %}
+                {% if page.product.manufacturer %}
+                    <div class="ssik-product-detail-manufacturer-container">
+                        <span class="label">
+                            {{ "ssik.detail.brand"|trans|sw_sanitize }}:
+                        </span>
+                        <span class="product-detail-manufacturer">
+                            {{ page.product.manufacturer.translated.name }}
+                        </span>
+                    </div>
+                {% endif %}
+            </div>
+            {% if page.product.manufacturer.media && ssik.config.isBrandLogoShow == 1 %}
+                <div class="ssik-product-detail-brand-logo">
+                    <img src="{{ page.product.manufacturer.media|sw_encode_media_url }}"
+                        class="ssik-product-detail-manufacturer-logo"
+                        alt="{{ page.product.manufacturer.translated.name }}"/>
+                </div>
+            {% endif %}
+        </div>
+        
+        {{parent()}}
+    </div>
+{% endblock %}

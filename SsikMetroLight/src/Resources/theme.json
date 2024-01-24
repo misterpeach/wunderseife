@@ -1,0 +1,3661 @@
+{
+  "name": "SsikMetroLight",
+  "author": "wonderthemes.de",
+  "description": {
+    "en-GB": "Liberty Theme - free template for Shopware 6",
+    "de-DE": "kostenlose Vorlage für Shopware 6"
+  },
+  "previewMedia": "app/storefront/dist/assets/MetroLightPreview.png",
+  "views": [
+     "@Storefront",
+     "@Plugins",
+     "@SsikMetroLight"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "app/storefront/dist/storefront/js/fa.all.min.js",
+    "app/storefront/dist/storefront/js/ssik-metro-light.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "app/storefront/src/assets"
+  ],
+  "config": {
+    "tabs": {
+      "base": {
+        "label": {
+            "en-GB": "Metro",
+            "de-DE": "Metro"
+        }
+      },
+      "header": {
+        "label": {
+            "en-GB": "Header",
+            "de-DE": "Header"
+        }
+      },
+      "topbar": {
+        "label": {
+            "en-GB": "Top-bar",
+            "de-DE": "Top-bar"
+        }
+      },
+      "mainmenu": {
+        "label": {
+            "en-GB": "Menu",
+            "de-DE": "Menü"
+        }
+      },
+      "footer": {
+        "label": {
+            "en-GB": "Footer",
+            "de-DE": "Footer"
+        }
+      },
+      "forms": {
+        "label": {
+            "en-GB": "Forms",
+            "de-DE": "Forms"
+        }
+      },
+      "productbox": {
+        "label": {
+            "en-GB": "Product box",
+            "de-DE": "Produktbox"
+        }
+      },
+      "product": {
+        "label": {
+            "en-GB": "Product detail",
+            "de-DE": "Produktdetail"
+        }
+      },
+      "badges": {
+        "label": {
+            "en-GB": "Product badge",
+            "de-DE": "Produktabzeichen"
+        }
+      },
+      "listing": {
+        "label": {
+            "en-GB": "Listing Page",
+            "de-DE": "Kategorieseiten"
+        }
+      },
+      "slider": {
+        "label": {
+            "en-GB": "Slider",
+            "de-DE": "Slider"
+        }
+      },
+      "cartoffcanvas" : {
+        "label": {
+          "en-GB": "Cart Offcanvas",
+          "de-DE": "Warenkorb Offcanvas"
+        }
+      },
+      "checkout" : {
+        "label": {
+          "en-GB": "Cart Checkout",
+          "de-DE": "Einkaufswagen-Kasse"
+        }
+      }
+    },
+    "blocks": {
+      "base": {
+        "base" : {
+          "label": {
+            "en-GB": "Base",
+            "de-DE": "Base"
+          }
+        },
+        "text" : {
+          "label": {
+            "en-GB": "Text",
+            "de-DE": "Text"
+          }
+        },
+        "headline" : {
+          "label": {
+            "en-GB": "Headline",
+            "de-DE": "Überschrift"
+          }
+        },
+        "link" : {
+          "label": {
+            "en-GB": "Link",
+            "de-DE": "Link"
+          }
+        },
+        "logo" : {
+          "label": {
+            "en-GB": "Logo",
+            "de-DE": "Logo"
+          }
+        }
+      },
+      "header": {
+        "header": {
+          "en-GB": "Header",
+          "de-DE": "Header"
+        },
+        "actions" : {
+          "label": {
+            "en-GB": "Action Buttons",
+            "de-DE": "Aktionsschaltflächen"
+          }
+        },
+        "badges" : {
+          "label": {
+            "en-GB": "Badges",
+            "de-DE": "Abzeichen"
+          }
+        },
+        "topbar": {
+          "en-GB": "Header Top Bar",
+          "de-DE": "Header Top Bar"
+        },
+        "search": {
+          "en-GB": "Header",
+          "de-DE": "Header"
+        },
+        "announcement-banner": {
+          "en-GB": "Announcement banner",
+          "de-DE": "Ankündigung banner"
+        },
+        "usp" : {
+          "en-GB": "Our advantages",
+          "de-DE": "Unsere Vorzüge"
+        }
+      },
+      "topbar": {
+        "topbar" : {
+          "label": {
+            "en-GB": "Top-bar",
+            "de-DE": "Top-bar"
+          }
+        },
+        "buttons" : {
+          "label": {
+            "en-GB": "Buttons",
+            "de-DE": "Tasten"
+          }
+        }
+      },
+      "forms": {
+        "input": {
+          "en-GB": "Forms",
+          "de-DE": "Formular"
+        },
+        "btn": {
+          "en-GB": "Button",
+          "de-DE": "Tasten"
+        },
+        "primary": {
+          "en-GB": "Primary button",
+          "de-DE": "Primäre Schaltfläche"
+        },
+        "focus": {
+          "en-GB": "Input focus",
+          "de-DE": "Input focus"
+        },
+        "counter": {
+          "en-GB": "Choice of quantity of goods",
+          "de-DE": "Wahl der Warenmenge"
+        },
+        "counteroffcanvas": {
+          "en-GB": "Choice of quantity of goods (Offcanvas)",
+          "de-DE": "Wahl der Warenmenge (Offcanvas)"
+        }
+      },
+      "mainmenu": {
+        "mainmenu": {
+          "label": {
+            "en-GB": "Main menu",
+            "de-DE": "Haupt-Nav"
+          }
+        },
+        "navcontainer": {
+          "en-GB": "Container decoration",
+          "de-DE": "Behälter Dekoration"
+        },
+        "navitem": {
+          "en-GB": "Menu item",
+          "de-DE": "Menüpunkt"
+        },
+        "nav": {
+          "en-GB": "Main navigation",
+          "de-DE": "Hauptnavigation"
+        },
+        "sidebar": {
+          "en-GB": "Catalog in sidebar",
+          "de-DE": "Katalog im Sidebar"
+        },
+        "flyout": {
+          "en-GB": "Flyout menu",
+          "de-DE": "Flyout-Menü"
+        },
+        "dropdown": {
+          "en-GB": "Dropdown menu",
+          "de-DE": "Dropdown-Menü"
+        },
+        "sticky": {
+          "en-GB": "Sticky menu",
+          "de-DE": "Sticky Menü"
+        },
+        "stickycart": {
+          "en-GB": "Shopping cart",
+          "de-DE": "Warenkorb"
+        },
+        "offcanvas": {
+          "en-GB": "Offcanvas menu",
+          "de-DE": "Offcanvas menu"
+        }
+      },
+      "product": {
+        "product": {
+          "label": {
+              "en-GB": "Product Card",
+              "de-DE": "Produktkarte"
+          }
+        },
+        "name": {
+          "label": {
+              "en-GB": "Product title",
+              "de-DE": "Produktname"
+          }
+        },
+        "oldprice": {
+          "label": {
+              "en-GB": "Old price",
+              "de-DE": "Alter Preis"
+          }
+        },
+        "price": {
+          "label": {
+              "en-GB": "Product price",
+              "de-DE": "Produktpreis"
+          }
+        },
+        "newprice": {
+          "label": {
+              "en-GB": "New price",
+              "de-DE": "Neue Preis"
+          }
+        },
+        "info": {
+          "label": {
+              "en-GB": "Info",
+              "de-DE": "Info"
+          }
+        },
+        "buybtn": {
+          "label": {
+              "en-GB": "Add to cart",
+              "de-DE": "In den Warenkorb"
+          }
+        },
+        "wishlist": {
+          "label": {
+              "en-GB": "Wishlist",
+              "de-DE": "Wunschzettel"
+          }
+        },
+        "badge" : {
+          "en-GB": "Product badge",
+          "de-DE": "Produktabzeichen"
+        },
+        "detail" : {
+          "en-GB": "detail",
+          "de-DE": "detail"
+        }
+      },
+      "productbox" : {
+        "box": {
+          "label": {
+              "en-GB": "Product box",
+              "de-DE": "Produktbox"
+          }
+        },
+        "name": {
+          "label": {
+              "en-GB": "Product title",
+              "de-DE": "Produktname"
+          }
+        },
+        "brand": {
+          "label": {
+              "en-GB": "Brand",
+              "de-DE": "Marke"
+          }
+        },
+        "price": {
+          "label": {
+              "en-GB": "Product price",
+              "de-DE": "Produktpreis"
+          }
+        },
+        "newprice": {
+          "label": {
+              "en-GB": "New price",
+              "de-DE": "Neue Preis"
+          }
+        },
+        "buybtn": {
+          "label": {
+              "en-GB": "Add to cart",
+              "de-DE": "In den Warenkorb"
+          }
+        },
+        "action": {
+          "label": {
+              "en-GB": "Action",
+              "de-DE": "Aktion"
+          }
+        }
+      },
+      "badges" : {
+        "badge": {
+          "label": {
+              "en-GB": "Badge",
+              "de-DE": "Abzeichen"
+          }
+        },
+        "new": {
+          "label": {
+              "en-GB": "New",
+              "de-DE": "AbzeiNeuchen"
+          }
+        },
+        "freeshipp": {
+          "label": {
+              "en-GB": "Free shipping",
+              "de-DE": "Kostenloser Versand"
+          }
+        },
+        "topseller": {
+          "label": {
+              "en-GB": "Top seller",
+              "de-DE": "Topseller"
+          }
+        },
+        "discount": {
+          "label": {
+              "en-GB": "Discount",
+              "de-DE": "Rabatt"
+          }
+        }
+      },
+      "listing": {
+        "listing": {
+          "en-GB": "Product list",
+          "de-DE": "Produktliste"
+        },
+        "sidebar": {
+          "en-GB": "Sidebar",
+          "de-DE": "Sidebar"
+        },
+        "breadcrumbs": {
+          "en-GB": "Breadcrumbs",
+          "de-DE": "Semmelbrösel"
+        },
+        "filter": {
+          "en-GB": "Filter",
+          "de-DE": "Filter"
+        },
+        
+        "pagination": {
+          "en-GB": "Pagination",
+          "de-DE": "Seitennummerierung"
+        }
+      },
+      "footer": {
+        "logo": {
+          "en-GB": "Logo",
+          "de-DE": "Logo"
+        },
+        
+        "footer": {
+          "en-GB": "Footer",
+          "de-DE": "Footer"
+        },
+        "newsletter": {
+          "en-GB": "Newsletter",
+          "de-DE": "Newsletter"
+        },
+        "cookie": {
+          "en-GB": "Cookie Bar",
+          "de-DE": "Cookie Bar"
+        },
+        "social": {
+          "en-GB": "Social links",
+          "de-DE": "Soziale Links"
+        },
+        "footerbottom": {
+          "en-GB": "Footer bottom",
+          "de-DE": "Fußzeile unten"
+        },
+        "usp" : {
+          "en-GB": "Our advantages",
+          "de-DE": "Unsere Vorzüge"
+        }
+      },
+      "slider": {
+        "nav": {
+          "en-GB": "Nav",
+          "de-DE": "Nav"
+        },
+        "dots": {
+          "en-GB": "Dots",
+          "de-DE": "Punkte"
+        },
+        "product": {
+          "en-GB": "Product gallery",
+          "de-DE": "Produktgalerie"
+        }
+      },
+      "cartoffcanvas" : {
+        "base" : {
+          "label" : {
+            "en-GB": "Base",
+            "de-DE": "Base"
+          }
+        },
+        "closebtn" : {
+          "label" : {
+            "en-GB": "Close Button",
+            "de-DE": "Schließen-Schaltfläche"
+          }
+        },
+        "headline" : {
+          "label" : {
+            "en-GB": "Headline",
+            "de-DE": "Überschrift"
+          }
+        },
+        "promotion" : {
+          "label" : {
+            "en-GB": "Promotion form",
+            "de-DE": "Aktionsformular"
+          }
+        },
+        "basket" : {
+          "label" : {
+            "en-GB": "Basket",
+            "de-DE": "Warenkorb"
+          }
+        },
+        "checkout" : {
+          "label" : {
+            "en-GB": "Checkout Btn",
+            "de-DE": "Auschecken"
+          }
+        },
+
+        "counter" : {
+          "label" : {
+            "en-GB": "Counter",
+            "de-DE": "Zähler"
+          }
+        }
+      },
+      "checkout" : {
+        "summary" : {
+          "label" : {
+            "en-GB": "summary",
+            "de-DE": "summary"
+          }
+        }
+      }
+    },
+    "fields": {
+      
+      "ssik-metro-base-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "base",
+        "block": "base",
+        "order": 400
+      },
+
+      "ssik-metro-base-overlay-bg": {
+        "label": {
+          "en-GB": "Overlay",
+          "de-DE": "Overlay"
+        },
+        "type": "color",
+        "value": "#000000b3",
+        "editable": true,
+        "tab": "base",
+        "block": "base"
+      },
+      
+      "ssik-metro-base-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "base",
+        "block": "text",
+        "order": 200
+      },
+
+      "ssik-metro-base-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#ECECE7",
+        "editable": true,
+        "tab": "base",
+        "block": "text",
+        "order": 200
+      },
+      
+      "ssik-metro-base-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "base",
+        "block": "text",
+        "order": 200
+      },
+
+      "ssik-metro-base-font-family": {
+        "label": {
+          "en-GB": "Font",
+          "de-DE": "Schriftart"
+        },
+        "type": "text",
+        "value": "'Lato', sans-serif",
+        "editable": true,
+        "tab": "base",
+        "block": "text",
+        "order": 100,
+        "custom": {
+          "componentName": "sw-single-select",
+          "options": [
+            {
+              "value": "'Ubuntu', sans-serif",
+              "label": {
+                "en-GB": "Ubuntu",
+                "de-DE": "Ubuntu"
+              }
+            },
+            {
+              "value": "'Lato', sans-serif",
+              "label": {
+                "en-GB": "Lato",
+                "de-DE": "Lato"
+              }
+            },
+            {
+              "value": "'Inter', sans-serif",
+              "label": {
+                "en-GB": "Inter",
+                "de-DE": "Inter"
+              }
+            },
+            {
+              "value": "'Roboto Slab', sans-serif",
+              "label": {
+                "en-GB": "Roboto Slab",
+                "de-DE": "Roboto Slab"
+              }
+            },
+            {
+              "value": "'Merriweather', sans-serif",
+              "label": {
+                "en-GB": "Merriweather",
+                "de-DE": "Merriweather"
+              }
+            },
+            {
+              "value": "'Open Sans', sans-serif",
+              "label": {
+                "en-GB": "Open Sans",
+                "de-DE": "Open Sans"
+              }
+            }
+          ]
+        }
+      },
+
+      "ssik-metro-base-headline-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "base",
+        "block": "headline",
+        "order": 400
+      },
+
+      "ssik-metro-base-headline-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "22px",
+        "editable": true,
+        "tab": "base",
+        "block": "headline",
+        "order": 400
+      },
+
+      "ssik-metro-base-headline-font-family": {
+        "label": {
+          "en-GB": "Font",
+          "de-DE": "Schriftart"
+        },
+        "type": "text",
+        "value": "'Lato', sans-serif",
+        "editable": true,
+        "tab": "base",
+        "block": "headline",
+        "order": 300,
+        "custom": {
+          "componentName": "sw-single-select",
+          "options": [
+            {
+              "value": "'Ubuntu', sans-serif",
+              "label": {
+                "en-GB": "Ubuntu",
+                "de-DE": "Ubuntu"
+              }
+            },
+            {
+              "value": "'Lato', sans-serif",
+              "label": {
+                "en-GB": "Lato",
+                "de-DE": "Lato"
+              }
+            },
+            {
+              "value": "'Inter', sans-serif",
+              "label": {
+                "en-GB": "Inter",
+                "de-DE": "Inter"
+              }
+            },
+            {
+              "value": "'Roboto Slab', sans-serif",
+              "label": {
+                "en-GB": "Roboto Slab",
+                "de-DE": "Roboto Slab"
+              }
+            },
+            {
+              "value": "'Merriweather', sans-serif",
+              "label": {
+                "en-GB": "Merriweather",
+                "de-DE": "Merriweather"
+              }
+            },
+            {
+              "value": "'Open Sans', sans-serif",
+              "label": {
+                "en-GB": "Open Sans",
+                "de-DE": "Open Sans"
+              }
+            }
+          ]
+        }
+      },
+
+      "ssik-metro-base-link-color": {
+        "label": {
+          "en-GB": "Link Color",
+          "de-DE": "Linkfarbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "base",
+        "block": "link",
+        "order": 400
+      },
+      "ssik-metro-base-link-hover-color": {
+        "label": {
+          "en-GB": "Link Color hover",
+          "de-DE": "Linkfarbe aktiv"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "base",
+        "block": "link",
+        "order": 500
+      },
+
+      "ssik-metro-base-logo-container-width": {
+        "label": {
+          "en-GB": "Width",
+          "de-DE": "Breite"
+        },
+        "type": "text",
+        "value": "200px",
+        "editable": true,
+        "tab": "base",
+        "block": "logo",
+        "order": 400
+      },
+      
+      "ssik-metro-input-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#f7f8fa",
+        "editable": true,
+        "tab": "forms",
+        "block": "input"
+      },
+      "ssik-metro-input-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#777777",
+        "editable": true,
+        "tab": "forms",
+        "block": "input"
+      },
+      "ssik-metro-input-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "forms",
+        "block": "input"
+      },
+      "ssik-metro-input-label-color": {
+        "label": {
+          "en-GB": "Color (Label)",
+          "de-DE": "Farbe (Label)"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "forms",
+        "block": "input"
+      },
+      "ssik-metro-input-label-font-size": {
+        "label": {
+          "en-GB": "Text size (Label)",
+          "de-DE": "Schriftgröße (Label)"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "forms",
+        "block": "input"
+      },
+      "ssik-metro-input-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#E6E6E6",
+        "editable": true,
+        "tab": "forms",
+        "block": "input"
+      },
+      "ssik-metro-input-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#f9f9f9",
+        "editable": true,
+        "tab": "forms",
+        "block": "input"
+      },
+      "ssik-metro-input-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#777777",
+        "editable": true,
+        "tab": "forms",
+        "block": "input"
+      },
+      "ssik-metro-input-hover-border": {
+        "label": {
+          "en-GB": "Border on hover",
+          "de-DE": "Rahmen bei Hover"
+        },
+        "type": "color",
+        "value": "#919191",
+        "editable": true,
+        "tab": "forms",
+        "block": "input"
+      },
+
+      "ssik-metro-btn-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#151635",
+        "editable": true,
+        "tab": "forms",
+        "block": "btn"
+      },
+
+      "ssik-metro-btn-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "forms",
+        "block": "btn"
+      },
+
+      "ssik-metro-btn-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "forms",
+        "block": "btn"
+      },
+
+      "ssik-metro-btn-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "forms",
+        "block": "btn"
+      },
+
+      "ssik-metro-btn-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "forms",
+        "block": "btn"
+      },
+
+      "ssik-metro-base-btn-primary-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#151635",
+        "editable": true,
+        "tab": "forms",
+        "block": "primary"
+      },
+
+      "ssik-metro-base-btn-primary-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "forms",
+        "block": "primary"
+      },
+
+      "ssik-metro-base-btn-primary-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#151635",
+        "editable": true,
+        "tab": "forms",
+        "block": "primary"
+      },
+
+      "ssik-metro-base-btn-primary-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "forms",
+        "block": "primary"
+      },
+
+      "ssik-metro-base-btn-primary-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "forms",
+        "block": "primary"
+      },
+
+      "ssik-metro-base-btn-primary-hover-border": {
+        "label": {
+          "en-GB": "Border on hover",
+          "de-DE": "Rahmen bei Hover"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "forms",
+        "block": "primary"
+      },
+
+      "ssik-metro-base-btn-primary-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "forms",
+        "block": "primary"
+      },
+
+      "ssik-metro-pagination-bg": {
+        "label": {
+          "en-GB": "Background item",
+          "de-DE": "Hintergrund Element"
+        },
+        "type": "color",
+        "value": "#e5e8ec",
+        "editable": true,
+        "tab": "listing",
+        "block": "pagination"
+      },
+
+      "ssik-metro-pagination-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "listing",
+        "block": "pagination"
+      },
+
+      "ssik-metro-pagination-hover-bg": {
+        "label": {
+          "en-GB": "Background item on hover",
+          "de-DE": "Hintergrund Element bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "listing",
+        "block": "pagination"
+      },
+
+      "ssik-metro-pagination-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "listing",
+        "block": "pagination"
+      },
+
+      "ssik-metro-pagination-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "listing",
+        "block": "pagination"
+      },
+
+      "ssik-metro-breadcrumbs-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#f5f5f5",
+        "editable": true,
+        "tab": "listing",
+        "block": "breadcrumbs"
+      },
+
+      "ssik-metro-breadcrumbs-link-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "12px",
+        "editable": true,
+        "tab": "listing",
+        "block": "breadcrumbs"
+      },
+
+      "ssik-metro-breadcrumbs-link-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "listing",
+        "block": "breadcrumbs"
+      },
+
+      "ssik-metro-breadcrumbs-link-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "listing",
+        "block": "breadcrumbs"
+      },
+
+      "ssik-metro-product-box-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "productbox",
+        "block": "box"
+      },
+
+      "ssik-metro-product-box-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#ecece7",
+        "editable": true,
+        "tab": "productbox",
+        "block": "box"
+      },
+
+      "ssik-metro-product-box-border-radius": {
+        "label": {
+          "en-GB": "Radius",
+          "de-DE": "Radius"
+        },
+        "type": "text",
+        "value": "10px",
+        "editable": true,
+        "tab": "productbox",
+        "block": "box"
+      },
+
+      "ssik-metro-product-box-name-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "productbox",
+        "block": "name"
+      },
+
+      "ssik-metro-product-box-name-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "productbox",
+        "block": "name"
+      },
+
+      "ssik-metro-product-box-name-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "productbox",
+        "block": "name"
+      },
+
+      "ssik-metro-product-box-brand-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "productbox",
+        "block": "brand"
+      },
+
+      "ssik-metro-product-box-brand-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "productbox",
+        "block": "brand"
+      },
+
+      "ssik-metro-product-box-price-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "22px",
+        "editable": true,
+        "tab": "productbox",
+        "block": "price"
+      },
+
+      "ssik-metro-product-box-price-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "productbox",
+        "block": "price"
+      },
+
+      "ssik-metro-product-box-discount-price-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#e52427",
+        "editable": true,
+        "tab": "productbox",
+        "block": "newprice"
+      },
+
+
+      "ssik-metro-product-box-buy-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#151635",
+        "editable": true,
+        "tab": "productbox",
+        "block": "buybtn"
+      },
+
+      "ssik-metro-product-box-buy-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "productbox",
+        "block": "buybtn"
+      },
+
+      "ssik-metro-product-box-buy-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "productbox",
+        "block": "buybtn"
+      },
+
+      "ssik-metro-product-box-buy-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "productbox",
+        "block": "buybtn"
+      },
+
+      "ssik-metro-product-box-action-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "productbox",
+        "block": "action"
+      },
+
+      "ssik-metro-product-box-action-color": {
+        "label": {
+          "en-GB": "Icon color",
+          "de-DE": "Symbol farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "productbox",
+        "block": "action"
+      },
+
+      "ssik-metro-product-box-action-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "productbox",
+        "block": "action"
+      },
+
+      "ssik-metro-product-box-action-hover-color": {
+        "label": {
+          "en-GB": "Icon color on hover",
+          "de-DE": "Symbol farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "productbox",
+        "block": "action"
+      },
+
+      "ssik-metro-badge-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "12px",
+        "editable": true,
+        "tab": "badges",
+        "block": "badge"
+      },
+
+      "ssik-metro-badge-new-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#04835d",
+        "editable": true,
+        "tab": "badges",
+        "block": "new"
+      },
+
+      "ssik-metro-badge-new-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "badges",
+        "block": "new"
+      },
+      
+      "ssik-metro-badge-freeshipp-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#0048ac",
+        "editable": true,
+        "tab": "badges",
+        "block": "freeshipp"
+      },
+
+      "ssik-metro-badge-freeshipp-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "badges",
+        "block": "freeshipp"
+      },
+
+      "ssik-metro-badge-topseller-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#6f0946",
+        "editable": true,
+        "tab": "badges",
+        "block": "topseller"
+      },
+
+      "ssik-metro-badge-topseller-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "badges",
+        "block": "topseller"
+      },
+
+      "ssik-metro-badge-discount-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#df0f0f",
+        "editable": true,
+        "tab": "badges",
+        "block": "discount"
+      },
+
+      "ssik-metro-badge-discount-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "badges",
+        "block": "discount"
+      },
+
+      "ssik-metro-product-detail-name-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "product",
+        "block": "name"
+      },
+
+      "ssik-metro-product-detail-name-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "24px",
+        "editable": true,
+        "tab": "product",
+        "block": "name"
+      },
+
+      "ssik-metro-product-detail-price-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "product",
+        "block": "price"
+      },
+
+      "ssik-metro-product-detail-price-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "26px",
+        "editable": true,
+        "tab": "product",
+        "block": "price"
+      },
+
+      "ssik-metro-product-detail-old-price-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#6a6a6a",
+        "editable": true,
+        "tab": "product",
+        "block": "oldprice"
+      },
+
+      "ssik-metro-product-detail-new-price-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "product",
+        "block": "newprice"
+      },
+
+      "ssik-metro-product-detail-info-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#747474",
+        "editable": true,
+        "tab": "product",
+        "block": "info"
+      },
+
+      "ssik-metro-product-detail-info-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "13px",
+        "editable": true,
+        "tab": "product",
+        "block": "info"
+      },
+
+      "ssik-metro-product-detail-buybtn-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#151635",
+        "editable": true,
+        "tab": "product",
+        "block": "buybtn"
+      },
+
+      "ssik-metro-product-detail-buybtn-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "product",
+        "block": "buybtn"
+      },
+
+      "ssik-metro-product-detail-buybtn-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "product",
+        "block": "buybtn"
+      },
+
+      "ssik-metro-product-detail-buybtn-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#D31622",
+        "editable": true,
+        "tab": "product",
+        "block": "buybtn"
+      },
+
+      "ssik-metro-product-detail-buybtn-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "product",
+        "block": "buybtn"
+      },
+
+      "ssik-metro-product-detail-wishlist-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#f1f3f2",
+        "editable": true,
+        "tab": "product",
+        "block": "wishlist"
+      },
+
+      "ssik-metro-product-detail-wishlist-color": {
+        "label": {
+          "en-GB": "Icon color",
+          "de-DE": "Symbol farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "product",
+        "block": "wishlist"
+      },
+
+      "ssik-metro-product-detail-wishlist-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#e8ebea",
+        "editable": true,
+        "tab": "product",
+        "block": "wishlist"
+      },
+
+      "ssik-metro-product-detail-wishlist-hover-color": {
+        "label": {
+          "en-GB": "Icon color on hover",
+          "de-DE": "Symbol farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "product",
+        "block": "wishlist"
+      },
+
+      "ssik-metro-listing-headline-color": {
+        "label": {
+          "en-GB": "Headline Color",
+          "de-DE": "Farbe der Überschrift"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "listing",
+        "block": "listing"
+      },
+
+      "ssik-metro-listing-headline-font-size": {
+        "label": {
+          "en-GB": "Headline text size",
+          "de-DE": "Schriftgröße der Überschrift"
+        },
+        "type": "text",
+        "value": "22px",
+        "editable": true,
+        "tab": "listing",
+        "block": "listing"
+      },
+
+      "ssik-metro-sidebar-headline-color": {
+        "label": {
+          "en-GB": "Headline Color",
+          "de-DE": "Farbe der Überschrift"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "listing",
+        "block": "sidebar"
+      },
+
+      "ssik-metro-sidebar-headline-font-size": {
+        "label": {
+          "en-GB": "Headline text size",
+          "de-DE": "Schriftgröße der Überschrift"
+        },
+        "type": "text",
+        "value": "18px",
+        "editable": true,
+        "tab": "listing",
+        "block": "sidebar"
+      },
+
+      "ssik-metro-filter-item-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+
+      "ssik-metro-filter-item-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+    
+      "ssik-metro-filter-item-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+
+      "ssik-metro-filter-item-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+
+      "ssik-metro-filter-item-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+
+      "ssik-metro-filter-item-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#EEEEEE",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+
+      "ssik-metro-filter-item-hover-border": {
+        "label": {
+          "en-GB": "Border on hover",
+          "de-DE": "Rahmen bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+      
+      "ssik-metro-filter-select-color": {
+        "label": {
+          "en-GB": "Icon color",
+          "de-DE": "Symbol farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+
+      "ssik-metro-filter-select-border": {
+        "label": {
+          "en-GB": "Icon border",
+          "de-DE": "Symbol Rahmen"
+        },
+        "type": "color",
+        "value": "#c7c7c7",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+
+      "ssik-metro-filter-select-hover-color": {
+        "label": {
+          "en-GB": "Icon color on hover",
+          "de-DE": "Symbol farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "listing",
+        "block": "filter"
+      },
+      
+      "ssik-metro-main-navigation-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "mainmenu"
+      },
+
+      "ssik-metro-main-navigation-align": {
+        "label": {
+          "en-GB": "Alignment method",
+          "de-DE": "Ausrichtungsmethode"
+        },
+        "type": "text",
+        "value": "flex-start",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "mainmenu",
+        "custom": {
+          "componentName": "sw-single-select",
+          "options": [
+            {
+              "value": "flex-start",
+              "label": {
+                "en-GB": "Left",
+                "de-DE": "Links"
+              }
+            },
+            {
+              "value": "center",
+              "label": {
+                "en-GB": "Center",
+                "de-DE": "Center"
+              }
+            }
+          ]
+        }
+      },
+
+      "ssik-metro-main-navigation-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "navitem"
+      },
+
+      "ssik-metro-main-navigation-transform": {
+        "label": {
+          "en-GB": "Text transform",
+          "de-DE": "Textumwandlung"
+        },
+        "type": "text",
+        "value": "none",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "navitem",
+        "custom": {
+          "componentName": "sw-single-select",
+          "options": [
+            {
+              "value": "none",
+              "label": {
+                "en-GB": "none",
+                "de-DE": "none"
+              }
+            },
+            {
+              "value": "uppercase",
+              "label": {
+                "en-GB": "Uppercase",
+                "de-DE": "Großbuchstaben"
+              }
+            },
+            {
+              "value": "lowercase",
+              "label": {
+                "en-GB": "Lowercase",
+                "de-DE": "Kleinbuchstaben"
+              }
+            }
+          ]
+        }
+      },
+
+      "ssik-metro-main-navigation-font-weight": {
+        "label": {
+          "en-GB": "Font weight",
+          "de-DE": "Schriftgewicht"
+        },
+        "type": "text",
+        "value": "400",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "navitem",
+        "custom": {
+          "componentName": "sw-single-select",
+          "options": [
+            {
+              "value": "200",
+              "label": {
+                "en-GB": "200",
+                "de-DE": "200"
+              }
+            },
+            {
+              "value": "300",
+              "label": {
+                "en-GB": "300",
+                "de-DE": "300"
+              }
+            },
+            {
+              "value": "400",
+              "label": {
+                "en-GB": "400",
+                "de-DE": "400"
+              }
+            },
+            {
+              "value": "500",
+              "label": {
+                "en-GB": "500",
+                "de-DE": "500"
+              }
+            },
+            {
+              "value": "600",
+              "label": {
+                "en-GB": "600",
+                "de-DE": "600"
+              }
+            }
+          ]
+        }
+      },
+
+      "ssik-metro-main-navigation-color": {
+        "label": {
+          "en-GB": "Text color",
+          "de-DE": "Textfarbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "navitem"
+      },
+
+      "ssik-metro-main-navigation-hover-color": {
+        "label": {
+          "en-GB": "Text color on hover",
+          "de-DE": "Textfarbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "navitem"
+      },
+
+      "ssik-metro-main-navigation-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#232523",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "navitem"
+      },
+
+      "ssik-metro-sidebar-catalog-link-color": {
+        "label": {
+          "en-GB": "Link color",
+          "de-DE": "Verknüpfungsfarbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "sidebar"
+      },
+    
+      "ssik-metro-sidebar-catalog-link-hover-color": {
+        "label": {
+          "en-GB": "Link color on mouseover",
+          "de-DE": "Link beim Mouseover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "sidebar"
+      },
+
+      "ssik-metro-sidebar-catalog-link-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "sidebar"
+      },
+
+      "ssik-metro-navigation-flyout-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "flyout",
+        "fullWidth": true
+      },
+
+      "ssik-metro-navigation-flyout-link-color": {
+        "label": {
+          "en-GB": "Link color",
+          "de-DE": "Linkfarbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "flyout"
+      },
+
+      "ssik-metro-navigation-flyout-link-hover-color": {
+        "label": {
+          "en-GB": "Link color on hover",
+          "de-DE": "Linkfarbe bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "flyout"
+      },
+      "ssik-metro-navigation-flyout-link-font-size": {
+        "label": {
+          "en-GB": "Link text size",
+          "de-DE": "Linktextgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "flyout"
+      },
+
+      "ssik-metro-navigation-flyout-category-link-font-size": {
+        "label": {
+          "en-GB": "Name of category. Text size",
+          "de-DE": "Name der Kategorie. Textgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "flyout"
+      },
+
+      "ssik-metro-nav-off-color": {
+        "label": {
+          "en-GB": "Text color",
+          "de-DE": "Textfarbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "offcanvas"
+      },
+
+      "ssik-metro-nav-off-link-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "offcanvas"
+      },
+
+      "ssik-metro-nav-off-link-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "offcanvas"
+      },
+
+      "ssik-metro-nav-off-link-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#ecece7",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "offcanvas"
+      },
+
+      "ssik-metro-nav-off-link-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "offcanvas"
+      },
+
+      "ssik-metro-main-dropdown-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "dropdown"
+      },
+
+      "ssik-metro-main-dropdown-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#131313",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "dropdown"
+      },
+
+      "ssik-metro-main-dropdown-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "dropdown"
+      },
+
+      "ssik-metro-main-dropdown-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "dropdown"
+      },
+
+      "ssik-metro-main-dropdown-font-weight": {
+        "label": {
+          "en-GB": "Font weight",
+          "de-DE": "Schriftgewicht"
+        },
+        "type": "text",
+        "value": "400",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "dropdown",
+        "custom": {
+          "componentName": "sw-single-select",
+          "options": [
+            {
+              "value": "200",
+              "label": {
+                "en-GB": "200",
+                "de-DE": "200"
+              }
+            },
+            {
+              "value": "300",
+              "label": {
+                "en-GB": "300",
+                "de-DE": "300"
+              }
+            },
+            {
+              "value": "400",
+              "label": {
+                "en-GB": "400",
+                "de-DE": "400"
+              }
+            },
+            {
+              "value": "500",
+              "label": {
+                "en-GB": "500",
+                "de-DE": "500"
+              }
+            },
+            {
+              "value": "600",
+              "label": {
+                "en-GB": "600",
+                "de-DE": "600"
+              }
+            }
+          ]
+        }
+      },
+
+      "ssik-metro-main-dropdown-transform": {
+        "label": {
+          "en-GB": "Text transform",
+          "de-DE": "Texttransformation"
+        },
+        "type": "text",
+        "value": "none",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "dropdown",
+        "custom": {
+          "componentName": "sw-single-select",
+          "options": [
+            {
+              "value": "none",
+              "label": {
+                "en-GB": "none",
+                "de-DE": "none"
+              }
+            },
+            {
+              "value": "uppercase",
+              "label": {
+                "en-GB": "Uppercase",
+                "de-DE": "Großbuchstaben"
+              }
+            },
+            {
+              "value": "lowercase",
+              "label": {
+                "en-GB": "Lowercase",
+                "de-DE": "Kleinbuchstaben"
+              }
+            }
+          ]
+        }
+      },
+
+      "ssik-metro-sticky-navigation-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#222525",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "sticky",
+        "fullWidth": true
+      },
+
+      "ssik-metro-sticky-navigation-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "sticky"
+      },
+
+      "ssik-metro-sticky-navigation-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "sticky"
+      },
+
+      "ssik-metro-sticky-navigation-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "sticky",
+        "fullWidth": true
+      },
+
+      "ssik-metro-sticky-navigation-z": {
+        "label": {
+          "en-GB": "Block stacking order (z-index)",
+          "de-DE": "Blockstapelreihenfolge (z-Index)"
+        },
+        "type": "text",
+        "value": "1002",
+        "editable": true,
+        "tab": "mainmenu",
+        "block": "sticky"
+      },
+
+      "ssik-footer-logo": {
+        "label": {
+          "en-GB": "Logo",
+          "de-DE": "Logo"
+        },
+        "type": "media",
+        "value": "app/storefront/dist/assets/logo/metro-light-logo-white.svg",
+        "editable": true,
+        "tab": "footer",
+        "block": "logotip"
+      },
+
+      "ssik-footer-logo-height": {
+        "label": {
+          "en-GB": "Logo height",
+          "de-DE": "Logohöhe"
+        },
+        "type": "text",
+        "value": "60px",
+        "editable": true,
+        "tab": "footer",
+        "block": "logotip"
+      },
+      
+      "ssik-metro-footer-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#222525",
+        "editable": true,
+        "tab": "footer",
+        "block": "footer"
+      },
+
+      "ssik-metro-footer-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#a8a8a8",
+        "editable": true,
+        "tab": "footer",
+        "block": "footer"
+      },
+
+      "ssik-metro-footer-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "footer",
+        "block": "footer"
+      },
+      
+      "ssik-metro-footer-link-color": {
+        "label": {
+          "en-GB": "Link color",
+          "de-DE": "Link farbe"
+        },
+        "type": "color",
+        "value": "#a8a8a8",
+        "editable": true,
+        "tab": "footer",
+        "block": "footer"
+      },
+      "ssik-metro-footer-link-hover-color": {
+        "label": {
+          "en-GB": "Link color on hover",
+          "de-DE": "Link beim Mouseover"
+        },
+        "type": "color",
+        "value": "#d61523",
+        "editable": true,
+        "tab": "footer",
+        "block": "footer"
+      },
+      
+      "ssik-metro-footer-headline-color": {
+        "label": {
+          "en-GB": "Headline color",
+          "de-DE": "Überschrift farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "footer",
+        "block": "footer"
+      },
+      "ssik-metro-footer-headline-font-size": {
+        "label": {
+          "en-GB": "Headline size",
+          "de-DE": "Schriftgröße Überschrift"
+        },
+        "type": "text",
+        "value": "18px",
+        "editable": true,
+        "tab": "footer",
+        "block": "footer"
+      },
+      
+      "ssik-metro-footer-line": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#393939",
+        "editable": true,
+        "tab": "footer",
+        "block": "footer"
+      },
+     
+      "ssik-metro-social-icon-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#404040",
+        "editable": true,
+        "tab": "footer",
+        "block": "social"
+      },
+
+      "ssik-metro-social-icon-color": {
+        "label": {
+          "en-GB": "Icon color",
+          "de-DE": "Symbol farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "footer",
+        "block": "social"
+      },
+
+      "ssik-metro-social-icon-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "footer",
+        "block": "social"
+      },
+      
+      "ssik-metro-social-icon-hover-color": {
+        "label": {
+          "en-GB": "Icon color on hover",
+          "de-DE": "Symbol farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "footer",
+        "block": "social"
+      },
+      
+      
+      "ssik-metro-footer-uspbar-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "footer",
+        "block": "usp"
+      },
+      "ssik-metro-footer-uspbar-icon-color": {
+        "label": {
+          "en-GB": "Icon color",
+          "de-DE": "Symbol farbe"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "footer",
+        "block": "usp"
+      },
+      "ssik-metro-footer-uspbar-icon-font-size": {
+        "label": {
+          "en-GB": "Icon Size",
+          "de-DE": "Symbolgröße"
+        },
+        "type": "text",
+        "value": "44px",
+        "editable": true,
+        "tab": "footer",
+        "block": "usp"
+      },
+
+      "ssik-metro-footer-uspbar-text-color": {
+        "label": {
+          "en-GB": "Headline color",
+          "de-DE": "Farbe der Überschrift"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "footer",
+        "block": "usp"
+      },
+      
+      "ssik-metro-footer-uspbar-text-font-size": {
+        "label": {
+          "en-GB": "Headline Size",
+          "de-DE": "Schriftgröße der Überschrift"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "footer",
+        "block": "usp"
+      },
+
+      "ssik-metro-footer-uspbar-desc-color": {
+        "label": {
+          "en-GB": "Text color",
+          "de-DE": "Text farbe"
+        },
+        "type": "color",
+        "value": "#6a6a6a",
+        "editable": true,
+        "tab": "footer",
+        "block": "usp"
+      },
+      
+      "ssik-metro-footer-uspbar-desc-font-size": {
+        "label": {
+          "en-GB": "Text Size",
+          "de-DE": "Textgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "footer",
+        "block": "usp"
+      },
+
+
+      "ssik-metro-newsletter-input-bg": {
+        "label": {
+          "en-GB": "Input Background",
+          "de-DE": "Input-Hintergrund"
+        },
+        "type": "color",
+        "value": "#2E2F2D",
+        "editable": true,
+        "tab": "footer",
+        "block": "newsletter"
+      },
+
+      "ssik-metro-newsletter-input-border": {
+        "label": {
+          "en-GB": "Input border",
+          "de-DE": "Input-Rahmen"
+        },
+        "type": "color",
+        "value": "#393939",
+        "editable": true,
+        "tab": "footer",
+        "block": "newsletter"
+      },
+
+      "ssik-metro-newsletter-input-color": {
+        "label": {
+          "en-GB": "Text Color",
+          "de-DE": "Textfarbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "footer",
+        "block": "newsletter"
+      },
+      "ssik-metro-newsletter-input-font-size": {
+        "label": {
+          "en-GB": "Font Size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "footer",
+        "block": "newsletter"
+      },
+      "ssik-metro-newsletter-submit-bg": {
+        "label": {
+          "en-GB": "Button background",
+          "de-DE": "Button-Hintergrund"
+        },
+        "type": "color",
+        "value": "#d61523",
+        "editable": true,
+        "tab": "footer",
+        "block": "newsletter"
+      },
+      "ssik-metro-newsletter-submit-color": {
+        "label": {
+          "en-GB": "Button text color",
+          "de-DE": "Textfarbe der Schaltfläche"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "footer",
+        "block": "newsletter"
+      },
+      "ssik-metro-newsletter-submit-font-size": {
+        "label": {
+          "en-GB": "Button font size",
+          "de-DE": "Schriftgröße für Schaltflächen"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "footer",
+        "block": "newsletter"
+      },
+
+      "ssik-metro-cookie-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#292929",
+        "editable": true,
+        "tab": "footer",
+        "block": "cookie"
+      },
+
+      "ssik-metro-cookie-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "footer",
+        "block": "cookie"
+      },
+
+      "ssik-metro-cookie-link-color": {
+        "label": {
+          "en-GB": "Link color",
+          "de-DE": "Linkfarbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "footer",
+        "block": "cookie"
+      },
+
+      "ssik-metro-cookie-btn-bg": {
+        "label": {
+          "en-GB": "Button background",
+          "de-DE": "Button-Hintergrund"
+        },
+        "type": "color",
+        "value": "#F9CD3B",
+        "editable": true,
+        "tab": "footer",
+        "block": "cookie"
+      },
+
+      "ssik-metro-cookie-btn-color": {
+        "label": {
+          "en-GB": "Button text color",
+          "de-DE": "Textfarbe der Schaltfläche"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "footer",
+        "block": "cookie"
+      },
+
+      "ssik-metro-quantity-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "forms",
+        "block": "counter"
+      },
+
+      "ssik-metro-quantity-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "12px",
+        "editable": true,
+        "tab": "forms",
+        "block": "counter"
+      },
+
+      "ssik-metro-quantity-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#ECECE7",
+        "editable": true,
+        "tab": "forms",
+        "block": "counter"
+      },
+
+      "ssik-metro-quantity-btn": {
+        "label": {
+          "en-GB": "Button background",
+          "de-DE": "Button-Hintergrund"
+        },
+        "type": "color",
+        "value": "#F9F9F9",
+        "editable": true,
+        "tab": "forms",
+        "block": "counter"
+      },
+
+      "ssik-metro-header-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "header",
+        "block": "header"
+      },
+
+      "ssik-metro-header-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "header",
+        "block": "header"
+      },
+
+      "ssik-metro-topbar-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "topbar",
+        "block": "topbar"
+      },
+
+      "ssik-metro-topbar-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "topbar",
+        "block": "topbar"
+      },
+
+      "ssik-metro-topbar-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "topbar",
+        "block": "topbar"
+      },
+
+      "ssik-metro-topbar-btn-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#F0F0F0",
+        "editable": true,
+        "tab": "topbar",
+        "block": "buttons"
+      },
+
+      "ssik-metro-topbar-btn-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "topbar",
+        "block": "buttons"
+      },
+
+      "ssik-metro-topbar-btn-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "topbar",
+        "block": "buttons"
+      },
+
+      "ssik-metro-topbar-btn-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "topbar",
+        "block": "buttons"
+      },
+
+      "ssik-metro-topbar-btn-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "topbar",
+        "block": "buttons"
+      },
+
+      "ssik-metro-search-input-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "header",
+        "block": "search"
+      },
+
+      "ssik-metro-search-input-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#505050",
+        "editable": true,
+        "tab": "header",
+        "block": "search"
+      },
+
+      "ssik-metro-search-input-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "12px",
+        "editable": true,
+        "tab": "header",
+        "block": "search"
+      },
+      
+      "ssik-metro-search-input-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#ECECEC",
+        "editable": true,
+        "tab": "header",
+        "block": "search"
+      },
+
+      "ssik-metro-search-icon-color": {
+        "label": {
+          "en-GB": "Icon color",
+          "de-DE": "Symbol Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "header",
+        "block": "search"
+      },
+
+      "ssik-metro-search-icon-hover-color": {
+        "label": {
+          "en-GB": "Icon color on hover",
+          "de-DE": "Symbol Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "header",
+        "block": "search"
+      },
+
+      "ssik-metro-actions-btn-color": {
+        "label": {
+          "en-GB": "Icon color",
+          "de-DE": "Symbolfarbe"
+        },
+        "type": "color",
+        "value": "#131313",
+        "editable": true,
+        "tab": "header",
+        "block": "actions"
+      },
+
+      "ssik-metro-actions-btn-hover-color": {
+        "label": {
+          "en-GB": "Icon on mouseover",
+          "de-DE": "Icon beim Mouseover"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "header",
+        "block": "actions"
+      },
+
+      "ssik-metro-action-badge-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "header",
+        "block": "badges"
+      },
+
+      "ssik-metro-action-badge-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "header",
+        "block": "badges"
+      },
+
+      "ssik-metro-ads-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "header",
+        "block": "announcement-banner"
+      },
+
+      "ssik-metro-ads-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#D51523",
+        "editable": true,
+        "tab": "header",
+        "block": "announcement-banner"
+      },
+
+      "ssik-metro-ads-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Schriftgröße"
+        },
+        "type": "text",
+        "value": "14px",
+        "editable": true,
+        "tab": "header",
+        "block": "announcement-banner"
+      },
+
+      "ssik-metro-uspbar-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#232523",
+        "editable": true,
+        "tab": "header",
+        "block": "usp"
+      },
+      "ssik-metro-uspbar-icon-color": {
+        "label": {
+          "en-GB": "Icon color",
+          "de-DE": "Symbolfarbe"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "header",
+        "block": "usp"
+      },
+      "ssik-metro-uspbar-text-color": {
+        "label": {
+          "en-GB": "Text color",
+          "de-DE": "Textfarbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "header",
+        "block": "usp"
+      },
+      "ssik-metro-uspbar-icon-font-size": {
+        "label": {
+          "en-GB": "Icon Size",
+          "de-DE": "Symbolgröße"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "header",
+        "block": "usp"
+      },
+      "ssik-metro-uspbar-text-font-size": {
+        "label": {
+          "en-GB": "Text Size",
+          "de-DE": "Textgröße"
+        },
+        "type": "text",
+        "value": "13px",
+        "editable": true,
+        "tab": "header",
+        "block": "usp"
+      },
+      
+      "ssik-metro-slider-nav-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#151635",
+        "editable": true,
+        "tab": "slider",
+        "block": "nav"
+      },
+
+      "ssik-metro-slider-nav-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "slider",
+        "block": "nav"
+      },
+
+      "ssik-metro-slider-nav-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "slider",
+        "block": "nav"
+      },
+
+      "ssik-metro-slider-nav-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "slider",
+        "block": "nav"
+      },
+
+      "ssik-metro-slider-dots-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#151635",
+        "editable": true,
+        "tab": "slider",
+        "block": "dots"
+      },
+      "ssik-metro-slider-dots-hover-bg": {
+        "label": {
+          "en-GB": "Background item on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "slider",
+        "block": "dots"
+      },
+
+      "ssik-metro-slider-detail-active-border": {
+        "label": {
+          "en-GB": "Gallery active border color in product page",
+          "de-DE": "Aktive Randfarbe der Galerie auf der Produktseite"
+        },
+        "type": "color",
+        "value": "#a6a7a9",
+        "editable": true,
+        "tab": "slider",
+        "block": "product"
+      },
+
+      "ssik-metro-cart-offcanvas-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "base"
+      },
+
+      "ssik-metro-cart-offcanvas-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "base"
+      },
+
+      "ssik-metro-cart-offcanvas-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "color",
+        "value": "#ECECE7",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "base"
+      },
+
+      "ssik-metro-cart-offcanvas-closebtn-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#232523",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "closebtn"
+      },
+
+      "ssik-metro-cart-offcanvas-closebtn-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "closebtn"
+      },
+
+      "ssik-metro-cart-offcanvas-closebtn-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#313131",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "closebtn"
+      },
+
+      "ssik-metro-cart-offcanvas-closebtn-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "closebtn"
+      },
+
+      "ssik-metro-cart-offcanvas-closebtn-font-size": {
+        "label": {
+          "en-GB": "Text size (Font size)",
+          "de-DE": "Textgröße (Schriftgröße)"
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "closebtn"
+      },
+
+      "ssik-metro-cart-offcanvas-headline-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "headline"
+      },
+
+      "ssik-metro-cart-offcanvas-headline-font-size": {
+        "label": {
+          "en-GB": "Text size (Font size)",
+          "de-DE": "Textgröße (Schriftgröße)"
+        },
+        "type": "text",
+        "value": "22px",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "headline"
+      },
+
+      "ssik-metro-cart-offcanvas-promoinput-bg": {
+        "label": {
+          "en-GB": "Background (Input)",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "promotion"
+      },
+
+      "ssik-metro-cart-offcanvas-promoinput-color": {
+        "label": {
+          "en-GB": "Color (Input)",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "promotion"
+      },
+
+      "ssik-metro-cart-offcanvas-promoinput-border": {
+        "label": {
+          "en-GB": "Border (Input)",
+          "de-DE": "Rahmen (Input)"
+        },
+        "type": "color",
+        "value": "#f1f3f2",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "promotion"
+      },
+
+      "ssik-metro-cart-offcanvas-promotionbtn-bg": {
+        "label": {
+          "en-GB": "Background (Button)",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#f1f3f2",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "promotion"
+      },
+
+      "ssik-metro-cart-offcanvas-promotionbtn-color": {
+        "label": {
+          "en-GB": "Color (Button)",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "promotion"
+      },
+
+      "ssik-metro-cart-offcanvas-promotionbtn-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover (Button)",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#ECECEC",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "promotion"
+      },
+
+      "ssik-metro-cart-offcanvas-promotionbtn-hover-color": {
+        "label": {
+          "en-GB": "Color on hover (Button)",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#333333",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "promotion"
+      },
+
+      "ssik-metro-cart-offcanvas-promotionbtn-font-size": {
+        "label": {
+          "en-GB": "Text size (Button)",
+          "de-DE": "Textgröße "
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "promotion"
+      },
+
+      "ssik-metro-cart-offcanvas-checkoutbtn-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#d51523",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "checkout"
+      },
+
+      "ssik-metro-cart-offcanvas-checkoutbtn-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "checkout"
+      },
+
+      "ssik-metro-cart-offcanvas-checkoutbtn-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#151635",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "checkout"
+      },
+
+      "ssik-metro-cart-offcanvas-checkoutbtn-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#FFFFFF",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "checkout"
+      },
+
+      "ssik-metro-cart-offcanvas-checkoutbtn-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Textgröße "
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "checkout"
+      },
+
+      "ssik-metro-cart-offcanvas-basketbtn-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "color",
+        "value": "#f1f3f2",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "basket"
+      },
+
+      "ssik-metro-cart-offcanvas-basketbtn-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "color",
+        "value": "#121212",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "basket"
+      },
+
+      "ssik-metro-cart-offcanvas-basketbtn-hover-bg": {
+        "label": {
+          "en-GB": "Background on hover",
+          "de-DE": "Hintergrund bei Hover"
+        },
+        "type": "color",
+        "value": "#dedede",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "basket"
+      },
+
+      "ssik-metro-cart-offcanvas-basketbtn-hover-color": {
+        "label": {
+          "en-GB": "Color on hover",
+          "de-DE": "Farbe bei Hover"
+        },
+        "type": "color",
+        "value": "#333",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "basket"
+      },
+
+      "ssik-metro-cart-offcanvas-basketbtn-font-size": {
+        "label": {
+          "en-GB": "Text size",
+          "de-DE": "Textgröße "
+        },
+        "type": "text",
+        "value": "16px",
+        "editable": true,
+        "tab": "cartoffcanvas",
+        "block": "basket"
+      },
+
+      "ssik-metro-checkout-summary-bg": {
+        "label": {
+          "en-GB": "Background",
+          "de-DE": "Hintergrund"
+        },
+        "type": "text",
+        "value": "#f9f9f9",
+        "editable": true,
+        "tab": "checkout",
+        "block": "summary"
+      },
+
+      "ssik-metro-checkout-summary-color": {
+        "label": {
+          "en-GB": "Color",
+          "de-DE": "Farbe"
+        },
+        "type": "text",
+        "value": "#121212",
+        "editable": true,
+        "tab": "checkout",
+        "block": "summary"
+      },
+
+      "ssik-metro-checkout-summary-border": {
+        "label": {
+          "en-GB": "Border",
+          "de-DE": "Rahmen"
+        },
+        "type": "text",
+        "value": "#ECECE7",
+        "editable": true,
+        "tab": "checkout",
+        "block": "summary"
+      },
+
+      "sw-logo-desktop": {
+        "label": {
+          "en-GB": "Desktop",
+          "de-DE": "Desktop"
+        },
+        "helpText": {
+          "en-GB": "Displayed on viewport sizes above 991px and as a fallback on smaller viewports, if no other logo is set.",
+          "de-DE": "Wird bei Ansichten über 991px angezeigt und als Alternative bei kleineren Auflösungen, für die kein anderes Logo eingestellt ist."
+        },
+        "type": "media",
+        "value": "app/storefront/dist/assets/logo/metro-light-logo.svg",
+        "editable": true,
+        "block": "media",
+        "order": 100,
+        "fullWidth": true
+      },
+      "sw-logo-tablet": {
+        "label": {
+          "en-GB": "Tablet",
+          "de-DE": "Tablet"
+        },
+        "helpText": {
+          "en-GB": "Displayed between a viewport of 767px to 991px",
+          "de-DE": "Wird zwischen einem viewport von 767px bis 991px angezeigt"
+        },
+        "type": "media",
+        "value": "app/storefront/dist/assets/logo/metro-light-logo.svg",
+        "editable": true,
+        "block": "media",
+        "order": 200,
+        "fullWidth": true
+      },
+      "sw-logo-mobile": {
+        "label": {
+          "en-GB": "Mobile",
+          "de-DE": "Mobil"
+        },
+        "helpText": {
+          "en-GB": "Displayed up to a viewport of 767px",
+          "de-DE": "Wird bis zu einem Viewport von 767px angezeigt"
+        },
+        "type": "media",
+        "value": "app/storefront/dist/assets/logo/metro-light-logo.svg",
+        "editable": true,
+        "block": "media",
+        "order": 300,
+        "fullWidth": true
+      },
+      "sw-logo-share": {
+        "label": {
+          "en-GB": "App & share icon",
+          "de-DE": "App- & Share-Icon"
+        },
+        "type": "media",
+        "value": "",
+        "editable": true,
+        "block": "media",
+        "order": 400
+      },
+      "sw-logo-favicon": {
+        "label": {
+          "en-GB": "Favicon",
+          "de-DE": "Favicon"
+        },
+        "type": "media",
+        "value": "app/storefront/dist/assets/logo/metro-fav.svg",
+        "editable": true,
+        "block": "media",
+        "order": 500
+      }
+    }
+  }
+}

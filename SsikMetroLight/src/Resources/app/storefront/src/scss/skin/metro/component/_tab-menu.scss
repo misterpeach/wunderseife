@@ -1,0 +1,16 @@
+.card-tabs {
+    .nav-link {
+        color: var(--ssik-metro-base-color);
+        border-bottom: 2px solid var(--ssik-metro-input-border);
+
+        &:hover {
+            border-color: var(--ssik-metro-input-hover-border);
+            color: var(--ssik-metro-base-color);
+        }
+
+        &.active {
+            border-color: var(--ssik-metro-input-hover-border);
+            color: var(--ssik-metro-base-color);
+        }
+    }
+}

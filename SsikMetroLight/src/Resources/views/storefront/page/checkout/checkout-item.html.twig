@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/page/checkout/checkout-item.html.twig' %}
+
+{% block page_checkout_item_remove_submit %}
+    <button type="submit"
+            title="{{ "checkout.removeLineItem"|trans|striptags }}"
+            data-product-id="{{ lineItem.id }}"
+            class="btn btn-light btn-sm cart-item-remove-button">
+        {% sw_icon 'icon-trash' style { 'pack':'custom', 'namespace': 'SsikMetroLight', 'class':'ssik xxs' } %}
+    </button>
+{% endblock %}

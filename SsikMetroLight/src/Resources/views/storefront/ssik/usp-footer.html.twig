@@ -1,0 +1,91 @@
+
+{% set uspBarSliderOptions = {
+		slider: {
+			gutter: 0,
+			autoplayButtonOutput: false,
+			nav: false,
+			mouseDrag: false,
+			controls: true,
+			autoplay: false,
+			responsive: {
+				xs: {
+					enabled: true,
+					items: 1
+				},
+				sm: {
+					gutter: 20,
+					enabled: true,
+					items: 2
+				},
+				md: {
+					gutter: 20,
+					enabled: true,
+					items: 3
+				},
+				lg: {
+					enabled: false,
+				},
+				xl: {
+					enabled: false,
+				},
+				xxl: {
+					enabled: false,
+				}
+    		}
+		}
+	} 
+%}
+
+<div class="section-usp-footer-bar" data-usp-bar-slider="true"
+	data-usp-bar-slider-options="{{ uspBarSliderOptions|json_encode }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="usp-footer-bar-controls" data-usp-bar-slider-controls="true">
+					<button class="btn-ctrl prev" aria-label="prev">prev</button>
+					<button class="btn-ctrl next" aria-label="next">next</button>
+				</div>
+                <div class="usp-footer-bar-title">{{ "ssik.footer.usp.title"|trans|sw_sanitize }}</div>
+				<div class="usp-footer-bar" data-usp-bar-slider-container="true">
+					<div class="usp-footer-bar-item">
+						<div class="usp-footer-bar-item-icon">
+							<i class="icon {% if ssik.config.uspfooterbaricon1 is not empty  %} {{ ssik.config.uspfooterbaricon1}} {% else %} fas fa-star {% endif %}"></i>
+						</div>
+						<div class="usp-footer-bar-item-text">
+							<div class="head">{{ "ssik.footer.usp.item1.text"|trans|sw_sanitize }}</div>
+							<div class="desc">{{ "ssik.footer.usp.item1.desc"|trans|sw_sanitize }}</div>
+						</div>
+					</div>
+					<div class="usp-footer-bar-item">
+						<div class="usp-footer-bar-item-icon">
+							<i class="icon {% if ssik.config.uspfooterbaricon3 is not empty  %} {{ ssik.config.uspfooterbaricon3}} {% else %} fas fa-shipping-fast {% endif %}"></i>
+						</div>
+						<div class="usp-footer-bar-item-text">
+							<div class="head">{{ "ssik.footer.usp.item3.text"|trans|sw_sanitize }}</div>
+							<div class="desc">{{ "ssik.footer.usp.item3.desc"|trans|sw_sanitize }}</div>
+						</div>
+					</div>
+					<div class="usp-footer-bar-item">
+						<div class="usp-footer-bar-item-icon">
+							<i class="icon {% if ssik.config.uspfooterbaricon4 is not empty  %} {{ ssik.config.uspfooterbaricon4}} {% else %} fab fa-expeditedssl {% endif %}"></i>
+						</div>
+						<div class="usp-footer-bar-item-text">
+							<div class="head">{{ "ssik.footer.usp.item4.text"|trans|sw_sanitize }}</div>
+							<div class="desc">{{ "ssik.footer.usp.item4.desc"|trans|sw_sanitize }}</div>
+						</div>
+					</div>
+                    <div class="usp-footer-bar-item">
+						<div class="usp-footer-bar-item-icon">
+							<i class="icon {% if ssik.config.uspfooterbaricon5 is not empty  %} {{ ssik.config.uspfooterbaricon5}} {% else %} fas fa-hands-helping {% endif %}"></i>
+						</div>
+						<div class="usp-footer-bar-item-text">
+							<div class="head">{{ "ssik.footer.usp.item5.text"|trans|sw_sanitize }}</div>
+							<div class="desc">{{ "ssik.footer.usp.item5.desc"|trans|sw_sanitize }}</div>
+						</div>
+                        
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,183 @@
+.quantity-counter {
+    display: inline-flex;
+    border: 1px solid var(--ssik-metro-quantity-border);
+    border-radius: .4rem;
+    &-value {
+        font-size: 0;
+        .form-control {
+            border:0;
+            border-left: 1px solid var(--ssik-metro-quantity-border);
+            border-right: 1px solid var(--ssik-metro-quantity-border);
+            width: 5rem;
+            height: 3.2rem;
+            padding: 0;
+            color: var(--ssik-metro-base-color);
+            background: var(--ssik-metro-quantity-bg);
+            text-align: center;
+            @include font-size(var(--ssik-metro-quantity-font-size));
+            &:focus, &:active {
+                border-color: var(--ssik-metro-quantity-border);
+            }
+        }
+    }
+
+    &-btn {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        width: 4rem;
+        height: 3.2rem;
+        background: var(--ssik-metro-quantity-btn);
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            & > svg {
+                top:0;
+                color: var(--ssik-metro-base-color);
+            }
+        }
+        &:focus, &:hover {
+            box-shadow: none;
+            background: var(--ssik-metro-quantity-hover-btn);
+        }
+
+        &.is-minus {
+            border-bottom-left-radius: .4rem;
+            border-top-left-radius: .4rem;
+        }
+
+        &.is-plus {
+            border-top-right-radius: .4rem;
+            border-bottom-right-radius: .4rem;
+        }
+    }
+
+    &.listing &-value{
+        width: 2.6rem;
+        .list & {
+            width: 100%;
+            flex-grow: 1;
+        }
+    }
+
+    &.listing &-btn {
+        line-height: 2.8rem;
+        width: 2.6rem;
+        .icon {
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+
+    &.offcanvascart {
+        border: 0;
+    }
+
+    &.is-offcanvas &-value{
+        .form-control {
+            height: 3rem;
+            width: 3.5rem;
+            background: var(--ssik-metro-quantity-bg);
+            @include font-size(var(--ssik-metro-quantity-font-size));
+        }
+    }
+
+    &.is-offcanvas &-btn {
+        height: 3rem;
+        width: 3rem;
+        .icon {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        &:focus, &:hover {
+            background: var(--ssik-metro-quantity-hover-btn);
+        }
+    }
+
+    label {
+        margin-bottom: 0;
+    }
+}
+
+.is-ssik-counter .cart-item-quantity .custom-select {
+    display: none;
+}
+
+.quantity-counter + .product-detail-quantity-select {
+    display: none;
+}
+
+.quantity-selector-group {
+    border: 1px solid var(--ssik-metro-quantity-border);
+
+    &-input {
+        border:0;
+        border-left: 1px solid var(--ssik-metro-quantity-border);
+        border-right: 1px solid var(--ssik-metro-quantity-border);    
+        width: 3rem !important;
+        height: 4rem;
+        padding: 0;
+        color: var(--ssik-metro-base-color);
+        background: var(--ssik-metro-quantity-bg);
+        text-align: center;
+        @include font-size(var(--ssik-metro-quantity-font-size));
+        &:focus, &:active {
+            border-color: var(--ssik-metro-quantity-border);
+            outline: none;
+            box-shadow: none;
+        }
+
+        @include media-breakpoint-up(sm) {
+            width: 4rem !important;
+        }
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        width: 3rem;
+        height: 4rem;
+        background: var(--ssik-metro-quantity-btn);
+        .icon {
+            width: 1.6rem;
+            height: 1.6rem;
+            & > svg {
+                top:0;
+                color: var(--ssik-metro-base-color);
+            }
+        }
+        &:focus, &:hover {
+            box-shadow: none;
+            background: var(--ssik-metro-quantity-hover-btn);
+        }
+
+        @include media-breakpoint-up(sm) {
+            width: 4rem;
+        }
+    }
+}
+
+.is-offcanvas {
+    .quantity-selector-group { 
+        &-input {
+            height: 3rem;
+            width: 3.5rem;
+        }    
+        .btn {
+            height: 3rem;
+            width: 3rem;
+            .icon {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    }
+}

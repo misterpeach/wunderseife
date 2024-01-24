@@ -1,0 +1,27 @@
+.cart-shipping-costs-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.cart-add-product-container {
+    margin-top: 1rem;
+}
+
+.cart-add-product, .cart-add-promotion {
+    .btn {
+        display: flex;
+    }
+}
+
+.checkout-aside-summary {
+    background: $ssik-metro-checkout-summary-bg;
+    color: $ssik-metro-checkout-summary-color;
+
+    .checkout-aside-summary-header {
+        color: $ssik-metro-checkout-summary-color;
+    }
+
+    .checkout-aside-summary-total {
+        border-color: $ssik-metro-checkout-summary-border;
+    }
+}

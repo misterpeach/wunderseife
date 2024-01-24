@@ -1,0 +1,68 @@
+{% block ssik_social_icons %}
+    <div class="social-icons">
+        {% if config('SsikMetroLight.config.youtube') %}
+            <a href="{{ config('SsikMetroLight.config.youtube') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.youtube') }}" aria-label="{{ config('SsikMetroLight.config.youtube') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon1') %} {{config('SsikMetroLight.config.socialicon1')}}{% else %}fa-brands fa-youtube{% endif %}"></i>
+            </a>
+        {% endif %}
+        {% if config('SsikMetroLight.config.facebook') %}
+            <a href="{{ config('SsikMetroLight.config.facebook') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.facebook') }}" aria-label="{{ config('SsikMetroLight.config.facebook') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon2') %} {{config('SsikMetroLight.config.socialicon2')}}{% else %}fa-brands fa-facebook{% endif %}"></i>
+            </a>
+        {% endif %}
+        {% if config('SsikMetroLight.config.twitter') %}
+            <a href="{{ config('SsikMetroLight.config.twitter') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.twitter') }}" aria-label="{{ config('SsikMetroLight.config.twitter') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon3') %} {{config('SsikMetroLight.config.socialicon3')}}{% else %}fa-brands fa-twitter{% endif %}"></i>
+            </a>
+        {% endif %}
+        {% if config('SsikMetroLight.config.instagram') %}
+            <a href="{{ config('SsikMetroLight.config.instagram') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.instagram') }}" aria-label="{{ config('SsikMetroLight.config.instagram') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon4') %} {{config('SsikMetroLight.config.socialicon4')}}{% else %}fa-brands fa-instagram{% endif %}"></i>
+            </a>
+        {% endif %}
+        {% if config('SsikMetroLight.config.whatsapp') %}
+            <a href="{{ config('SsikMetroLight.config.whatsapp') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.whatsapp') }}" aria-label="{{ config('SsikMetroLight.config.whatsapp') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon5') %} {{config('SsikMetroLight.config.socialicon5')}}{% else %}fa-brands fa-whatsapp{% endif %}"></i>
+            </a>
+        {% endif %}
+        {% if config('SsikMetroLight.config.pinterest') %}
+            <a href="{{ config('SsikMetroLight.config.pinterest') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.pinterest') }}" aria-label="{{ config('SsikMetroLight.config.pinterest') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon6') %} {{config('SsikMetroLight.config.socialicon6')}}{% else %}fa-brands fa-pinterest{% endif %}"></i>
+            </a>
+        {% endif %}
+        {% if config('SsikMetroLight.config.google') %}
+            <a href="{{ config('SsikMetroLight.config.google') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.google') }}" aria-label="{{ config('SsikMetroLight.config.google') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon7') %} {{config('SsikMetroLight.config.socialicon7')}}{% else %}fa-brands fa-google{% endif %}"></i>
+            </a>
+        {% endif %}
+        {% if config('SsikMetroLight.config.tiktok') %}
+            <a href="{{ config('SsikMetroLight.config.tiktok') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.tiktok') }}" aria-label="{{ config('SsikMetroLight.config.tiktok') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon8') %} {{config('SsikMetroLight.config.socialicon8')}}{% else %}fa-brands fa-tiktok{% endif %}"></i>
+            </a>
+        {% endif %}
+
+        {% if config('SsikMetroLight.config.linkedin') %}
+            <a href="{{ config('SsikMetroLight.config.linkedin') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.linkedin') }}" aria-label="{{ config('SsikMetroLight.config.linkedin') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon9') %} {{config('SsikMetroLight.config.socialicon9')}}{% else %}fa-brands fa-linkedin{% endif %}"></i>
+            </a>
+        {% endif %}
+
+        {% if config('SsikMetroLight.config.discord') %}
+            <a href="{{ config('SsikMetroLight.config.discord') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.discord') }}" aria-label="{{ config('SsikMetroLight.config.discord') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon10') %} {{config('SsikMetroLight.config.socialicon10')}}{% else %}fa-brands fa-discord{% endif %}"></i>
+            </a>
+        {% endif %}
+
+        {% if config('SsikMetroLight.config.kickstarter') %}
+            <a href="{{ config('SsikMetroLight.config.kickstarter') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.kickstarter') }}" aria-label="{{ config('SsikMetroLight.config.kickstarter') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon11') %} {{config('SsikMetroLight.config.socialicon11')}}{% else %}fa-brands fa-kickstarter{% endif %}"></i>
+            </a>
+        {% endif %}
+
+        {% if config('SsikMetroLight.config.facebookmessanger') %}
+            <a href="{{ config('SsikMetroLight.config.facebookmessanger') }}" target="_blank" rel="noopener" title="{{ config('SsikMetroLight.config.facebookmessanger') }}" aria-label="{{ config('SsikMetroLight.config.facebookmessanger') }}">
+                <i class="{% if config('SsikMetroLight.config.socialicon12') %} {{config('SsikMetroLight.config.socialicon12')}}{% else %}fa-brands fa-facebook-messenger{% endif %}"></i>
+            </a>
+        {% endif %}
+    </div>
+{% endblock %}

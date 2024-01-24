@@ -1,0 +1,53 @@
+.account-menu {
+    &-header {
+        font-size: 1.4rem;
+    }
+    &-register {
+        font-size: 1.2rem;
+    }
+    &-links {
+        font-size: 1.4rem;
+    }
+}
+
+.is-ssik-account {
+
+    .header-actions-col .account-menu .dropdown {
+        position: relative;
+    }
+    .account-menu {
+        .dropdown-account-menu {
+            position: absolute;
+            width: 20rem;
+            padding-top: 12px;
+            right: 0;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: .2s;
+            transform: translateY(10px);
+
+            @include media-breakpoint-up(md) {
+                top: 100%;
+                right: 0;
+                width: 30rem;
+            }
+            
+            .account-menu-container {
+                position: relative;
+                padding: 3rem;
+                background: var(--ssik-metro-base-bg);
+                @include font-size(--ssik-metro-base-font-size);
+                border: 1px solid var(--ssik-metro-base-border);
+                box-shadow: -1px -1px 10px rgb(0 0 0 / 10%);
+                
+            }            
+        }
+
+        & > .dropdown:hover .dropdown-account-menu {
+            transform: translateY(0);
+            opacity: 1;
+            visibility:visible;
+        }
+    }
+}

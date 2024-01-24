@@ -1,0 +1,169 @@
+.offcanvas-filter .filter-panel, 
+.offcanvas-filter .filter-panel-items-container {
+    display: block;
+}
+
+// hide default filter button
+.cms-element-sidebar-filter {
+    & > .btn.filter-panel-wrapper-toggle {
+        display: none;
+    }
+    
+}
+
+//filters on product listing page without sidebar
+.filter-panel-items-container {
+    gap: 1.25rem;
+}
+.filter-panel-item {
+    margin: 0;
+
+    .filter-panel-item-toggle {
+        display: flex;
+        position: relative;
+        padding: 1.25rem 3rem 1.25rem 1rem;
+        line-height: 1;
+        text-transform: capitalize;
+        border-radius: .6rem;
+        background: var(--ssik-metro-filter-item-bg);
+        color: var(--ssik-metro-filter-item-color);
+        @include font-size(var(--ssik-metro-filter-item-font-size));
+        border: 1px solid var(--ssik-metro-filter-item-border);
+        //default icon
+        .icon {
+            display: none;
+        }
+
+        @include is-dropdown();
+        &::before {
+            border-color: var(--ssik-metro-filter-item-color);
+            right: 1.75rem;
+        }
+
+        &[aria-expanded='true'] {
+            color: var(--ssik-metro-filter-item-color);
+            &::before {
+                right: 1.5rem;
+                border-width: 1px 0 0 1px;
+                transform: rotate(45deg) translateY(calc(-1 * ( 50% - 2px )));
+            }
+        }
+
+        &:focus, &:hover {
+            color: var(--ssik-metro-filter-item-hover-color);
+            border-color: var(--ssik-metro-filter-item-hover-border);
+            background: var(--ssik-metro-filter-item-hover-bg);
+            box-shadow: none;
+            &::before {
+                border-color: var(--ssik-metro-filter-item-hover-color);
+            }
+        }
+
+    }
+
+    .filter-panel-item-dropdown {
+        &.dropdown-menu {
+            border-radius: .6rem;
+            box-shadow: 0 2px 8px #00000014;
+        }
+    }
+}
+
+.offcanvas-filter,
+.is--sidebar {
+    .filter-panel-item {
+
+        border-bottom: 1px solid var(--ssik-metro-filter-item-border);
+
+        .filter-panel-item-toggle {
+            font-weight: bold;
+            border: 0;
+            border-radius: .6rem;    
+            padding: 1rem 1rem;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                display: block;
+                background: var(--ssik-metro-filter-item-color);
+                transform: translateY(-50%);
+                border: 0;
+            }
+    
+            &::before {
+                width: 0.85rem;
+                height: .1rem;
+            }
+    
+            &::after {
+                height: 0.85rem;
+                width:  .1rem;
+                right: 1.35rem;
+            }
+
+            &:hover {
+                &::before, &::after {
+                    background: var(--ssik-metro-filter-item-hover-color);
+                }
+            }
+
+            &[aria-expanded='true'] {
+                color: var(--ssik-metro-filter-item-hover-color);
+                background: var(--ssik-metro-filter-item-hover-bg);
+                &::before {
+                    background: var(--ssik-metro-filter-item-hover-color);
+                }
+                &::after {
+                    content: none;
+                }
+            }
+
+            &[aria-expanded='false'] {
+                color: var(--ssik-metro-filter-item-color);
+                background: var(--ssik-metro-filter-item-bg);
+                &::before, &::after {
+                    background: var(--ssik-metro-filter-item-color);
+                }
+            }
+
+            
+        }
+
+        .filter-panel-item-dropdown {
+            border: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.offcanvas-filter.is-fullwidth {
+    width: 35rem;
+    height: 100%;
+    border-radius: 0;
+    
+    .filter-panel-offcanvas-header {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    .filter-panel {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    .filter-panel-item-toggle {
+        width: 100%;
+    }
+
+    .filter-panel-item-dropdown {
+        float: unset;
+        position: unset !important;
+        transform: unset !important;
+        box-shadow: none;
+        margin-bottom: 0;
+        padding-top: 10px;
+    }
+}

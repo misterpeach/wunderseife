@@ -1,0 +1,7 @@
+.card {
+    &-title {
+        color: var(--ssik-metro-base-headline-color);
+        @include font-size(var(--ssik-metro-base-font-size));
+        border-color: var(--ssik-metro-base-border);
+    }
+}

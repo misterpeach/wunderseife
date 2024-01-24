@@ -1,0 +1,141 @@
+.header-search {
+    &-icon {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+    }
+    &-input {
+        height: 5rem;
+        border:1px solid var(--ssik-metro-search-input-border);
+        background: var(--ssik-metro-search-input-bg);
+        color: var(--ssik-metro-search-input-color);
+        @include font-size(var(--ssik-metro-search-input-font-size));
+        &:hover,
+        &:focus {
+            border:1px solid var(--ssik-metro-search-input-border);
+            background: var(--ssik-metro-search-input-bg);
+            border-right: 0;
+
+            ~ .input-group-append .header-search-btn {
+                border-color: var(--ssik-metro-search-input-border);
+                background: var(--ssik-metro-search-input-bg);
+            }
+        }
+    }
+    &-btn {
+        //border-radius: 2rem;
+        border:1px solid var(--ssik-metro-search-input-border);
+        background: var(--ssik-metro-search-input-bg);
+        border-left: none;
+        &:disabled {
+            border-color: var(--ssik-metro-search-input-border);
+            background: var(--ssik-metro-search-input-bg);
+        }
+
+        .icon {
+            color: var(--ssik-metro-search-icon-color);
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &:hover {
+            .icon {
+                color: var(--ssik-metro-search-icon-hover-color);
+            }
+        }
+    }
+    &-form-head {
+        display: none;
+    }
+}
+
+.is-header-inline {
+    .header-row {
+        .header-search {
+            &-col {
+                & > .row {
+                    //width: 100%;
+                    & > div:first-child {
+                        display: block !important;
+                        @include media-breakpoint-up(xl) {
+                            display: none !important; // hide nav-main-toggle
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include media-breakpoint-up(xl) {
+        .header-row {
+            .header-search {
+                // &-col {
+                //     & > .row {
+                //         width: 100%;
+                //         & > div:first-child {
+                //             display: none !important; // hide nav-main-toggle
+                //         }
+                //     }
+                // }
+                
+                max-width: unset;
+            
+                &-form {
+                    width: 70rem;
+                }
+
+                &-input {
+                    height: unset;
+                    border: 0;
+                    border-bottom:1px solid var(--ssik-metro-search-input-border);
+                    border-radius: 0;
+                    background:  var(--ssik-metro-search-input-bg);
+                    font-size: 22px;
+                    color:  var(--ssik-metro-search-input-color);
+                    padding: 2rem 1rem;
+                    text-transform: uppercase;
+            
+                    &:hover,
+                    &:focus {
+                        border-bottom-color: var(--ssik-metro-search-input-border);
+                        background: var(--ssik-metro-search-input-bg);
+                        border-right: 0;
+
+                        ~ .input-group-append .header-search-btn {
+                            border-color: var(--ssik-metro-search-input-border);
+                            background: var(--ssik-metro-search-input-bg);
+                        }
+                    }
+                }
+
+                &-btn {
+                    border-radius: 0;
+                    border: 0;
+                    border-bottom:1px solid var(--ssik-metro-search-input-border);
+                    background: var(--ssik-metro-search-input-bg);
+                    border-left: none;
+                    padding: 2rem 1rem;
+                    &:disabled {
+                        border-color: var(--ssik-metro-search-input-border);
+                        background: var(--ssik-metro-search-input-bg);
+                    }
+                }
+
+                &-form-head {
+                    display: block;
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                    color: #777777;
+                }
+
+                .input-group-append {
+                    margin-left: 0;
+                }
+            }
+        }
+    
+        .search-suggest-container {
+            top: 120px;
+        }
+    }
+    
+}

@@ -1,0 +1,94 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-product-slider.html.twig' %}
+
+{% block element_product_slider_slider %}
+
+    <div class="base-slider product-slider ssik-listing {% if sliderConfig.border.value %} has-border{% endif %}{% if sliderConfig.navigation.value %} has-nav{% endif %} "
+        {% if ssik.config.productCard is not empty and ssik.config.productCard is not same as('shopware') and ssik.config.productBoxHover == 1 %}data-product-img-hover="true"{% endif %}
+        data-product-slider="true" data-product-slider-options="{{ productSliderOptions|json_encode }}">
+
+        {% block element_product_slider_title %}
+            {{parent()}}
+        {% endblock %}
+
+        {% block element_product_slider_inner %}
+
+            {% block element_product_slider_element %}
+                <div class="product-slider-container"
+                        data-product-slider-container="true">
+
+                    {% if ssik.config.productCard is not empty and ssik.config.productCard is not same as('shopware') %}
+                        {% set aspectRatio = 1 %}
+                        {% set itemRatioSum = 0 %}
+
+                        {% set first = element.data.products.elements|first %}
+                        {% if first and first.cover %}
+                            {% set cover = first.cover.media %}
+                            {% set height = cover.metaData['height'] > 0 ? cover.metaData['height'] : 100 %}
+                            {% set aspectRatio = (cover.metaData['width'] / height) %}
+                        {% endif %}
+
+                        {% for product in element.data.products.elements %}
+                            {% if product %}
+                                    {% set itemRatio = 1 %}
+                                    {% if product.cover %}
+                                        {% set cover = product.cover.media %}
+                                        {% set height = cover.metaData['height'] > 0 ? cover.metaData['height'] : 100 %}
+                                        {% set itemRatio = (cover.metaData['width'] / height) %} 
+                                        {% set itemRatioSum = itemRatioSum + itemRatio %} 
+                                    {% endif %}
+                                    {% if ssik.config.productImageRatio is same as('max') %}
+                                        {% set aspectRatio = (itemRatio < aspectRatio) ? itemRatio : aspectRatio %} 
+                                    {% endif %}
+
+                                    {% if ssik.config.productImageRatio is same as('min') %}
+                                        {% set aspectRatio = (itemRatio > aspectRatio) ? itemRatio : aspectRatio %} 
+                                    {% endif %} 
+                            {% endif %}
+                        {% endfor %}
+                        {% if ssik.config.productImageRatio is same as('avg') && itemRatioSum != 0 %}
+                            {% set aspectRatio = itemRatioSum / element.data.products.elements|length %} 
+                        {% endif %}
+                    {% else %}
+                        {% set aspectRatio = false %} 
+                    {% endif %}    
+
+                    {% for product in element.data.products.elements %}
+                        {% block element_product_slider_inner_item %}
+                            <div class="product-slider-item">
+                                {% sw_include '@Storefront/storefront/component/product/card/box.html.twig' with {
+                                    'layout': sliderConfig.boxLayout.value,
+                                    'displayMode': sliderConfig.displayMode.value,
+                                    'aspectRatio': aspectRatio,
+                                } %}
+                            </div>
+                        {% endblock %}
+                    {% endfor %}
+                </div>
+            {% endblock %}
+
+            {% block element_product_slider_controls %}
+                {% if sliderConfig.navigation.value %}
+                    <div class="product-slider-controls-container">
+                        <div class="base-slider-controls"
+                                data-product-slider-controls="true">
+                            {% block element_product_slider_controls_items %}
+                                <button
+                                    class="base-slider-controls-prev product-slider-controls-prev{% if sliderConfig.border.value %} has-border{% endif %}" aria-label="prev">
+                                    {% block element_product_slider_controls_items_prev_icon %}
+                                        {% sw_icon 'arrow-head-left' %}
+                                    {% endblock %}
+                                </button>
+                                <button
+                                    class="base-slider-controls-next product-slider-controls-next{% if sliderConfig.border.value %} has-border{% endif %}" aria-label="next">
+                                    {% block element_product_slider_controls_items_next_icon %}
+                                        {% sw_icon 'arrow-head-right' %}
+                                    {% endblock %}
+                                </button>
+                            {% endblock %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% endblock %}
+        {% endblock %}
+    </div>
+{% endblock %}

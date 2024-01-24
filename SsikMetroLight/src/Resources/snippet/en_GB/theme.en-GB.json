@@ -1,0 +1,88 @@
+{
+  "footer" : {
+    "copyrightInfo" : "The Metro Light Theme by <a href=\"https://wonderthemes.de/\">Wonderthemes.de</a>"
+  },
+    "ssik": {
+        "topbar": {
+            "contact": {
+                "buttonContactText": "Contact/Locations"
+            }
+        },
+        "header": {
+            "afterlogo" : {
+              "head" : "Available 24/7 at",
+              "text" : "<a href=\"tel:(+484) 490 012345 990\">(+484) 490 012345 991</a>"
+            },
+            "usp": {
+                "usp1" : "Free shipping for orders over € 49",
+                "usp2" : "30 days return policy",
+                "usp3" : "Free returns",
+                "usp4" : "Secure shopping with SSL"
+            }
+        },
+        "announcementbanner": {
+            "text": "EXTRA 20% off Outlet*. Use Code: EXTRA20 at checkout!!"
+        },
+        "listing" : {
+            "addtocart": "Add to cart",
+            "boxLabelFreeShipp" : "Free shipping",
+            "quickview" : {
+                "title":"Quick View",
+                "gotodetail": "Read more"
+            }
+        },
+        "detail" : {
+          "brand": "Brand"
+        },
+        "footer": {   
+            "newsletter": {
+                "title": "Subscribe to our newsletter",
+                "helptext": "We'll never share your email with anyone else.",
+                "submit": "ok"
+            },
+            "contact" : {
+                "item1" : {
+                  "text" : "Meiereistrasse 7, 1020 Wien"
+                },
+                "item2" : {
+                  "text" : "info@wonderthemes.de"
+                },
+                "item3" : {
+                  "text" : "+44 (0) 000 1234567"
+                },
+                "item4" : {
+                  "text" : "9:00 a.m. to 6:00 p.m."
+                }
+            },
+            "usp" : {
+                "title": "Why shop with us?",
+                "item1" : {
+                  "text" : "Quality and Saving",
+                  "desc" : "Comprehensive quality control and affordable prices"
+                },
+                "item2" : {
+                  "text" : "Global Warehouse",
+                  "desc" : "100 overseas warehouses"
+                },
+                "item3" : {
+                  "text" : "Fast Shipping",
+                  "desc" : "Fast and convenient door to door delivery"
+                },
+                "item4" : {
+                  "text" : "Payment Security",
+                  "desc" : "More than 10 different secure payment methods"
+                },
+                "item5" : {
+                  "text" : "Have Questions?",
+                  "desc" : "24/7 Customer Service - We’re here and happy to help!"
+                }
+            }
+        },
+        "account" : {
+            "join" : "Join our family",
+            "login" : "Log In",
+            "signup" : "Sign Up",
+            "error" : "Something went wrong"
+        }
+    }
+}

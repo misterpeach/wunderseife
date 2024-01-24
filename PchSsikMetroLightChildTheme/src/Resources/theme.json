@@ -1,0 +1,30 @@
+{
+  "name": "PchSsikMetroLightChildTheme",
+  "author": "misterpeach.",
+  "views": [
+     "@Storefront",
+     "@SsikMetroLight",
+     "@Plugins",
+     "@PchSsikMetroLightChildTheme"
+  ],
+  "style": [
+    "app/storefront/src/scss/overrides.scss",
+    "@Storefront",
+    "@SsikMetroLight",
+    "app/storefront/src/scss/base.scss"
+  ],
+  "script": [
+    "@Storefront",
+    "@SsikMetroLight",
+    "app/storefront/dist/storefront/js/pch-ssik-metro-light-child-theme/pch-ssik-metro-light-child-theme.js"
+  ],
+  "asset": [
+    "@Storefront",
+    "@SsikMetroLight",
+    "app/storefront/src/assets"
+  ],
+  "configInheritance": [
+    "@Storefront",
+    "@SsikMetroLight"
+  ]
+}

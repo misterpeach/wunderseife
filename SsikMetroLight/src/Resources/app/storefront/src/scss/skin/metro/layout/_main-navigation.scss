@@ -1,0 +1,150 @@
+.main-navigation {
+    display: none;
+    background: var(--ssik-metro-main-navigation-bg);
+
+    @include media-breakpoint-up(xl) {
+        display: inherit;
+    }
+}
+
+.main-navigation-menu {
+    justify-content: var(--ssik-metro-main-navigation-align);
+    [data-flyout-menu-trigger] {
+        .main-navigation-link-text {
+            span {
+                position: relative;
+                display: flex;
+                align-items: center;
+                &::after {
+                    content: '';
+                    display: block;
+                    width: .5rem;
+                    height: .5rem;
+                    margin-top: .5rem;
+                    border-style: solid;
+                    border-width: 0 1px 1px 0;
+                    transform: rotate(45deg) translateY(calc(-1*(50% + 2px)));
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .main-navigation-link {
+        display: block;
+        position: relative;
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        &:hover,
+        &.is-open,
+        &.active {
+            background: var(--ssik-metro-main-navigation-hover-bg);
+            .main-navigation-link-text {
+                color: var(--ssik-metro-main-navigation-hover-color);
+                span {
+                    &::after {
+                        border-color: var(--ssik-metro-main-navigation-hover-color);
+                    }
+                }
+            }
+        }
+
+        .main-navigation-link-text {
+            border: 0;
+            padding-bottom: 0;
+            color: var(--ssik-metro-main-navigation-color);
+            text-transform: var(--ssik-metro-main-navigation-transform);
+            font-weight: var(--ssik-metro-main-navigation-font-weight);
+            @include font-size(var(--ssik-metro-main-navigation-font-size));
+        }
+
+        &.is-dropdown {
+            &:hover {
+                & > .dropdown-menu-list {
+                    display: block;
+                    animation-name: ssikFadeOutDown;
+                    left: 0;
+                }
+            }
+        }
+
+        // .header-floating & {
+        //     padding-top: 1rem;
+        //     padding-bottom: 1rem;
+        // }
+    }
+}
+
+.is-header-inline {
+    .main-navigation {
+        border-radius: .6rem;
+        .container {
+            padding: 0;
+        }
+        .main-navigation-link {
+            @include media-breakpoint-up(lg) {
+                padding: .75rem 1.25rem;
+                border-radius: .4rem;
+
+            }
+        }
+        .home-link {
+            display: none;
+        }
+    }
+}
+
+
+.is-sticky {
+    .main-navigation {
+        background: var(--ssik-metro-sticky-navigation-bg);
+    }
+
+    @include media-breakpoint-up(lg) {
+        .main-navigation-link {
+
+            //padding: 1.1rem 1.5rem;
+
+            &:hover,
+            &.active,
+            &.is-open {                
+                background: var(--ssik-metro-sticky-navigation-hover-bg);
+                .main-navigation-link-text {
+                    color: var(--ssik-metro-sticky-navigation-hover-color);
+                    span {
+                        &::after {
+                            border-color: var(--ssik-metro-sticky-navigation-hover-color);
+                        }
+                    }
+                }
+            }
+
+            .main-navigation-link-text {
+                color: var(--ssik-metro-sticky-navigation-color);
+                span {
+                    &::after {
+                        border-color: var(--ssik-metro-sticky-navigation-color);
+                    }
+                }
+            }
+        
+            
+
+            // &[data-flyout-menu-trigger] {
+            //     &::before {
+            //         right: 1.1rem;
+            //         border-color: var(--ssik-metro-sticky-navigation-color);
+            //     }
+
+            //     &.active,
+            //     &.is-open,
+            //     &:hover {
+            //         &::before {
+            //             border-color: var(--ssik-metro-sticky-navigation-hover-color);
+            //         }
+            //     }
+            // }
+        }
+    }
+}

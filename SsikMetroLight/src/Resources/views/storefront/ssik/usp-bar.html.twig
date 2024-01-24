@@ -1,0 +1,75 @@
+
+{% set uspBarSliderOptions = {
+		slider: {
+			gutter: 0,
+			autoplayButtonOutput: false,
+			nav: false,
+			mouseDrag: false,
+			controls: true,
+			autoplay: false,
+			responsive: {
+				xs: {
+					enabled: true,
+					items: 1
+				},
+				sm: {
+					enabled: true,
+					items: 1
+				},
+				md: {
+					enabled: true,
+					items: 1
+				},
+				lg: {
+					enabled: false,
+				},
+				xl: {
+					enabled: false,
+				},
+				xxl: {
+					enabled: false,
+				}
+    		}
+		}
+	} 
+%}
+
+<div class="section-usp-bar" data-usp-bar-slider="true"
+	data-usp-bar-slider-options="{{ uspBarSliderOptions|json_encode }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="usp-bar-controls" data-usp-bar-slider-controls="true">
+					<button class="btn-ctrl prev" aria-label="prev">prev</button>
+					<button class="btn-ctrl next" aria-label="next">next</button>
+				</div>
+				<div class="usp-bar" data-usp-bar-slider-container="true">
+					<div class="usp-bar-item">
+						<div class="usp-bar-item-icon">
+							<i class="icon {% if ssik.config.uspbaricon1 is not empty  %} {{ssik.config.uspbaricon1}} {% else %} fas fa-truck {% endif %}"></i>
+						</div>
+						<div class="usp-bar-item-text">{{ "ssik.header.usp.usp1"|trans|sw_sanitize }}</div>
+					</div>
+					<div class="usp-bar-item">
+						<div class="usp-bar-item-icon">
+							<i class="icon {% if ssik.config.uspbaricon2 is not empty  %} {{ssik.config.uspbaricon2}} {% else %} fas fa-undo-alt {% endif %}"></i>
+						</div>
+						<div class="usp-bar-item-text">{{ "ssik.header.usp.usp2"|trans|sw_sanitize }}</div>
+					</div>
+					<div class="usp-bar-item">
+						<div class="usp-bar-item-icon">
+							<i class="icon {% if ssik.config.uspbaricon3 is not empty  %} {{ssik.config.uspbaricon3}} {% else %} fas fa-hands-helping {% endif %}"></i>
+						</div>
+						<div class="usp-bar-item-text">{{ "ssik.header.usp.usp3"|trans|sw_sanitize }}</div>
+					</div>
+					<div class="usp-bar-item">
+						<div class="usp-bar-item-icon">
+							<i class="icon {% if ssik.config.uspbaricon4 is not empty  %} {{ssik.config.uspbaricon4}} {% else %} fab fa-expeditedssl {% endif %}"></i>
+						</div>
+						<div class="usp-bar-item-text">{{ "ssik.header.usp.usp4"|trans|sw_sanitize }}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+{% block ssik_layout_footer_logo_inner %}
+    {% if theme_config('ssik-footer-logo') %}
+        <a class="footer-logo-main-link" href="{{ path('frontend.home.page') }}" title="{{ "header.logoLink"|trans|striptags }}">
+            {% block ssik_layout_footer_logo_image %}
+                <picture class="footer-logo-picture">
+                    {% block ssik_layout_footer_logo_image_default %}
+                        <img src="{{ theme_config('ssik-footer-logo') |sw_encode_url }}"
+                            alt="{{ "header.logoLink"|trans|striptags }}"
+                            class="img-fluid footer-logo-main-img"
+                        />
+                    {% endblock %}
+                </picture>
+            {% endblock %}
+        </a> 
+    {% endif %}
+{% endblock %}

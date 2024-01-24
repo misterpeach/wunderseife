@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Header</title>
+        <title lang="de-DE">Header</title>
+
+        <input-field type="single-select">
+            <name>headerStyle</name>
+            <options>
+                <option>
+                    <id>shopware</id>
+                    <name>Shopware</name>
+                    <name lang="de-DE">Shopware</name>
+                </option>
+                <option>
+                    <id>metro</id>
+                    <name>Metro</name>
+                    <name lang="de-DE">Metro</name>
+                </option>
+            </options>
+            <defaultValue>shopware</defaultValue>
+            <label>Header Style</label>
+            <label lang="de-DE">Header-Variante</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>ssikAccountWidget</name>
+            <defaultValue>true</defaultValue>
+            <label>Enable Login Modal Form</label>
+            <label lang="de-DE">Modales Anmeldeformular aktivieren</label>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>ssikCartLayout</name>
+            <options>
+                <option>
+                    <id>default</id>
+                    <name>Shopware</name>
+                    <name lang="de-DE">Shopware</name>
+                </option>
+                <option>
+                    <id>metro</id>
+                    <name>Metro Theme</name>
+                    <name lang="de-DE">Metro Theme</name>
+                </option>
+            </options>
+            <defaultValue>metro</defaultValue>
+            <label>Offcanvas Cart Style</label>
+            <label lang="de-DE">Offcanvas Cart Style</label>
+        </input-field>
+
+    </card>
+
+    <card>
+        <title>Navigation</title>
+        <title lang="de-DE">Navigation</title>
+        <input-field type="single-select">
+            <name>dropdown</name>
+            <options>
+                <option>
+                    <id>default</id>
+                    <name>Shopware</name>
+                    <name lang="de-DE">Shopware</name>
+                </option>
+                <option>
+                    <id>metro</id>
+                    <name>Metro</name>
+                    <name lang="de-DE">Metro</name>
+                </option>
+            </options>
+            <defaultValue>metro</defaultValue>
+            <label>Dropdown Style</label>
+            <label lang="de-DE">Dropdown-Variante</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>headerStickyNav</name>
+            <defaultValue>true</defaultValue>
+            <label>Enable sticky navigation</label>
+            <label lang="de-DE">Sticky-Navigation aktivieren</label>
+        </input-field>
+    </card>
+
+    <card>
+        <title>After logo text (HEADER)</title>
+        <title lang="de-DE">After logo text</title>
+
+        <input-field type="bool">
+            <name>isAfterLogoShow</name>
+            <defaultValue>true</defaultValue>
+            <label>Show block</label>
+            <label lang="de-DE">Block anzeigen</label>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>afterLogoHead</name>
+            <label>Headline</label>
+            <label lang="de-DE">Headline</label>
+            <snippet>ssik.header.afterlogo.head</snippet>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>afterLogoText</name>
+            <label>Text</label>
+            <label lang="de-DE">Text</label>
+            <snippet>ssik.header.afterlogo.text</snippet>
+        </component>
+    </card>
+
+    <card>
+        <title>Contact/Locations (HEADER)</title>
+        <title lang="de-DE">Kontakt/Standorte</title>
+
+        <input-field type="bool">
+            <name>contactHeader</name>
+            <defaultValue>true</defaultValue>
+            <label>Show block</label>
+            <label lang="de-DE">Block anzeigen</label>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>buttonContactText</name>
+            <label>Button text</label>
+            <label lang="de-DE">Schaltflächentext</label>
+            <snippet>ssik.topbar.contact.buttonContactText</snippet>
+        </component>
+    </card>
+
+    <card>
+        <title>Advertising banner</title>
+        <title lang="de-DE">Werbebanner</title>
+
+        <input-field type="bool">
+            <name>announcementbanner</name>
+            <defaultValue>true</defaultValue>
+            <label>Enable ad banner display</label>
+            <label lang="de-DE">Werbebanner aktivieren</label>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>announcementbannerText</name>
+            <label>Announcement Banner content</label>
+            <label lang="de-DE">Inhalt des Ankündigungsbanners</label>
+            <snippet>ssik.announcementbanner.text</snippet>
+        </component>
+    </card>
+
+    <card>
+        <title>Our advantages (HEADER)</title>
+        <title lang="de-DE">Unsere Vorzüge (HEADER)</title>
+    
+        <input-field type="single-select">
+            <name>isUspBarShow</name>
+            <options>
+                <option>
+                    <id>false</id>
+                    <name>Not show</name>
+                    <name lang="de-DE">Nicht zeigen</name>
+                </option>
+                <option>
+                    <id>top</id>
+                    <name>Show above Headers</name>
+                    <name lang="de-DE">Top</name>
+                </option>
+                <option>
+                    <id>after</id>
+                    <name>Show after Main Menu</name>
+                    <name lang="de-DE">nach Hauptmenü</name>
+                </option>
+            </options>
+            <defaultValue>top</defaultValue>
+            <label>Activate the block Our advantages in the header of the site?</label>
+            <label lang="de-DE">Aktivieren Sie den Block Unsere Vorteile in der Kopfzeile der Seite?</label>
+        </input-field>
+
+        <input-field type="text">
+            <name>uspbaricon1</name>
+            <defaultValue>fas fa-truck</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the first item</label>
+            <label lang="de-DE">Symbol für das erste Element</label>
+            <placeholder>fas fa-truck</placeholder>
+            <placeholder lang="de-DE">fas fa-truck</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspbartext1</name>
+            <label>Text for the first item</label>
+            <label lang="de-DE">Text für das erste Element</label>
+            <snippet>ssik.header.usp.usp1</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>uspbaricon2</name>
+            <defaultValue>fas fa-undo-alt</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the second item</label>
+            <label lang="de-DE">Symbol für das zweite Element</label>
+            <placeholder>fas fa-undo-alt</placeholder>
+            <placeholder lang="de-DE">fas fa-undo-alt</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspbartext2</name>
+            <label>Text for the second item</label>
+            <label lang="de-DE">uspbartext 2</label>
+            <snippet>ssik.header.usp.usp2</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>uspbaricon3</name>
+            <defaultValue>fas fa-hands-helping</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the third item</label>
+            <label lang="de-DE">Symbol für das dritte Element</label>
+            <placeholder>fas fa-hands-helping</placeholder>
+            <placeholder lang="de-DE">fas fa-hands-helping</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspbartext3</name>
+            <label>Text for the third item</label>
+            <label lang="de-DE">Text für das dritte Element</label>
+            <snippet>ssik.header.usp.usp3</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>uspbaricon4</name>
+            <defaultValue>fab fa-expeditedssl</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the fourth item</label>
+            <label lang="de-DE">Symbol für das vierte Element</label>
+            <placeholder>fab fa-expeditedssl</placeholder>
+            <placeholder lang="de-DE">fab fa-expeditedssl</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspbartext4</name>
+            <label>Text for the fourth item</label>
+            <label lang="de-DE">Text für das vierte Element</label>
+            <snippet>ssik.header.usp.usp4</snippet>
+        </component>
+    </card>
+
+    <card>
+        <title>Listing page</title>
+        <title lang="de-DE">Auflistungsseite</title>
+
+        <input-field type="bool">
+            <name>ssikSidebarTitleShow</name>
+            <defaultValue>true</defaultValue>
+            <label>Show title in sidebar</label>
+            <label lang="de-DE">Titel in der Sidebar anzeigen</label>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>ssikSidebarTitle</name>
+            <label>Title</label>
+            <label lang="de-DE">Title</label>
+            <snippet>general.categories</snippet>
+        </component>
+
+        <input-field type="single-select">
+            <name>productCard</name>
+            <options>
+                <option>
+                    <id>shopware</id>
+                    <name>Shopware</name>
+                    <name lang="de-DE">Shopware</name>
+                </option>
+                <option>
+                    <id>metro</id>
+                    <name>Metro Theme</name>
+                    <name lang="de-DE">Metro Theme</name>
+                </option>
+            </options>
+            <defaultValue>metro</defaultValue>
+            <label>Product Card</label>
+            <label lang="de-DE">Produktkarte</label>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Categories</title>
+        <title lang="de-DE">Kategorien</title>
+        <component name="sw-entity-single-select">
+            <name>shopCatalogId</name>
+            <entity>category</entity>
+            <label>Specify the menu item for the product catalog.</label>
+            <label lang="de-DE">Geben Sie den Menüpunkt für den Produktkatalog an.</label>
+        </component>
+    </card>
+
+    <card>
+        <title>Product Card - Metro Theme</title>
+        <title lang="de-DE">Produktkarte - Metro Theme</title>
+        <input-field type="single-select">
+            <name>productImageRatio</name>
+            <options>
+                <option>
+                    <id>min</id>
+                    <name>Min</name>
+                    <name lang="de-DE">Min.</name>
+                </option>
+                <option>
+                    <id>max</id>
+                    <name>Max</name>
+                    <name lang="de-DE">Max.</name>
+                </option>
+                <option>
+                    <id>avg</id>
+                    <name>Avg.</name>
+                    <name lang="de-DE">Durchschnitt</name>
+                </option>
+            </options>
+            <defaultValue>avg</defaultValue>
+            <label>Leveling Height</label>
+            <label lang="de-DE">Nivellierhöhe</label>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>productImageObjectFit</name>
+            <options>
+                <option>
+                    <id>product-image-cover</id>
+                    <name>cover</name>
+                    <name lang="de-DE">cover</name>
+                </option>
+                <option>
+                    <id>product-image-contain</id>
+                    <name>contain</name>
+                    <name lang="de-DE">contain</name>
+                </option>
+            </options>
+            <defaultValue>product-image-cover</defaultValue>
+            <label>Object-fit</label>
+            <label lang="de-DE">Object-fit</label>
+        </input-field>
+
+        <input-field type="single-select">
+            <name>productImageObjectPostion</name>
+            <options>
+                <option>
+                    <id>product-image-top</id>
+                    <name>top</name>
+                    <name lang="de-DE">top</name>
+                </option>
+                <option>
+                    <id>product-image-center</id>
+                    <name>center</name>
+                    <name lang="de-DE">center</name>
+                </option>
+            </options>
+            <defaultValue>product-image-center</defaultValue>
+            <label>Object-position</label>
+            <label lang="de-DE">Object-position</label>
+        </input-field>
+
+    </card>
+
+    <card>
+        <title>Product item</title>
+        <title lang="de-DE">Produktkarte</title>
+
+        <input-field type="bool">
+            <name>productBoxHover</name>
+            <defaultValue>true</defaultValue>
+            <label>Change the product’s image by mouseover?</label>
+            <label lang="de-DE">Produktbild bei Mouseover ändern?</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>isBrandShow</name>
+            <defaultValue>true</defaultValue>
+            <label>Show product brand</label>
+            <label lang="de-DE">Produktmarke anzeigen</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>productPriceFormat</name>
+            <defaultValue>true</defaultValue>
+            <label>Enable price formatting</label>
+            <label lang="de-DE">Aktivieren Sie die Preisformatierung</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>isDescriptionShow</name>
+            <defaultValue>false</defaultValue>
+            <label>Show product description</label>
+            <label lang="de-DE">Produktbeschreibung anzeigen</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>isCharacteristicsShow</name>
+            <defaultValue>false</defaultValue>
+            <label>Show product characteristics</label>
+            <label lang="de-DE">Produkteigenschaften anzeigen</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>isPriceUnitShow</name>
+            <defaultValue>false</defaultValue>
+            <label>Show product price unit</label>
+            <label lang="de-DE">Produktpreiseinheit anzeigen</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>isPriceCheapestShow</name>
+            <defaultValue>false</defaultValue>
+            <label>Show product price cheapest</label>
+            <label lang="de-DE">Produktpreis am günstigsten anzeigen</label>
+        </input-field>
+
+    </card>
+        
+    <card>
+        <title>Product Detail</title>
+        <title lang="de-DE">Produktdetail</title>
+        <input-field type="bool">
+            <name>isProductDetailCustom</name>
+            <defaultValue>true</defaultValue>
+            <label>Enable product detail page optimization</label>
+            <label lang="de-DE">Optimierung der Produktdetailseite aktivieren</label>
+        </input-field>
+        <input-field type="bool">
+            <name>productDetailImageZoom</name>
+            <defaultValue>true</defaultValue>
+            <label>Deactivate Image Zoom</label>
+            <label lang="de-DE">Bildzoom deaktivieren</label>
+        </input-field>
+        <input-field type="bool">
+            <name>isBrandLogoShow</name>
+            <defaultValue>true</defaultValue>
+            <label>Show brand logo</label>
+            <label lang="de-DE">Markenlogo zeigen</label>
+        </input-field>
+    </card>
+
+    <card>
+        <title>Our advantages (FOOTER)</title>
+        <title lang="de-DE">Unsere Vorzüge (FOOTER)</title>
+
+        <input-field type="bool">
+            <name>isFooterUspBarShow</name>
+            <defaultValue>true</defaultValue>
+            <label>Activate the block Our advantages in the footer of the site?</label>
+            <label lang="de-DE">Aktivieren Sie den Block Unsere Vorteile in der Fußzeile der Website?</label>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbartitle</name>
+            <label>Headline</label>
+            <label lang="de-DE">Überschrift</label>
+            <snippet>ssik.footer.usp.title</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>uspfooterbaricon1</name>
+            <defaultValue>fas fa-star</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the first item</label>
+            <label lang="de-DE">Symbol für das erste Element</label>
+            <placeholder>fas fa-star</placeholder>
+            <placeholder lang="de-DE">fas fa-star</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem1text</name>
+            <label>Headline for the first item</label>
+            <label lang="de-DE">Überschrift für das erste Element</label>
+            <snippet>ssik.footer.usp.item1.text</snippet>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem1desc</name>
+            <label>Text for the first item</label>
+            <label lang="de-DE">Text für das erste Element</label>
+            <snippet>ssik.footer.usp.item1.desc</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>uspfooterbaricon2</name>
+            <defaultValue>fas fa-warehouse</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the second item</label>
+            <label lang="de-DE">Symbol für das zweite Element</label>
+            <placeholder>fas fa-warehouse</placeholder>
+            <placeholder lang="de-DE">fas fa-warehouse</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem2text</name>
+            <label>Headline for the second item</label>
+            <label lang="de-DE">Überschrift für das zweite Element</label>
+            <snippet>ssik.footer.usp.item2.text</snippet>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem2desc</name>
+            <label>Text for the second item</label>
+            <label lang="de-DE">Text für das zweite Element</label>
+            <snippet>ssik.footer.usp.item2.desc</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>uspfooterbaricon3</name>
+            <defaultValue>fas fa-shipping-fast</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the third item</label>
+            <label lang="de-DE">Symbol für das dritte Element</label>
+            <placeholder>fas fa-shipping-fast</placeholder>
+            <placeholder lang="de-DE">fas fa-shipping-fast</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem3text</name>
+            <label>Headline for the third item</label>
+            <label lang="de-DE">Überschrift für das dritte Element</label>
+            <snippet>ssik.footer.usp.item3.text</snippet>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem3desc</name>
+            <label>Text for the third item</label>
+            <label lang="de-DE">Text für das dritte Element</label>
+            <snippet>ssik.footer.usp.item3.desc</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>uspfooterbaricon4</name>
+            <defaultValue>fab fa-expeditedssl</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the fourth item</label>
+            <label lang="de-DE">Symbol für das vierte Elemen</label>
+            <placeholder>fab fa-expeditedssl</placeholder>
+            <placeholder lang="de-DE">fab fa-expeditedssl</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem4text</name>
+            <label>Headline for the fourth item</label>
+            <label lang="de-DE">Überschrift für das vierte Element</label>
+            <snippet>ssik.footer.usp.item4.text</snippet>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem4desc</name>
+            <label>Text for the fourth item</label>
+            <label lang="de-DE">Text für das vierte Element</label>
+            <snippet>ssik.footer.usp.item4.desc</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>uspfooterbaricon5</name>
+            <defaultValue>fas fa-hands-helping</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the fifth item</label>
+            <label lang="de-DE">Symbol für das fünfte Element</label>
+            <placeholder>fas fa-hands-helping</placeholder>
+            <placeholder lang="de-DE">fas fa-hands-helping</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem5text</name>
+            <label>Headline for the fifth item</label>
+            <label lang="de-DE">Überschrift für das fünfte Element</label>
+            <snippet>ssik.footer.usp.item5.text</snippet>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem5desc</name>
+            <label>Text for the fifth item</label>
+            <label lang="de-DE">Text für das fünfte Element</label>
+            <snippet>ssik.footer.usp.item5.desc</snippet>
+        </component>
+    </card>
+
+    <card>
+        <title>Contact info (FOOTER)</title>
+        <title lang="de-DE">Kontaktinformation (FOOTER)</title>
+
+        <input-field type="bool">
+            <name>isShowFooterContact</name>
+            <defaultValue>true</defaultValue>
+            <label>Show contact information</label>
+            <label lang="de-DE">Kontaktdaten anzeigen</label>
+        </input-field>
+
+        <input-field type="text">
+            <name>footerContactIcon1</name>
+            <defaultValue>fa-solid fa-location-arrow</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the first item</label>
+            <label lang="de-DE">Symbol für das erste Element</label>
+            <placeholder>fa-solid fa-location-arrow</placeholder>
+            <placeholder lang="de-DE">fa-solid fa-location-arrow</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem1text</name>
+            <label>Headline for the first item</label>
+            <label lang="de-DE">Überschrift für das erste Element</label>
+            <snippet>ssik.footer.contact.item1.text</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>footerContactIcon2</name>
+            <defaultValue>fa-solid fa-envelope</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the second item</label>
+            <label lang="de-DE">Symbol für das zweite Element</label>
+            <placeholder>fa-solid fa-envelope</placeholder>
+            <placeholder lang="de-DE">fa-solid fa-envelope</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem2text</name>
+            <label>Headline for the second item</label>
+            <label lang="de-DE">Überschrift für das zweite Element</label>
+            <snippet>ssik.footer.contact.item2.text</snippet>
+        </component>
+
+
+        <input-field type="text">
+            <name>footerContactIcon3</name>
+            <defaultValue>fa-solid fa-phone</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the third item</label>
+            <label lang="de-DE">Symbol für das dritte Element</label>
+            <placeholder>fa-solid fa-phone</placeholder>
+            <placeholder lang="de-DE">fa-solid fa-phone</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem3text</name>
+            <label>Headline for the third item</label>
+            <label lang="de-DE">Überschrift für das dritte Element</label>
+            <snippet>ssik.footer.contact.item3.text</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>footerContactIcon4</name>
+            <defaultValue>fa-solid fa-clock</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the fourth item</label>
+            <label lang="de-DE">Symbol für das vierte Elemen</label>
+            <placeholder>fa-solid fa-clock</placeholder>
+            <placeholder lang="de-DE">fa-solid fa-clock</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem4text</name>
+            <label>Headline for the fourth item</label>
+            <label lang="de-DE">Überschrift für das vierte Element</label>
+            <snippet>ssik.footer.contact.item4.text</snippet>
+        </component>
+
+        <input-field type="text">
+            <name>footerContactIcon5</name>
+            <defaultValue>fa-solid fa-circle-info</defaultValue>
+            <copyable>true</copyable>
+            <label>Icon for the fifth item</label>
+            <label lang="de-DE">Symbol für das fünfte Element</label>
+            <placeholder>fa-solid fa-circle-info</placeholder>
+            <placeholder lang="de-DE">fa-solid fa-circle-info</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>uspfooterbaritem5text</name>
+            <label>Headline for the fifth item</label>
+            <label lang="de-DE">Überschrift für das fünfte Element</label>
+            <snippet>footer.serviceContactLink</snippet>
+        </component>
+    </card>
+
+    <card>
+        <title>Footer Newsletter Block</title>
+        <title lang="de-DE">Footer-Newsletter-Block</title>
+
+        <input-field type="bool">
+            <name>isShowNewsletterBlock</name>
+            <defaultValue>true</defaultValue>
+            <label>Show newsletter subscription box?</label>
+            <label lang="de-DE">Newsletter-Anmeldung-Box anzeigen?</label>
+        </input-field>
+
+        <component name="sw-snippet-field">
+            <name>newsletterhelptitle</name>
+            <label>Headline</label>
+            <label lang="de-DE">Überschrift</label>
+            <snippet>ssik.footer.newsletter.title</snippet>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>newsletterhelptext</name>
+            <label>Help text</label>
+            <label lang="de-DE">Hilfstext</label>
+            <snippet>ssik.footer.newsletter.helptext</snippet>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>newslettersubmit</name>
+            <label>Button text</label>
+            <label lang="de-DE">Schaltflächentext</label>
+            <snippet>ssik.footer.newsletter.submit</snippet>
+        </component>
+    </card>
+    
+    <card>
+        <title>Social Configuration</title>
+        <title lang="de-DE">Soziale Konfiguration</title>
+
+       
+        <input-field>
+            <name>youtube</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon1</name>
+            <copyable>true</copyable>
+            <label>Icon for the first item</label>
+            <label lang="de-DE">Symbol für das erste Element</label>
+            <placeholder>fa-brands fa-youtube</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-youtube</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+
+        <input-field>
+            <name>facebook</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon2</name>
+            <copyable>true</copyable>
+            <label>Icon for the second item</label>
+            <label lang="de-DE">Symbol für das zweite Element</label>
+            <placeholder>fa-brands fa-facebook</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-facebook</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <input-field>
+            <name>twitter</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon3</name>
+            <copyable>true</copyable>
+            <label>Icon for the third item</label>
+            <label lang="de-DE">Symbol für das dritte Element</label>
+            <placeholder>fa-brands fa-twitter</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-twitter</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <input-field>
+            <name>instagram</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon4</name>
+            <copyable>true</copyable>
+            <label>Icon for the fourth item</label>
+            <label lang="de-DE">Symbol für das vierte Element</label>
+            <placeholder>fa-brands fa-instagram</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-instagram</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <input-field>
+            <name>whatsapp</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon5</name>
+            <copyable>true</copyable>
+            <label>Icon for the fifth item</label>
+            <label lang="de-DE">Symbol für das fünfte Element</label>
+            <placeholder>fa-brands fa-whatsapp</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-whatsapp</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <input-field>
+            <name>pinterest</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon6</name>
+            <copyable>true</copyable>
+            <label>Icon for the sixth item</label>
+            <label lang="de-DE">Symbol für das sechste Element</label>
+            <placeholder>fa-brands fa-pinterest</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-pinterest</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <input-field>
+            <name>google</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon7</name>
+            <copyable>true</copyable>
+            <label>Icon for the seventh item</label>
+            <label lang="de-DE">Symbol für das siebte Element</label>
+            <placeholder>fa-brands fa-google</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-google</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <input-field>
+            <name>tiktok</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon8</name>
+            <copyable>true</copyable>
+            <label>Icon for the eighth item</label>
+            <label lang="de-DE">Symbol für das achte Element</label>
+            <placeholder>fa-brands fa-tiktok</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-tiktok</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <input-field>
+            <name>linkedin</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon9</name>
+            <copyable>true</copyable>
+            <label>Icon for the ninth item</label>
+            <label lang="de-DE">Symbol für das neunte Element</label>
+            <placeholder>fa-brands fa-linkedin</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-linkedin</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+
+        <input-field>
+            <name>discord</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon10</name>
+            <copyable>true</copyable>
+            <label>Icon for the tenth item</label>
+            <label lang="de-DE">Symbol für das zehnte Element</label>
+            <placeholder>fa-brands fa-discord</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-discord</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <input-field>
+            <name>kickstarter</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon11</name>
+            <copyable>true</copyable>
+            <label>Icon for the eleventh item</label>
+            <label lang="de-DE">Symbol für das elfte Element</label>
+            <placeholder>fa-brands fa-kickstarter</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-kickstarter</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+        <input-field>
+            <name>facebookmessanger</name>
+            <copyable>true</copyable>
+            <label>Enter your URL</label>
+            <label lang="de-DE">Geben Sie Ihre URL ein</label>
+            <placeholder>#</placeholder>
+            <placeholder lang="de-DE">#</placeholder>
+        </input-field>
+        <input-field type="text">
+            <name>socialicon12</name>
+            <copyable>true</copyable>
+            <label>Icon for the twelfth item</label>
+            <label lang="de-DE">Symbol für das zwölfte Element</label>
+            <placeholder>fa-brands fa-facebook-messenger</placeholder>
+            <placeholder lang="de-DE">fa-brands fa-facebook-messenger</placeholder>
+            <helpText>Specify FontAwesome Classes</helpText>
+            <helpText lang="de-DE">Geben Sie FontAwesome-Klassen an</helpText>
+        </input-field>
+
+    </card>
+
+    <card>
+        <title>Copyright</title>
+        <title lang="de-DE">Urheberrechte</title>
+        <component name="sw-snippet-field">
+            <name>footercopyrightInfo</name>
+            <label>Copyright</label>
+            <label lang="de-DE">Urheberrechte</label>
+            <snippet>footer.copyrightInfo</snippet>
+        </component>
+    </card>
+
+    <card>
+        <title>Google Tag Manager</title>
+        <title lang="de-DE">Google Tag Manager</title>
+
+        <input-field type="textarea">
+            <name>ssikGTMHead</name>
+            <label>Head</label>
+        </input-field>
+
+        <input-field type="textarea">
+            <name>ssikGTMBody</name>
+            <label>Body</label>
+        </input-field>
+    </card>
+</config>

@@ -1,0 +1,26 @@
+{% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget-form.html.twig' %}
+
+{# {% set isQuantityPlusMinus = config('SsikMetroLight.config.isQuantityPlusMinus') %} #}
+
+{% block buy_widget_buy_quantity %}
+    {# {% if isQuantityPlusMinus == 1 %}
+        {% sw_include '@SsikMetroLight/storefront/ssik/ssik-buy-widget-quantity.html.twig' with {
+            quantityId: product.id,
+            minPurchase: product.minPurchase,
+            maxPurchase: product.calculatedMaxPurchase,
+            step: product.purchaseSteps
+        } %}
+    {% endif %}  #}
+    {{parent()}}
+{% endblock %}
+
+{% block buy_widget_buy_button %}
+    {{parent()}}
+    {% if config('core.cart.wishlistEnabled') %} 
+        {% sw_include '@Storefront/storefront/component/product/card/wishlist.html.twig' with {
+            showText: false,
+            size: 'md',
+            productId: product.id
+        } %}
+    {% endif %} 
+{% endblock %}

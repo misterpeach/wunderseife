@@ -1,0 +1,29 @@
+{% macro list(items, categoryId) %}
+    {% import _self as tree %}
+    <ul class="dropdown-menu-list" {% if categoryId %}data-ssik-dropdown-menu-id="{{categoryId}}{% endif %}">
+        {% for item in items %}
+
+            {% set id = item.category.id %}
+            {% set name = item.category.translated.name %}
+            {% set link = category_url(item.category) %}
+
+            <li class="dropdown-menu-item">
+                <a class="dropdown-menu-link {% if item.children|length > 0 %}is-dropdown{% endif %}" 
+                    href="{{ link }}" 
+                    {% if category_linknewtab(item.category) %} target="_blank"
+                        {% if item.category.linkType == "external" %}rel="noopener noreferrer"{% endif %}
+                    {% endif %}
+                    title="{{ name }}"
+                    itemprop="url">
+                    <span itemprop="name">{{ name }}</span>
+                </a>
+                {% if item.children %}
+                    {{ tree.list(item.children, null) }}
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% import _self as tree %}
+{{ tree.list(navigationTree, uid) }}

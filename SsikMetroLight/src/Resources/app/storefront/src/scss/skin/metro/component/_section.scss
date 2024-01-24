@@ -1,0 +1,16 @@
+.section {
+    &-title {
+        font-weight: 700;
+        color: var(--ssik-metro-listing-headline-color);
+        @include font-size(var(--ssik-metro-listing-headline-font-size));
+        margin-bottom: 0;
+        //text-transform: normal;
+        &.in-sidebar {
+            @include font-size(var(--ssik-metro-sidebar-headline-font-size));
+            color: var(--ssik-metro-sidebar-headline-color);
+            margin-top: 1rem; 
+            padding-left: 1rem;
+            text-transform: none;
+        }
+    }
+}

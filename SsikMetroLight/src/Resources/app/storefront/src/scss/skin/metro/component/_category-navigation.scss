@@ -1,0 +1,68 @@
+.category-navigation {
+    &-link {
+        position: relative;
+        padding: .5rem 1rem;
+        line-height: 1.4;
+        color: var(--ssik-metro-sidebar-catalog-link-color);
+        &.is-active, &:hover {
+            color: var(--ssik-metro-sidebar-catalog-link-hover-color);
+        }
+    }
+    &.level-0 {
+        @include font-size(var(--ssik-metro-sidebar-catalog-link-font-size));
+    }
+
+    &.level-0 &-entry {
+        border: 0;
+    }
+
+    & > &-entry {
+        position: relative;
+        &.is-dropdown {
+            & > .category-navigation-link {
+                @include is-dropdown();
+                &::before {
+                    right: unset;
+                    left: 2px;
+                    top: 1.5rem;
+                    width: 4px;
+                    height: 4px;
+                    transform: rotate(-45deg);
+                    border-color: var(--ssik-metro-sidebar-catalog-link-color);
+                }
+                
+                &.is-active {
+                    &::before {
+                        transform: rotate(45deg);
+                    }
+                }
+
+                &:hover, &.is-active {
+                    &::before {
+                        border-color: var(--ssik-metro-sidebar-catalog-link-hover-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &.level-0 > &-entry > &-link {
+        font-weight: 400;
+    }
+
+    &.level-1 {
+        @include font-size(var(--ssik-metro-sidebar-catalog-link-font-size));
+    }
+
+    &.level-1 > &-entry > &-link {
+        padding: .25rem 1rem;
+        font-size: 85%;
+        &::before {
+            top: 1rem;
+        }
+    }
+
+    .category-navigation {
+        padding-left: 1rem;
+    }
+}

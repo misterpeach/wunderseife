@@ -1,0 +1,173 @@
+.ssik-top-bar {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-container {
+        padding: 1rem 0 0 0;
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        @include media-breakpoint-up(md) { 
+            flex-direction: row;
+            & > * {
+                padding-right: .5rem;
+            }
+        }
+        @include media-breakpoint-up(lg) { 
+            width: 50%;
+            justify-content: flex-start;
+        }
+
+        &.is-ads-banner {
+            text-align: center;
+            justify-content: center;
+
+            padding: .5rem 0;
+            background: var(--ssik-metro-ads-bg);
+            color: var(--ssik-metro-ads-color);
+            @include font-size(var(--ssik-metro-ads-font-size));
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: .6rem;
+        }
+    }
+
+    .top-bar {
+        display: none;
+        @include media-breakpoint-up(lg) { 
+            display: flex;
+            width: 50%;
+            justify-content: flex-end;
+        }
+    }
+
+    &.with-ads-banner  {
+        flex-wrap: wrap;
+        
+        .top-bar,
+        .ssik-top-bar-info {
+            width: 100%;
+        }
+        @include media-breakpoint-up(lg) { 
+            .top-bar,
+            .ssik-top-bar-info {
+                width: 33.3333%;
+            }
+        }
+    }
+
+    .top-bar-nav-text {
+        display: block;
+    }
+   
+    .top-bar-nav-btn {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        border:unset;
+        gap: .5rem;
+
+        &::after {
+            content: none;
+        }
+
+        &.btn {
+            padding: 0rem 1rem;
+            border-radius: 0.6rem;
+            height: 2.75rem;            
+        }
+    }
+
+    .top-bar-list {
+        &-item {
+            color: var(--ssik-metro-base-link-color);
+            &:hover {
+                color: var(--ssik-metro-base-link-hover-color);
+            }
+        }
+        .top-bar-list-label {
+            display: flex;
+            align-items: center;
+            font-size: 100%;
+            gap: .5rem;
+            @include font-size(var(--ssik-metro-topbar-font-size));
+        }
+    }
+    // .top-bar-list-label {
+    //     font-size: 1.2rem;
+    //     color: var(--ssik-metro-base-link-color);
+    //     &:hover {
+    //         color:var(--ssik-metro-base-link-hover-color);
+    //     }
+    // }
+}
+
+.top-bar-list-icon {
+    margin: 0;
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+}
+
+.ssik-base {
+    .ssik-top-bar-container {
+        .container {
+            width: 100%;
+            max-width: 140rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+}
+
+.ssik-top-bar {
+    &-container {
+        color: var(--ssik-metro-topbar-color);
+        background: var(--ssik-metro-topbar-bg);
+        @include font-size(var(--ssik-metro-topbar-font-size));
+    }
+    .top-bar-nav-btn {
+        &.btn {
+            color: var(--ssik-metro-topbar-btn-color);
+            background: var(--ssik-metro-topbar-btn-bg);
+            @include font-size(var(--ssik-metro-topbar-btn-font-size));
+            &:hover {
+                color: var(--ssik-metro-topbar-btn-hover-color);
+                background: var(--ssik-metro-topbar-btn-hover-bg);
+                .icon {
+                    color: var(--ssik-metro-topbar-btn-hover-color);
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
+        border: 0;
+        padding: 1rem;
+    }
+
+    .dropdown.show {
+        .btn {
+            color: var(--ssik-metro-topbar-btn-hover-color);
+            background: var(--ssik-metro-topbar-btn-hover-bg);
+            .icon {
+                color: var(--ssik-metro-topbar-btn-hover-color);
+            }
+        }
+    }
+}
+
+.ssik-top-bar-info.dropdown {
+    .dropdown-menu {
+        @include font-size(var(--ssik-metro-base-font-size));
+        color: var(--ssik-metro-base-color);
+    }
+}

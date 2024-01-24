@@ -1,0 +1,33 @@
+{% sw_extends '@Storefront/storefront/layout/header/search.html.twig' %}
+
+{% block layout_header_search_input_group %}
+    {% if inlineNav == 1 %}
+        <div class="header-search-form-head">
+            What are you Looking for?
+        </div>
+    {% endif %}
+    {{parent()}}
+{% endblock %}
+
+{% block layout_header_search_button %}
+    {# @deprecated tag:v6.5.0 - Bootstrap v5 removes `input-group-append` wrapper and uses elements as direct children of `input-group` #}
+    {% if feature('v6.5.0.0') %}
+        <button type="submit"
+                class="btn header-search-btn"
+                aria-label="{{ "header.searchButton"|trans|striptags }}">
+            <span class="header-search-icon">
+                {% sw_icon 'icon-search' style { 'pack':'custom', 'namespace': 'SsikMetroLight', 'class':'ssik' } %}
+            </span>
+        </button>
+    {% else %}
+        <div class="input-group-append">
+            <button type="submit"
+                    class="btn header-search-btn"
+                    aria-label="{{ "header.searchButton"|trans|striptags }}">
+                <span class="header-search-icon">
+                    {% sw_icon 'icon-search' style { 'pack':'custom', 'namespace': 'SsikMetroLight', 'class':'ssik' } %}
+                </span>
+            </button>
+        </div>
+    {% endif %}
+{% endblock %}

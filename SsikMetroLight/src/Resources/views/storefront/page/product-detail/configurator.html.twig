@@ -1,0 +1,10 @@
+{% sw_extends '@Storefront/storefront/page/product-detail/configurator.html.twig' %}
+
+{% block page_product_detail_configurator_group_title_text %}
+    {{parent()}} &mdash;
+    {% for option in group.options %}
+        {% if option.id in page.product.optionIds %}
+            <span class="active-option-title">{{ option.translated.name }}</span>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

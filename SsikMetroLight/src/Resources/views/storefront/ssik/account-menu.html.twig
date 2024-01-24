@@ -1,0 +1,9 @@
+{% block ssik_account_menu %}
+    <div class="dropdown-account-menu">
+        <div class="account-menu-container">
+            {% if context.customer %}
+                {% sw_include '@Storefront/storefront/page/account/sidebar.html.twig' with {'headerWidget': true} %}                
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
